@@ -8,8 +8,16 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anim;
-
+    public Player_Combat player_Combat;
     private bool isKnockedBack;
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("Slash"))
+        {
+            player_Combat.Attack();
+        }
+    }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
