@@ -1,16 +1,20 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Enemy_Movement : MonoBehaviour
 {
 
     public float speed;
-    private int facingDirection = -1; // 1 for right, -1 for left
+    public float attackRange = 2;
+    public float attackCoolDown = 2;
+    public float playerDetectRange = 5;
+    public Transform detectionPoint;
+    public LayerMask playerLayer;
 
+    private float attackCoolDownTimer;
+    private int facingDirection = -1; // 1 for right, -1 for left
     private EnemyState enemyState;
 
-    public float attackRange = 2;
+   
     private Rigidbody2D rb;
     private Transform player;
     private Animator anim;
@@ -28,6 +32,13 @@ public class Enemy_Movement : MonoBehaviour
     // FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here. 
     void FixedUpdate()
     {
+        CheckForPlayer();
+
+        if(attackCoolDownTimer > 0)
+        {
+            attackCoolDownTimer -= Time.deltaTime;
+        }
+
         if (enemyState == EnemyState.Chasing)
         {
             Chase();
@@ -43,38 +54,60 @@ public class Enemy_Movement : MonoBehaviour
     // Chase the player when in range
     void Chase()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
-        { 
-            ChangeState(EnemyState.Attacking);
-        }
-        else if (player.position.x > transform.position.x && facingDirection == -1 ||
-            player.position.x < transform.position.x && facingDirection == 1)
-        {
-            Flip();
-        }
-
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void CheckForPlayer()
     {
-        if (collision.CompareTag("Player"))
+        // Mientras ataca no cambia de estado; el evento de la animación lo devuelve a Idle
+        if (enemyState == EnemyState.Attacking)
         {
-            if (player == null)
+            return;
+        }
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectRange, playerLayer);
+
+        if (hits.Length > 0)
+        {
+            player = hits[0].transform;
+            FacePlayer();
+
+            if (Vector2.Distance(transform.position, player.position) <= attackRange)
             {
-                player = collision.transform;
+                rb.linearVelocity = Vector2.zero;
+
+                // Comprueba si el cooldown de ataque esta listo
+                if (attackCoolDownTimer <= 0)
+                {
+                    attackCoolDownTimer = attackCoolDown;
+                    ChangeState(EnemyState.Attacking);
+                }
+                else
+                {
+                    // En rango pero esperando el cooldown: se queda quieto mirando al jugador
+                    ChangeState(EnemyState.Idle);
+                }
             }
-            ChangeState(EnemyState.Chasing);
+            else
+            {
+                ChangeState(EnemyState.Chasing);
+            }
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+            ChangeState(EnemyState.Idle);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    // Gira al enemigo si el jugador esta en el lado contrario
+    private void FacePlayer()
     {
-        if (collision.CompareTag("Player"))
-        {   
-            rb.linearVelocity = Vector2.zero;
-            ChangeState(EnemyState.Idle);
+        if (player.position.x > transform.position.x && facingDirection == -1 ||
+            player.position.x < transform.position.x && facingDirection == 1)
+        {
+            Flip();
         }
     }
 
@@ -107,6 +140,14 @@ public class Enemy_Movement : MonoBehaviour
 
 
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(detectionPoint.position, playerDetectRange);
+    }
+
+
 }
 
 public enum EnemyState
