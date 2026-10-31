@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: 96923356f66b9378ff2acfd3c4ce3aab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1366644035451542333
+    second: Warrior_Bow_Blue_0
+  - first:
+      213: 2733631554623910686
+    second: Warrior_Bow_Blue_1
+  - first:
+      213: 1421351610974278582
+    second: Warrior_Bow_Blue_2
+  - first:
+      213: 4058566960068302308
+    second: Warrior_Bow_Blue_3
+  - first:
+      213: -965296982774186888
+    second: Warrior_Bow_Blue_4
+  - first:
+      213: -4308606755540791984
+    second: Warrior_Bow_Blue_5
+  - first:
+      213: 4035278468863257524
+    second: Warrior_Bow_Blue_8
+  - first:
+      213: -2114864512457381934
+    second: Warrior_Bow_Blue_9
+  - first:
+      213: 1331285115454443620
+    second: Warrior_Bow_Blue_10
+  - first:
+      213: -1639824786665046079
+    second: Warrior_Bow_Blue_11
+  - first:
+      213: 1853208332068550976
+    second: Warrior_Bow_Blue_12
+  - first:
+      213: 1796332512730368039
+    second: Warrior_Bow_Blue_13
+  - first:
+      213: 975319097748772184
+    second: Warrior_Bow_Blue_14
+  - first:
+      213: -3834265837776128870
+    second: Warrior_Bow_Blue_15
+  - first:
+      213: -4170550452472778056
+    second: Warrior_Bow_Blue_16
+  - first:
+      213: 885208918890827332
+    second: Warrior_Bow_Blue_17
+  - first:
+      213: 4401993941034029760
+    second: Warrior_Bow_Blue_18
+  - first:
+      213: -4015748447784486092
+    second: Warrior_Bow_Blue_19
+  - first:
+      213: -4097843983046315038
+    second: Warrior_Bow_Blue_20
+  - first:
+      213: 2206037155075110840
+    second: Warrior_Bow_Blue_21
+  - first:
+      213: 2971947266917466627
+    second: Warrior_Bow_Blue_22
+  - first:
+      213: -4095975861985674090
+    second: Warrior_Bow_Blue_23
+  - first:
+      213: 2550865680816122339
+    second: Warrior_Bow_Blue_24
+  - first:
+      213: -4374237206397222271
+    second: Warrior_Bow_Blue_25
+  - first:
+      213: -1312213855260901546
+    second: Warrior_Bow_Blue_26
+  - first:
+      213: 1298113443204131912
+    second: Warrior_Bow_Blue_27
+  - first:
+      213: -1128938153165593611
+    second: Warrior_Bow_Blue_28
+  - first:
+      213: 3386825309171112819
+    second: Warrior_Bow_Blue_29
+  - first:
+      213: 1849480356706308979
+    second: Warrior_Bow_Blue_30
+  - first:
+      213: -712445593641744450
+    second: Warrior_Bow_Blue_31
+  - first:
+      213: 2442945565467189339
+    second: Warrior_Bow_Blue_32
+  - first:
+      213: -3675532623698818432
+    second: Warrior_Bow_Blue_33
+  - first:
+      213: -1842006728634762354
+    second: Warrior_Bow_Blue_34
+  - first:
+      213: 1045140833518180231
+    second: Warrior_Bow_Blue_35
+  - first:
+      213: 845978490341666960
+    second: Warrior_Bow_Blue_36
+  - first:
+      213: 692225355940459035
+    second: Warrior_Bow_Blue_37
+  - first:
+      213: 3689744780449799241
+    second: Warrior_Bow_Blue_38
+  - first:
+      213: -62340654599620298
+    second: Warrior_Bow_Blue_39
+  - first:
+      213: 1988259862378352625
+    second: Warrior_Bow_Blue_40
+  - first:
+      213: 1681795818679927701
+    second: Warrior_Bow_Blue_41
+  - first:
+      213: 1281427471970785879
+    second: Warrior_Bow_Blue_42
+  - first:
+      213: -3669001429233909192
+    second: Warrior_Bow_Blue_43
+  - first:
+      213: -4261628780280878244
+    second: Warrior_Bow_Blue_44
+  - first:
+      213: -1647912493668394372
+    second: Warrior_Bow_Blue_45
+  - first:
+      213: -1896383806661314771
+    second: Warrior_Bow_Blue_46
+  - first:
+      213: 3317217704324360271
+    second: Warrior_Bow_Blue_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fdd50583b47492563d1e5f107cba24
+      internalID: 1366644035451542333
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c46668173041d71eef4a18b61bb7db
+      internalID: 2733631554623910686
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0586b211510892b1c4c20a18e4ca03
+      internalID: 1421351610974278582
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da3c5d4df75bb53f0a6eef03a810f88
+      internalID: 4058566960068302308
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48864e62cd58f7057369864eafcf8152
+      internalID: -965296982774186888
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a3407fc2af1537a3406b7b46e9d00b
+      internalID: -4308606755540791984
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ae6b63f3fdb25574e651024358d485
+      internalID: 4035278468863257524
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d487b07df3f9d980925c814c83cd516d
+      internalID: -2114864512457381934
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4981627b9db1b8245f73525502a17d
+      internalID: 1331285115454443620
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c737be2f8ef2cf29eabb83aac85088a
+      internalID: -1639824786665046079
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7655659ac6211b3ece1aec302154cc4f
+      internalID: 1853208332068550976
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c5581c3afe86ab585d0daa9de4f550
+      internalID: 1796332512730368039
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_14
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5843815ce29c71e102078bbe86be5bba
+      internalID: 975319097748772184
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9091daa36f1bdf4dd9ce0da1d1c8b87f
+      internalID: -3834265837776128870
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6472ea8606f64b02df5e65546d6723b
+      internalID: -4170550452472778056
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9c6914993ffd70e346d1a2cbe90189
+      internalID: 885208918890827332
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd75bd0ec1eff57ab185f83a756e64d1
+      internalID: 4401993941034029760
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e70f5164c242c2b4a89e25e1eef9da
+      internalID: -4015748447784486092
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbd8b3cd67c0cebcc156628b937d6c0
+      internalID: -4097843983046315038
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f383a6e22085da1e0806474dafb6189e
+      internalID: 2206037155075110840
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e682352469e1586507f93f1b8bf19be4
+      internalID: 2971947266917466627
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_23
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e97131bfd7b5b2ca422ab3fcff00d4c
+      internalID: -4095975861985674090
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af9a4e016fd5271f85bddeac6c33189
+      internalID: 2550865680816122339
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c07dcad76a33fa9d07b71deb9c661fe
+      internalID: -4374237206397222271
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2459b881148b9578262701393cb6ba7
+      internalID: -1312213855260901546
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07732221a1d0d38afbe59c6590c1c7a
+      internalID: 1298113443204131912
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81831ca6a3db409346ef37ad9a5c2775
+      internalID: -1128938153165593611
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_29
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226620e8999d7009903f9edbfb7a1474
+      internalID: 3386825309171112819
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_30
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee018d67d8f4ef7aabab4eca8bfa497
+      internalID: 1849480356706308979
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_31
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9774558d9966f7612e34a902b0a72629
+      internalID: -712445593641744450
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490fd5db2fb464e8d247428797353849
+      internalID: 2442945565467189339
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a094e99ecd606ea050449965dea07e
+      internalID: -3675532623698818432
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e328aec6f3aa4edca6d3003c2891a7d
+      internalID: -1842006728634762354
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a903079f86daa9fa80c351dc03a6edb1
+      internalID: 1045140833518180231
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_36
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79777f759768a77d2f3e2934aac94e2
+      internalID: 845978490341666960
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642269c1212a56e879ba347fcec2ea8e
+      internalID: 692225355940459035
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_38
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bb7cfd80c78c7f824bf1bf8a569d48
+      internalID: 3689744780449799241
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_39
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fd2403865cf91ab7e88c6482c3fb7f
+      internalID: -62340654599620298
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07c4ecf1b3a5d03deed8e2e55bdf5ee
+      internalID: 1988259862378352625
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9544033eb3fee811a5efebf3bda2d0a1
+      internalID: 1681795818679927701
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58054a91a6ec672146b93dbe0657453
+      internalID: 1281427471970785879
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f57e088038dceb76821ff4064b4c1b1
+      internalID: -3669001429233909192
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51158c680eb560d1de6990e3812eb0f8
+      internalID: -4261628780280878244
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_45
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae1540b14668ea40f5189cc85495d7e
+      internalID: -1647912493668394372
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cf6a04694d23a9148fdbbcf123dcc2
+      internalID: -1896383806661314771
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Bow_Blue_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70893e7dc300dea02316d11df3154c75
+      internalID: 3317217704324360271
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0a76589383346ba812a294bc602ab29c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warrior_Bow_Blue_0: 1366644035451542333
+      Warrior_Bow_Blue_1: 2733631554623910686
+      Warrior_Bow_Blue_2: 1421351610974278582
+      Warrior_Bow_Blue_3: 4058566960068302308
+      Warrior_Bow_Blue_4: -965296982774186888
+      Warrior_Bow_Blue_5: -4308606755540791984
+      Warrior_Bow_Blue_8: 4035278468863257524
+      Warrior_Bow_Blue_9: -2114864512457381934
+      Warrior_Bow_Blue_10: 1331285115454443620
+      Warrior_Bow_Blue_11: -1639824786665046079
+      Warrior_Bow_Blue_12: 1853208332068550976
+      Warrior_Bow_Blue_13: 1796332512730368039
+      Warrior_Bow_Blue_14: 975319097748772184
+      Warrior_Bow_Blue_15: -3834265837776128870
+      Warrior_Bow_Blue_16: -4170550452472778056
+      Warrior_Bow_Blue_17: 885208918890827332
+      Warrior_Bow_Blue_18: 4401993941034029760
+      Warrior_Bow_Blue_19: -4015748447784486092
+      Warrior_Bow_Blue_20: -4097843983046315038
+      Warrior_Bow_Blue_21: 2206037155075110840
+      Warrior_Bow_Blue_22: 2971947266917466627
+      Warrior_Bow_Blue_23: -4095975861985674090
+      Warrior_Bow_Blue_24: 2550865680816122339
+      Warrior_Bow_Blue_25: -4374237206397222271
+      Warrior_Bow_Blue_26: -1312213855260901546
+      Warrior_Bow_Blue_27: 1298113443204131912
+      Warrior_Bow_Blue_28: -1128938153165593611
+      Warrior_Bow_Blue_29: 3386825309171112819
+      Warrior_Bow_Blue_30: 1849480356706308979
+      Warrior_Bow_Blue_31: -712445593641744450
+      Warrior_Bow_Blue_32: 2442945565467189339
+      Warrior_Bow_Blue_33: -3675532623698818432
+      Warrior_Bow_Blue_34: -1842006728634762354
+      Warrior_Bow_Blue_35: 1045140833518180231
+      Warrior_Bow_Blue_36: 845978490341666960
+      Warrior_Bow_Blue_37: 692225355940459035
+      Warrior_Bow_Blue_38: 3689744780449799241
+      Warrior_Bow_Blue_39: -62340654599620298
+      Warrior_Bow_Blue_40: 1988259862378352625
+      Warrior_Bow_Blue_41: 1681795818679927701
+      Warrior_Bow_Blue_42: 1281427471970785879
+      Warrior_Bow_Blue_43: -3669001429233909192
+      Warrior_Bow_Blue_44: -4261628780280878244
+      Warrior_Bow_Blue_45: -1647912493668394372
+      Warrior_Bow_Blue_46: -1896383806661314771
+      Warrior_Bow_Blue_47: 3317217704324360271
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

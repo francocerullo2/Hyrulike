@@ -4,13 +4,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
-    public int facingDirection = 1; // 1 for right, -1 for left
+    public int facingDirection = 1; // 1 mira a la derecha, -1 a la izquierda
 
     public Rigidbody2D rb;
     public Animator anim;
     public Player_Combat player_Combat;
-    private bool isKnockedBack;
+    private bool isKnockedBack; // mientras sea true el jugador no se puede mover
 
+    // El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion
     private void Update()
     {
         if(Input.GetButtonDown("Slash"))
@@ -19,22 +20,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
+    // FixedUpdate va a intervalos fijos y no depende de los fps, aqui va todo lo de fisicas
     void FixedUpdate()
     {
-        // Get the input from the player
+        // Si le estan empujando no leemos el input, que se mueva solo por el knockback
         if (isKnockedBack == false)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
 
-            // Flip the player sprite if the direction changes
+            // Si cambia de direccion damos la vuelta al sprite
             if (horizontal > 0 && transform.localScale.x < 0 || horizontal < 0 && transform.localScale.x > 0)
             {
                 Flip();
             }
 
-            // Set the animator parameters based on the input
+            // Guarda hacia donde mira el jugador para el ataque (lado, arriba o abajo)
+            if (horizontal != 0)
+            {
+                anim.SetFloat("lastHorizontal", 1);
+                anim.SetFloat("lastVertical", 0);
+            }
+            else if (vertical != 0)
+            {
+                anim.SetFloat("lastHorizontal", 0);
+                anim.SetFloat("lastVertical", vertical);
+            }
+
+            // Le pasamos el input al animator para que cambie entre idle y andar
             anim.SetFloat("horizontal", Mathf.Abs(horizontal));
             anim.SetFloat("vertical", Mathf.Abs(vertical));
 
@@ -45,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Flip the player sprite when changing direction
+    // Da la vuelta al sprite invirtiendo la escala en X
     void Flip()
     {
         facingDirection *= -1;
@@ -55,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale.z);
     }
 
+    // Empuja al jugador en direccion contraria al enemigo que le ha pegado
     public void Knockback(Transform enemy, float force, float stunTime)
     {
         isKnockedBack = true;
@@ -64,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    // Espera el tiempo de stun, frena al jugador y le devuelve el control
     IEnumerator KnockbackCounter(float stunTime)
     {
         yield return new WaitForSeconds(stunTime);
