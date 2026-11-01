@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0.0
+    - time: 0
       value: {fileID: 2550865680816122339, guid: 96923356f66b9378ff2acfd3c4ce3aab, type: 3}
     - time: 0.1
       value: {fileID: -4374237206397222271, guid: 96923356f66b9378ff2acfd3c4ce3aab, type: 3}
@@ -39,7 +39,7 @@ AnimationClip:
     - time: 0.7833333
       value: {fileID: -712445593641744450, guid: 96923356f66b9378ff2acfd3c4ce3aab, type: 3}
     attribute: m_Sprite
-    path:
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8
+    m_StopTime: 0.79999995
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -96,14 +96,14 @@ AnimationClip:
   m_Events:
   - time: 0.6
     functionName: ReleaseArrow
-    data:
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.7833333
     functionName: FinishShooting
-    data:
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

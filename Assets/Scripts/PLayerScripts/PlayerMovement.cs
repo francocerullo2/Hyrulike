@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public Player_Combat player_Combat;
     private bool isKnockedBack; // mientras sea true el jugador no se puede mover
+    public bool isShooting; // lo activa Player_Bow mientras dispara, para que no se mueva
 
+    
     // El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion
     private void Update()
     {
@@ -24,7 +26,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Si le estan empujando no leemos el input, que se mueva solo por el knockback
-        if (isKnockedBack == false)
+        if (isShooting == true)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        else if (isKnockedBack == false)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");

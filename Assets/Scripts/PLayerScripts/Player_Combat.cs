@@ -29,18 +29,15 @@ public class Player_Combat : MonoBehaviour
     // Se llama desde PlayerMovement al pulsar el boton de ataque
     public void Attack()
     {
-        // Si el cooldown ha acabado empieza el ataque normal
-        if(timer<=0)
-        {
-            anim.SetBool("isAttacking", true);
-
-            timer = cooldown;
-
-        }
         // Si vuelve a pulsar mientras ataca, se encadena el segundo golpe (combo)
-        else if(anim.GetBool("isAttacking"))
+        if(anim.GetBool("isAttacking"))
         {
             anim.SetBool("isCombo", true);
+        }
+        // Si el cooldown ha acabado empieza el ataque normal
+        else if(timer<=0)
+        {
+            anim.SetBool("isAttacking", true);
         }
 
     }
@@ -64,10 +61,12 @@ public class Player_Combat : MonoBehaviour
     }
 
     // Evento al final de la animacion, vuelve a dejar al jugador sin atacar
+    // El cooldown empieza aqui para que el golpe y el combo cuenten como un solo ataque
     public void FinishAttacking()
     {
             anim.SetBool("isAttacking", false);
             anim.SetBool("isCombo", false);
+            timer = cooldown;
     }
 
 

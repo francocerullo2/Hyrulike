@@ -4,31 +4,55 @@ public class Player_Bow : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject arrowPrefab;
+    public PlayerMovement playerMovement;
 
     private Vector2 aimDirection = Vector2.right;
 
     public float shootCooldown = .5f;
     private float shootTimer;
+    private bool arrowReleased; // para que en cada disparo salga una sola flecha
+
+    public Animator anim;
 
     // Update se llama una vez por frame
     void Update()
     {
         shootTimer -= Time.deltaTime;
 
-        HandleAiming();
-
-        if(Input.GetButtonDown("Shoot") && shootTimer <= 0)
+        // Mientras tensa el arco no cambia de direccion, asi la flecha sale hacia donde apunta la animacion
+        if (playerMovement.isShooting == false)
         {
-            Shoot();
+            HandleAiming();
+        }
+
+        if(Input.GetButtonDown("Shoot") && shootTimer <= 0 && playerMovement.isShooting == false)
+        {
+            playerMovement.isShooting = true;
+            arrowReleased = false;
+            anim.SetBool("isShooting", true);
         }
     }
 
-    // Crea una flecha en el punto de disparo, el movimiento ya lo hace el script Arrow
-    public void Shoot()
+    // Lo llama un evento de la animacion en el frame en el que suelta la cuerda
+    public void ReleaseArrow()
     {
+        // En diagonal el blend tree mezcla varias animaciones y cada una lanza su evento, solo vale el primero
+        if (arrowReleased)
+        {
+            return;
+        }
+        arrowReleased = true;
+
         Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.direction = aimDirection;
         shootTimer = shootCooldown;
+    }
+
+    // Evento al final de la animacion de disparo, vuelve a la pose normal y deja moverse
+    public void FinishShooting()
+    {
+        anim.SetBool("isShooting", false);
+        playerMovement.isShooting = false;
     }
 
     private void HandleAiming()
@@ -39,6 +63,8 @@ public class Player_Bow : MonoBehaviour
         if(horizontal != 0 || vertical != 0)
         {
             aimDirection = new Vector2(horizontal, vertical).normalized;
+            anim.SetFloat("aimX", aimDirection.x);
+            anim.SetFloat("aimY", aimDirection.y);
         }
     }
 }

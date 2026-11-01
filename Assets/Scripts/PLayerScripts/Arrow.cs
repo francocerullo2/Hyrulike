@@ -46,12 +46,27 @@ public class Arrow : MonoBehaviour
         }
     }
 
+    // El collider del enemigo es trigger, asi que el golpe a enemigos llega por aqui y no por OnCollisionEnter2D
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((enemyLayer.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            collision.gameObject.GetComponent<Enemy_Health>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
+            Destroy(gameObject);
+        }
+    }
+
     private void AttachToTarget(Transform target)
     {
         sr.sprite = buriedSprite;
 
         rb.linearVelocity = Vector2.zero;
-        rb.isKinematic = true;
+        rb.angularVelocity = 0;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
+        // Para que la flecha clavada no estorbe al jugador ni a otras flechas
+        GetComponent<Collider2D>().enabled = false;
 
         transform.SetParent(target);
     }

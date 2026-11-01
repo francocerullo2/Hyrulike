@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 587895828900110910}
   - component: {fileID: 2625524109933728899}
   - component: {fileID: 4374810657253257511}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrow_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,14 +82,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4346244404228752641, guid: cd029b8e1917c404597481dc4143fa55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.16}
+  m_Size: {x: 1, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -133,10 +133,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723c9871668a0164ba12ef2ec985373b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Arrow
-  rb: {fileID: 0}
+  rb: {fileID: 587895828900110910}
   direction: {x: 1, y: 0}
   lifeSpan: 2
-  speed: 0
+  speed: 10
+  damage: 1
+  knockbackForce: 1
+  knockbackTime: 1
+  stunTime: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  sr: {fileID: 514441701613036638}
+  buriedSprite: {fileID: -6662812116773042688, guid: cd029b8e1917c404597481dc4143fa55, type: 3}
 --- !u!61 &4374810657253257511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,15 +183,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.06062019, y: 0.0033735782}
+  m_Offset: {x: 0.17657, y: 0.0052712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.16}
-    newSize: {x: 0.64, y: 0.16}
+    oldSize: {x: 1, y: 0.25}
+    newSize: {x: 1, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5187596, y: 0.18024153}
+  m_Size: {x: 0.26798, y: 0.28163}
   m_EdgeRadius: 0
