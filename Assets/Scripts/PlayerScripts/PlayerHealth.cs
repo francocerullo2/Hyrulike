@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentHealth;
-    public int maxHealth;
-
     // Tiempo sin poder recibir daño despues de un golpe
     public float invulnerabilityTime = 1f;
     private float invulnerabilityTimer;
@@ -16,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         // Pintamos las vidas nada mas empezar para que no salga el texto vacio
-        healthText.text = "VIDAS: " + currentHealth + " / " + maxHealth;
+        healthText.text = "VIDAS: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
     }
 
     private void Update()
@@ -42,11 +39,11 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Mantiene la vida entre 0 y el maximo
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        healthText.text = "VIDAS: " + currentHealth + " / " + maxHealth;
+        StatsManager.Instance.currentHealth = Mathf.Clamp(StatsManager.Instance.currentHealth + amount, 0, StatsManager.Instance.maxHealth);
+        healthText.text = "VIDAS: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
 
         // Sin vidas = muerto, de momento solo lo desactivamos
-        if (currentHealth <= 0)
+        if (StatsManager.Instance.currentHealth <= 0)
         {
             gameObject.SetActive(false);
         }

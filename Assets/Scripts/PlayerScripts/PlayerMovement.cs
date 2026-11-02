@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5;
     public int facingDirection = 1; // 1 mira a la derecha, -1 a la izquierda
 
     public Rigidbody2D rb;
@@ -60,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             // Limita la velocidad diagonal a la misma velocidad que la horizontal o vertical.
             Vector2 movement = new Vector2(horizontal, vertical);
             movement = Vector2.ClampMagnitude(movement, 1f);
-            rb.linearVelocity = movement * speed;
+            rb.linearVelocity = movement * StatsManager.Instance.speed;
         }
     }
 
