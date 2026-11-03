@@ -17,6 +17,12 @@ public class Player_Bow : MonoBehaviour
     // Update se llama una vez por frame
     void Update()
     {
+        // En pausa no se puede apuntar ni disparar
+        if (PauseMenu.isPaused)
+        {
+            return;
+        }
+
         shootTimer -= Time.deltaTime;
 
         // Mientras tensa el arco no cambia de direccion, asi la flecha sale hacia donde apunta la animacion

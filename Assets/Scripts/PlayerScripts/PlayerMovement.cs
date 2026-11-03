@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
     // El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion
     private void Update()
     {
+        // En pausa no se puede atacar
+        if (PauseMenu.isPaused)
+        {
+            return;
+        }
+
         if(Input.GetButtonDown("Slash"))
         {
             player_Combat.Attack();

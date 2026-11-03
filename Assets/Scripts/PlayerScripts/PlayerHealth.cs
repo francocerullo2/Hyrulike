@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -7,13 +6,13 @@ public class PlayerHealth : MonoBehaviour
     public float invulnerabilityTime = 1f;
     private float invulnerabilityTimer;
 
-    // Texto de la UI donde se ven las vidas
-    public TMP_Text healthText;
+    // Fila de corazones de la UI
+    public HeartsUI heartsUI;
 
     private void Start()
     {
-        // Pintamos las vidas nada mas empezar para que no salga el texto vacio
-        healthText.text = "VIDAS: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
+        // Pintamos los corazones nada mas empezar
+        heartsUI.UpdateHearts(StatsManager.Instance.currentHealth, StatsManager.Instance.maxHealth);
     }
 
     private void Update()
@@ -40,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
 
         // Mantiene la vida entre 0 y el maximo
         StatsManager.Instance.currentHealth = Mathf.Clamp(StatsManager.Instance.currentHealth + amount, 0, StatsManager.Instance.maxHealth);
-        healthText.text = "VIDAS: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
+        heartsUI.UpdateHearts(StatsManager.Instance.currentHealth, StatsManager.Instance.maxHealth);
 
         // Sin vidas = muerto, de momento solo lo desactivamos
         if (StatsManager.Instance.currentHealth <= 0)
