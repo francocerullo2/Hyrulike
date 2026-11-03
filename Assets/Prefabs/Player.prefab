@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6030325255377403822}
   - component: {fileID: 4427287920985831444}
+  - component: {fileID: 97076653141596122}
   - component: {fileID: 1979775315714897063}
   - component: {fileID: 3933947485282304762}
   - component: {fileID: 5655459149467553669}
@@ -162,6 +163,43 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!70 &97076653141596122
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971006751495296246}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.17867506, y: 0.012762547}
+  m_Size: {x: 0.8770249, y: 1.3650999}
+  m_Direction: 0
 --- !u!70 &1979775315714897063
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -238,7 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d0fd11f3b2f8a48b936e95db5f28aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
   facingDirection: 1
   rb: {fileID: 3933947485282304762}
   anim: {fileID: 1932907699759909949}
@@ -278,10 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0781e98d11e64824b90e482e4a3fbc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  currentHealth: 3
-  maxHealth: 3
-  invulnerabilityTime: 1
-  healthText: {fileID: 0}
+  invulnerabilityTime: 0.25
+  heartsUI: {fileID: 0}
 --- !u!114 &7188271024100673864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,14 +331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
   anim: {fileID: 1932907699759909949}
   cooldown: 1
-  knockbackForce: 0.5
-  damage: 1
   attackPoint: {fileID: 4817551740331545071}
-  weaponRange: 1
   attackDistance: 0.7
   feetHeight: -0.5
-  stunTime: 0
-  knockbackTime: 0.15
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -322,5 +352,6 @@ MonoBehaviour:
   launchPoint: {fileID: 3038951207111107334}
   arrowPrefab: {fileID: 357129050851406472, guid: b92dfaf8c45509b4e9635b02a6c969e7, type: 3}
   playerMovement: {fileID: 5655459149467553669}
+  launchDistance: 0.66
   shootCooldown: 0.5
   anim: {fileID: 1932907699759909949}

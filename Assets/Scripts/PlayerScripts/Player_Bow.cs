@@ -8,6 +8,7 @@ public class Player_Bow : MonoBehaviour
 
     private Vector2 aimDirection = Vector2.right;
 
+    public float launchDistance = .66f; // lo lejos del jugador que sale la flecha
     public float shootCooldown = .5f;
     private float shootTimer;
     private bool arrowReleased; // para que en cada disparo salga una sola flecha
@@ -48,6 +49,10 @@ public class Player_Bow : MonoBehaviour
             return;
         }
         arrowReleased = true;
+
+        // Coloca el punto de salida hacia donde apunta (lado, arriba, abajo o diagonal)
+        // Con position y no localPosition, asi da igual que el jugador este girado con el Flip
+        launchPoint.position = transform.position + (Vector3)(aimDirection * launchDistance);
 
         Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.direction = aimDirection;

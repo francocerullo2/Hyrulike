@@ -1,6 +1,7 @@
 using UnityEngine;
 
-// Flecha que dispara el jugador, va recta y se borra sola al rato
+// Flecha que va recta y se borra sola al rato
+// La usan el jugador (enemyLayer puesto) y el arquero enemigo (playerLayer puesto)
 public class Arrow : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -12,6 +13,7 @@ public class Arrow : MonoBehaviour
     public float knockbackTime;
     public float stunTime;
     public LayerMask enemyLayer;
+    public LayerMask playerLayer; // en la flecha del jugador se deja en Nothing para que no se de a si mismo
     public LayerMask obstacleLayer;
 
     public SpriteRenderer sr;
@@ -40,6 +42,10 @@ public class Arrow : MonoBehaviour
             collision.gameObject.GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
 
         }
+        else if ((playerLayer.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            HitPlayer(collision.gameObject);
+        }
         else if ((obstacleLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             AttachToTarget(collision.gameObject.transform);
@@ -55,6 +61,18 @@ public class Arrow : MonoBehaviour
             collision.gameObject.GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
             Destroy(gameObject);
         }
+        else if ((playerLayer.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            HitPlayer(collision.gameObject);
+        }
+    }
+
+    // Igual que el ataque de Enemy_Combat: le quita vida al jugador, lo empuja y la flecha desaparece
+    private void HitPlayer(GameObject player)
+    {
+        player.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+        player.GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
+        Destroy(gameObject);
     }
 
     private void AttachToTarget(Transform target)

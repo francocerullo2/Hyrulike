@@ -55,8 +55,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.4671875, y: 0.505625}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -135,12 +135,12 @@ TextureImporter:
       name: Lancer_Up_Attack_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 130
-        width: 50
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4671875, y: 0.505625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -157,12 +157,12 @@ TextureImporter:
       name: Lancer_Up_Attack_1
       rect:
         serializedVersion: 2
-        x: 444
-        y: 130
-        width: 51
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4671875, y: 0.505625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: Lancer_Up_Attack_2
       rect:
         serializedVersion: 2
-        x: 761
-        y: 122
-        width: 54
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4671875, y: 0.505625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

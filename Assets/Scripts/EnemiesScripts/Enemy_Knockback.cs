@@ -14,6 +14,14 @@ public class Enemy_Knockback : MonoBehaviour
     // Empuja al enemigo lejos del jugador cuando recibe un golpe
     public void Knockback(Transform playerTransform, float knockbackForce, float knockbackTime, float stunTime)
     {
+        // Desactivar el componente no impide que otros scripts llamen a este metodo, asi que se comprueba a mano
+        // (por ejemplo el TNT con la mecha encendida lo desactiva para que el golpe no corte la animacion)
+        if (!enabled)
+        {
+            return;
+        }
+
+
         // Lo ponemos en estado Knockback para que Enemy_Movement no lo mueva mientras tanto
         enemy_Movement.ChangeState(EnemyState.Knockback);
         StartCoroutine(StunTimer(knockbackTime,stunTime));

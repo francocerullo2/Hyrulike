@@ -16,6 +16,14 @@ public class Enemy_Health : MonoBehaviour
     // Negativo para hacer daño, positivo para curar
     public void ChangeHealth(int amount)
     {
+        // Los explosivos no mueren de un golpe, se encienden
+        Enemy_Explosion explosive = GetComponent<Enemy_Explosion>();
+        if (amount < 0 && explosive != null)
+        {
+            explosive.LightFuse();
+            return;
+        }
+
         currentHealth += amount;
 
         // Que no se pase del maximo, y si llega a 0 se muere

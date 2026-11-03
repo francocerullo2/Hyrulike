@@ -13,6 +13,11 @@ GameObject:
   - component: {fileID: 765620768626130719}
   - component: {fileID: 8909173484101787870}
   - component: {fileID: 8543178321993122264}
+  - component: {fileID: 7323293656890701617}
+  - component: {fileID: 1667154540864517190}
+  - component: {fileID: 4045957686351607774}
+  - component: {fileID: 5763711615860082192}
+  - component: {fileID: 5910309177006648888}
   m_Layer: 9
   m_Name: Enemy_TNT
   m_TagString: Untagged
@@ -183,6 +188,100 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.062}
   m_Size: {x: 0.6342, y: 0.8236}
   m_Direction: 0
+--- !u!114 &7323293656890701617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435735291774565028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34412c30859ee9a4d98c479b1b757c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Combat
+  damage: 1
+  attackPoint: {fileID: 0}
+  weaponRange: 0
+  attackDistance: 1
+  knockbackForce: 0
+  stunTime: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &1667154540864517190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435735291774565028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 394064797c6876b439a44827dc4f6bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Explosion
+  damage: 2
+  explosionRange: 1.3
+  knockbackForce: 10
+  stunTime: 1
+  fuseTime: 2
+  explosionDuration: 0.8
+  explosionPoint: {fileID: 8567414830326145386}
+  explosionPrefab: {fileID: 3604357018133644232, guid: 38e297a1099d4ced8e262e2a9f0173b6, type: 3}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &4045957686351607774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435735291774565028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40c982778afbd24889d34b71837540c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Knockback
+--- !u!114 &5763711615860082192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435735291774565028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9d3a2549a2e694c97ce53c1aad34e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
+  currentHealth: 1
+  maxHealth: 1
+--- !u!114 &5910309177006648888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435735291774565028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017f770fe58f1584290115d0c032a847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Movement
+  speed: 0
+  attackRange: 3
+  attackCoolDown: 2
+  playerDetectRange: 0.5
+  detectionPoint: {fileID: 1306503333220035369}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  patrol: 0
+  chasePlayer: 0
+  patrolPoints: []
+  pauseDuration: 1.5
 --- !u!1 &1123482552162322883
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +308,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8156739163407761203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7626142016436857514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306503333220035369}
+  m_Layer: 0
+  m_Name: DetectionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306503333220035369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626142016436857514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -283,34 +413,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.397}
   m_Size: {x: 0.5436, y: 0.3}
   m_Direction: 1
---- !u!1 &7626142016436857514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1306503333220035369}
-  m_Layer: 0
-  m_Name: DetectionPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1306503333220035369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626142016436857514}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8156739163407761203}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
