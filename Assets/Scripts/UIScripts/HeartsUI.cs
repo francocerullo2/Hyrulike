@@ -4,11 +4,20 @@ using UnityEngine.UI;
 // Pinta la vida del jugador como una fila de corazones
 public class HeartsUI : MonoBehaviour
 {
+    // Igual que StatsManager.Instance: asi el jugador lo encuentra solo en cualquier nivel
+    public static HeartsUI Instance;
+
     // Imagenes de los corazones, de izquierda a derecha
     public Image[] hearts;
 
     public Sprite fullHeart;
     public Sprite emptyHeart;
+
+    // Awake va antes que cualquier Start, asi ya esta listo cuando PlayerHealth pinta los corazones
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void UpdateHearts(int currentHealth, int maxHealth)
     {

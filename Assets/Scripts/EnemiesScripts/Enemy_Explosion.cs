@@ -48,6 +48,10 @@ public class Enemy_Explosion : MonoBehaviour
         // El efecto de la explosion se borra solo cuando acaba la animacion
         GameObject explosion = Instantiate(explosionPrefab, explosionPoint.position, Quaternion.identity);
         Destroy(explosion, explosionDuration);
+
+        // Lo ha activado el jugador, asi que cuenta como enemigo derrotado en el resumen
+        // (pero no para el LevelManager: el TNT no hace falta explotarlo para acabar el nivel)
+        StatsManager.Instance.enemiesKilled++;
         Destroy(gameObject);
     }
 

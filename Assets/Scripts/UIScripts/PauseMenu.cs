@@ -21,6 +21,12 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
+        // Muerto o eligiendo mejora no se puede pausar ni reanudar, ya hay otro menu abierto
+        if (GameOverMenu.isGameOver || UpgradeChoiceMenu.isChoosing)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // Si estamos en ajustes, Esc vuelve al menu de pausa

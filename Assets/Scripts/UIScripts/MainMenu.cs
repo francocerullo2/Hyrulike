@@ -24,6 +24,11 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        // El StatsManager pasa entre escenas, asi que si ya se jugo una partida hay que dejarlo como nuevo
+        if (StatsManager.Instance != null)
+        {
+            StatsManager.Instance.ResetRun();
+        }
         SceneManager.LoadScene(firstLevel);
     }
 

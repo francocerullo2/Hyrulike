@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 8380082180169855612}
   - component: {fileID: 7188271024100673864}
   - component: {fileID: 6366891645650386514}
+  - component: {fileID: 523338526507334694}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -280,7 +281,13 @@ MonoBehaviour:
   rb: {fileID: 3933947485282304762}
   anim: {fileID: 1932907699759909949}
   player_Combat: {fileID: 7188271024100673864}
+  player_Guard: {fileID: 523338526507334694}
   isShooting: 0
+  isGuarding: 0
+  dashDuration: 0.15
+  dashCooldown: 0.8
+  dashEffect: {fileID: 4268930197329704744, guid: 45b8b465cfa50734eb1377982acda3dc, type: 3}
+  isDashing: 0
 --- !u!95 &1932907699759909949
 Animator:
   serializedVersion: 7
@@ -316,7 +323,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   invulnerabilityTime: 0.25
-  heartsUI: {fileID: 0}
+  player_Guard: {fileID: 523338526507334694}
+  playerMovement: {fileID: 5655459149467553669}
+  deadPrefab: {fileID: 3335451650952464426, guid: 3f883b120b65d9d4e9b0df4ead8bf647, type: 3}
+  deadDuration: 1.4
 --- !u!114 &7188271024100673864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
   anim: {fileID: 1932907699759909949}
-  cooldown: 1
+  cooldown: 0.5
   attackPoint: {fileID: 4817551740331545071}
   attackDistance: 0.7
   feetHeight: -0.5
@@ -355,3 +365,19 @@ MonoBehaviour:
   launchDistance: 0.66
   shootCooldown: 0.5
   anim: {fileID: 1932907699759909949}
+--- !u!114 &523338526507334694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971006751495296246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1a96aa8b195e043b48207455e2e3c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Guard
+  anim: {fileID: 1932907699759909949}
+  playerMovement: {fileID: 5655459149467553669}
+  blockAngle: 60
+  blockedKnockbackMultiplier: 0.3

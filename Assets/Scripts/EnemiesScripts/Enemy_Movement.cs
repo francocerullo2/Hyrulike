@@ -13,6 +13,10 @@ public class Enemy_Movement : MonoBehaviour
     public bool chasePlayer = true;     // si persigue al jugador al verlo (el lancero si, el torch y el arquero no)
     public Vector2[] patrolPoints;      // si se deja vacio, el enemigo no patrulla y se queda quieto como antes
     public float pauseDuration = 1.5f;  // lo que espera en cada punto
+    public float alertDuration = 5;     // segundos que va a por el jugador despues de recibir un golpe
+    public float alertRangeMultiplier = 3; // cuanto mas lejos "ve" al jugador mientras esta alerta
+
+    private float alertTimer;
 
     private int currentPatrolIndex;
     private float pauseTimer;
@@ -48,6 +52,11 @@ public class Enemy_Movement : MonoBehaviour
                 attackCoolDownTimer -= Time.deltaTime;
             }
 
+            if (alertTimer > 0)
+            {
+                alertTimer -= Time.deltaTime;
+            }
+
             // Si patrulla, la velocidad ya la pone Patrol()
             if (enemyState == EnemyState.Chasing && !isPatrolling)
             {
@@ -81,8 +90,13 @@ public class Enemy_Movement : MonoBehaviour
 
         isPatrolling = false;
 
-        // Busca al jugador dentro del rango de deteccion
-        Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectRange, playerLayer);
+        // Busca al jugador dentro del rango de deteccion (mas grande si le acaban de pegar)
+        float detectRange = playerDetectRange;
+        if (alertTimer > 0)
+        {
+            detectRange *= alertRangeMultiplier;
+        }
+        Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, detectRange, playerLayer);
 
         if (hits.Length > 0)
         {
@@ -138,6 +152,13 @@ public class Enemy_Movement : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             ChangeState(EnemyState.Idle);
         }
+    }
+
+    // Lo llama Enemy_Health al recibir daño: durante un rato ve al jugador desde mucho mas lejos y va a por el
+    // Asi si le disparas con el arco desde fuera de su rango no se queda quieto
+    public void Alert()
+    {
+        alertTimer = alertDuration;
     }
 
     // Elige la animacion de ataque (lado, arriba o abajo) segun donde este el jugador

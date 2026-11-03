@@ -32,7 +32,8 @@ public class Player_Bow : MonoBehaviour
             HandleAiming();
         }
 
-        if(Input.GetButtonDown("Shoot") && shootTimer <= 0 && playerMovement.isShooting == false)
+        // Solo se puede disparar si ya ha conseguido el arco (mejora permanente)
+        if(Input.GetButtonDown("Shoot") && StatsManager.Instance.hasBow && shootTimer <= 0 && playerMovement.isShooting == false && playerMovement.isGuarding == false)
         {
             playerMovement.isShooting = true;
             arrowReleased = false;
@@ -56,7 +57,8 @@ public class Player_Bow : MonoBehaviour
 
         Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.direction = aimDirection;
-        shootTimer = shootCooldown;
+        arrow.damage += StatsManager.Instance.ArrowDamageBonus(); // con la mejora Kunai la flecha hace mas daño
+        shootTimer = shootCooldown * StatsManager.Instance.ShootCooldownMultiplier(); // con la mejora Cañón de agua se dispara mas rapido
     }
 
     // Evento al final de la animacion de disparo, vuelve a la pose normal y deja moverse

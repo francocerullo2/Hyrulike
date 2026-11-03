@@ -70,7 +70,7 @@ public class Arrow : MonoBehaviour
     // Igual que el ataque de Enemy_Combat: le quita vida al jugador, lo empuja y la flecha desaparece
     private void HitPlayer(GameObject player)
     {
-        player.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+        player.GetComponent<PlayerHealth>().ChangeHealth(-damage, transform);
         player.GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
         Destroy(gameObject);
     }

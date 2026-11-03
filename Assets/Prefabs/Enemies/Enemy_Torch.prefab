@@ -233,8 +233,9 @@ MonoBehaviour:
   damage: 1
   attackPoint: {fileID: 8678971731538930306}
   weaponRange: 0.6
+  attackDistance: 1
   knockbackForce: 5
-  stunTime: 0
+  stunTime: 0.15
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -252,12 +253,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Movement
   speed: 2
   attackRange: 1
-  attackCoolDown: 0.5
+  attackCoolDown: 1
   playerDetectRange: 1.5
   detectionPoint: {fileID: 5738848802518512680}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  patrol: 1
+  chasePlayer: 1
+  patrolPoints:
+  - {x: -7, y: -3}
+  - {x: -7, y: 0}
+  pauseDuration: 1
 --- !u!114 &3618624228070655189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
   currentHealth: 3
   maxHealth: 3
+  deadPrefab: {fileID: 3335451650952464426, guid: 3f883b120b65d9d4e9b0df4ead8bf647, type: 3}
+  deadDuration: 1.4
 --- !u!114 &5507469974696574341
 MonoBehaviour:
   m_ObjectHideFlags: 0

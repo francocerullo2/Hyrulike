@@ -10,7 +10,7 @@ public class Contact_Damage : MonoBehaviour
         // Solo le hace daño si lo que ha chocado es el jugador
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage, transform);
         }
     }
 }

@@ -33,7 +33,7 @@ public class Enemy_Combat : MonoBehaviour
         if(hits.Length > 0)
         {
             hits[0].collider.GetComponent<PlayerMovement>().Knockback(transform, knockbackForce,stunTime);
-            hits[0].collider.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            hits[0].collider.GetComponent<PlayerHealth>().ChangeHealth(-damage, transform);
 
 
         }

@@ -44,12 +44,12 @@ public class Player_Combat : MonoBehaviour
           attackPoint.localPosition = new Vector2(anim.GetFloat("lastHorizontal"), anim.GetFloat("lastVertical")) * attackDistance + new Vector2(0, feetHeight);
 
           // Pilla todos los enemigos que haya dentro del circulo del ataque
-          Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatsManager.Instance.weaponRange, enemyLayer);
+          Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatsManager.Instance.WeaponRange(), enemyLayer);
 
             // A cada uno le quitamos vida y lo empujamos
             foreach(Collider2D enemy in enemies)
             {
-                enemy.GetComponent<Enemy_Health>().ChangeHealth(-StatsManager.Instance.damage);
+                enemy.GetComponent<Enemy_Health>().ChangeHealth(-StatsManager.Instance.Damage());
                 enemy.GetComponent<Enemy_Knockback>().Knockback(transform, StatsManager.Instance.knockbackForce, StatsManager.Instance.knockbackTime, StatsManager.Instance.stunTime);
             }
 
@@ -61,7 +61,7 @@ public class Player_Combat : MonoBehaviour
     {
             anim.SetBool("isAttacking", false);
             anim.SetBool("isCombo", false);
-            timer = cooldown;
+            timer = cooldown * StatsManager.Instance.AttackCooldownMultiplier(); // con la mejora Corte se ataca mas rapido
     }
 
 
@@ -74,6 +74,6 @@ public class Player_Combat : MonoBehaviour
             return;
         }
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, StatsManager.Instance.weaponRange);
+        Gizmos.DrawWireSphere(attackPoint.position, StatsManager.Instance.WeaponRange());
     }
 }
