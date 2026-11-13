@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "181362704592",
+    "project_id": "hyrulike",
+    "storage_bucket": "hyrulike.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181362704592:android:41ff10e06ca4de3a46ded5",
+        "android_client_info": {
+          "package_name": "com.hyrulike.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDszNS-jN72a9P8dGIrW3icX-zL1Njo2NE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

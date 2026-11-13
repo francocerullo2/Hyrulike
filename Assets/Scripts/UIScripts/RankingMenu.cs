@@ -1,29 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
+using Firebase.Extensions;
+using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 
-// Una fila del ranking. Tiene que ser Serializable para que JsonUtility la pase a JSON y al reves
-[System.Serializable]
-public class RankingEntry
-{
-    public string name;
-    public int level;   // nivel alcanzado
-    public int time;    // segundos que ha durado la partida
-    public bool won;    // true si se derroto al jefe
-}
-
-// Ranking online: guarda las partidas en la Realtime Database de Firebase y enseña las 10 mejores
-// Se habla con Firebase por su API REST (peticiones web normales), asi no hace falta instalar su SDK
+// Ranking online: guarda las partidas en Firestore (Firebase) y enseña las 10 mejores
+// Cada partida es un documento de la coleccion "scores" con nombre, nivel, tiempo y puntuacion
 // Va en un objeto que siempre este activo (MenuCanvas), igual que GameOverMenu
 public class RankingMenu : MonoBehaviour
 {
     public static RankingMenu Instance;
-
-    // La URL de la base de datos, sin la barra del final. Se copia de la consola de Firebase
-    public string databaseUrl;
 
     // El contenido del ranking se monta una sola vez y se mete en el recuadro del panel que se abra
     public Transform rankingContent;
@@ -43,9 +30,17 @@ public class RankingMenu : MonoBehaviour
     public int maxNameLength = 10;
     public int rows = 10;
 
+    private FirebaseFirestore db;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        // La conexion con la base de datos. Los datos del proyecto los lee solo de google-services.json
+        db = FirebaseFirestore.DefaultInstance;
     }
 
     // Lo llama GameOverMenu cuando sale el panel de Game Over o el de victoria
@@ -64,7 +59,7 @@ public class RankingMenu : MonoBehaviour
         sendButton.interactable = true;
         messageText.text = "";
 
-        StartCoroutine(LoadRanking());
+        LoadRanking();
     }
 
     // Boton Enviar
@@ -80,10 +75,44 @@ public class RankingMenu : MonoBehaviour
 
         // Se desactiva el boton para que no se pueda enviar la misma partida dos veces
         sendButton.interactable = false;
-        StartCoroutine(SendScore(playerName));
+        messageText.text = "Enviando...";
+
+        int level = StatsManager.Instance.screenReached;
+        int time = (int)StatsManager.Instance.runTime;
+        bool won = GameOverMenu.Instance.isVictory;
+
+        // Los datos de la partida, cada uno con su nombre de campo
+        Dictionary<string, object> entry = new Dictionary<string, object>();
+        entry["name"] = playerName;
+        entry["level"] = level;
+        entry["time"] = time;
+        entry["won"] = won;
+        entry["score"] = CalculateScore(level, time, won);
+
+        // Add crea un documento nuevo en la coleccion. La respuesta llega mas tarde, por eso va en ContinueWith
+        db.Collection("scores").AddAsync(entry).ContinueWithOnMainThread(task =>
+        {
+            // Si mientras tanto se ha cambiado de escena, este menu ya no existe
+            if (this == null)
+            {
+                return;
+            }
+
+            if (task.IsFaulted)
+            {
+                // Si falla se deja volver a intentarlo
+                messageText.text = "No se ha podido enviar";
+                sendButton.interactable = true;
+            }
+            else
+            {
+                messageText.text = "¡Puntuacion enviada!";
+                LoadRanking();
+            }
+        });
     }
 
-    // Solo letras y numeros: asi no se cuelan simbolos raros que rompan el JSON
+    // Solo letras y numeros, y ni muy corto ni muy largo
     private bool IsValidName(string playerName)
     {
         if (playerName.Length < minNameLength || playerName.Length > maxNameLength)
@@ -102,129 +131,74 @@ public class RankingMenu : MonoBehaviour
         return true;
     }
 
-    IEnumerator SendScore(string playerName)
+    // Un solo numero para poder ordenar el ranking: cuanto mas alto, mejor
+    // Cada nivel vale 100000 puntos y cada segundo resta 1, asi manda el nivel y el tiempo solo desempata
+    // Ganar cuenta como un nivel mas, para quedar por encima de quien murio contra el jefe
+    private int CalculateScore(int level, int time, bool won)
     {
-        messageText.text = "Enviando...";
+        int score = level * 100000 - time;
 
-        RankingEntry entry = new RankingEntry();
-        entry.name = playerName;
-        entry.level = StatsManager.Instance.screenReached;
-        entry.time = (int)StatsManager.Instance.runTime;
-        entry.won = GameOverMenu.Instance.isVictory;
-
-        // Con POST Firebase añade la partida a la lista "scores" con una clave unica
-        string json = JsonUtility.ToJson(entry);
-        UnityWebRequest request = UnityWebRequest.Post(databaseUrl + "/scores.json", json, "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.Success)
+        if (won)
         {
-            messageText.text = "¡Puntuacion enviada!";
-            StartCoroutine(LoadRanking());
+            score += 100000;
         }
-        else
-        {
-            // Si falla (por ejemplo, sin internet) se deja volver a intentarlo
-            messageText.text = "No se ha podido enviar";
-            sendButton.interactable = true;
-        }
+
+        return score;
     }
 
-    IEnumerator LoadRanking()
+    private void LoadRanking()
     {
         namesText.text = "Cargando...";
         levelsText.text = "";
         timesText.text = "";
 
-        UnityWebRequest request = UnityWebRequest.Get(databaseUrl + "/scores.json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result != UnityWebRequest.Result.Success)
+        // Firestore ya devuelve las partidas ordenadas de mayor a menor puntuacion, y solo las 10 primeras
+        db.Collection("scores").OrderByDescending("score").Limit(rows).GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
-            namesText.text = "Sin conexion";
-            yield break;
-        }
-
-        List<RankingEntry> entries = ReadEntries(request.downloadHandler.text);
-
-        // Se ordenan de mejor a peor con las reglas de CompareEntries
-        entries.Sort(CompareEntries);
-
-        ShowEntries(entries);
-    }
-
-    // Firebase devuelve todas las partidas asi: {"clave1":{...partida...},"clave2":{...partida...}}
-    // JsonUtility no sabe leer esas claves, asi que se va cortando cada {...partida...} y se lee una a una
-    private List<RankingEntry> ReadEntries(string json)
-    {
-        List<RankingEntry> entries = new List<RankingEntry>();
-
-        // Se empieza a buscar en la posicion 1 para saltarse la llave que lo abre todo
-        int start = json.IndexOf('{', 1);
-
-        while (start != -1)
-        {
-            int end = json.IndexOf('}', start);
-            string entryJson = json.Substring(start, end - start + 1);
-
-            entries.Add(JsonUtility.FromJson<RankingEntry>(entryJson));
-
-            start = json.IndexOf('{', end);
-        }
-
-        return entries;
-    }
-
-    // Devuelve un numero negativo si a va antes que b, y positivo si va despues
-    // Orden: primero los que han ganado, luego el nivel mas alto y, si empatan, el menor tiempo
-    private int CompareEntries(RankingEntry a, RankingEntry b)
-    {
-        if (a.won != b.won)
-        {
-            if (a.won)
+            if (this == null)
             {
-                return -1;
+                return;
             }
-            return 1;
-        }
 
-        if (a.level != b.level)
-        {
-            return b.level - a.level;
-        }
-
-        return a.time - b.time;
-    }
-
-    private void ShowEntries(List<RankingEntry> entries)
-    {
-        namesText.text = "";
-
-        for (int i = 0; i < rows && i < entries.Count; i++)
-        {
-            RankingEntry entry = entries[i];
-
-            int minutes = entry.time / 60;
-            int seconds = entry.time % 60;
-
-            namesText.text += (i + 1) + ". " + entry.name + "\n";
-            timesText.text += minutes.ToString("00") + ":" + seconds.ToString("00") + "\n";
-
-            if (entry.won)
+            if (task.IsFaulted)
             {
-                levelsText.text += "Victoria\n";
+                namesText.text = "Sin conexion";
+                return;
             }
-            else
-            {
-                levelsText.text += "Nivel " + entry.level + "\n";
-            }
-        }
 
-        if (entries.Count == 0)
-        {
-            namesText.text = "Todavia no hay partidas";
-        }
+            namesText.text = "";
+            int position = 1;
+
+            // Cada documento es una partida
+            foreach (DocumentSnapshot document in task.Result.Documents)
+            {
+                string playerName = document.GetValue<string>("name");
+                int level = document.GetValue<int>("level");
+                int time = document.GetValue<int>("time");
+                bool won = document.GetValue<bool>("won");
+
+                int minutes = time / 60;
+                int seconds = time % 60;
+
+                namesText.text += position + ". " + playerName + "\n";
+                timesText.text += minutes.ToString("00") + ":" + seconds.ToString("00") + "\n";
+
+                if (won)
+                {
+                    levelsText.text += "Victoria\n";
+                }
+                else
+                {
+                    levelsText.text += "Nivel " + level + "\n";
+                }
+
+                position++;
+            }
+
+            if (position == 1)
+            {
+                namesText.text = "Todavia no hay partidas";
+            }
+        });
     }
 }
