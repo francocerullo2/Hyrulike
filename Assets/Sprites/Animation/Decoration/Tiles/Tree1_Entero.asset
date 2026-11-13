@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Tree1_Entero
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 8820225462528658001, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: -8314676461311500424, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: 4857131609761005052, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: -3991680141363386797, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: 6497810973907180460, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: 9157283315811672409, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: -6280877400321882983, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  - {fileID: 3477587153479191250, guid: 338e0b22151988a47b13afa16ff4a5e7, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

@@ -9,10 +9,40 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3fa2b79a58424891ad90331b470b03e2
   - enabled: 1
-    path: Assets/Scenes/Zones/RioPelt_01_Base.unity
+    path: Assets/Scenes/Zones/Zone1/Zona1_01.unity
     guid: 286bb94356bc441468b0ed2a375f36f7
   - enabled: 1
+    path: Assets/Scenes/Zones/Zone1/Zona1_02.unity
+    guid: e5351e24511b36d4b9e38cb47f2f54a7
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone1/Zona1_03.unity
+    guid: bbeafd0c64872e449b922c344e967060
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone2/Zona2_01.unity
+    guid: f80b75c1342099d4ca8c2edd25fb2416
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone2/Zona2_02.unity
+    guid: 02487043d9332fc4daf72ca2f9297519
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone2/Zona2_03.unity
+    guid: 07f9b8b219628de499c1cc2e7dfedd48
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone3/Zona3_01.unity
+    guid: 2cb9fbad26ca49040b87db45e80e8017
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone3/Zona3_02.unity
+    guid: 00c29cfd893993247af2702511c21cb5
+  - enabled: 1
+    path: Assets/Scenes/Zones/Zone3/Zona3_03.unity
+    guid: 5a2bcdd8140a10d4b8ddc7c1970a9410
+  - enabled: 1
+    path: Assets/Scenes/Zones/Final/FinalLevel.unity
+    guid: 83f187b368a247f4bb8dd63bfc15cf22
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/Zones/Plantilla.unity
+    guid: 1fa45113239367940b3cd944b5601406
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

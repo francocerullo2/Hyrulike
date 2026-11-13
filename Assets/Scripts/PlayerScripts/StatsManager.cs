@@ -21,8 +21,8 @@ public class StatsManager : MonoBehaviour
     public int currentHealth;
 
     [Header("Permanent Upgrades")]
+    // El dash no esta aqui porque se tiene desde el principio
     public bool hasBow;
-    public bool hasDash;
     public bool hasGuard;
 
     [Header("Temporary Upgrades")]
@@ -31,7 +31,7 @@ public class StatsManager : MonoBehaviour
 
     // Posicion de cada mejora en upgradeLevels (y en la lista de UpgradeChoiceMenu y en el menu de la pausa)
     public const int HEART = 0;         // +1 corazon maximo
-    public const int HEAL = 1;          // recupera 2 corazones (no tiene nivel, se puede coger siempre)
+    public const int DASH_DISTANCE = 1; // el dash llega mas lejos
     public const int ARMOR = 2;         // mas tiempo invulnerable tras un golpe
     public const int STRENGTH = 3;      // +1 daño de espada
     public const int RANGE = 4;         // mas alcance de espada
@@ -72,14 +72,12 @@ public class StatsManager : MonoBehaviour
     {
         hasBow = hasBow || PlayerPrefs.GetInt("hasBow") == 1;
         hasGuard = hasGuard || PlayerPrefs.GetInt("hasGuard") == 1;
-        hasDash = hasDash || PlayerPrefs.GetInt("hasDash") == 1;
     }
 
     private void SavePermanents()
     {
         PlayerPrefs.SetInt("hasBow", hasBow ? 1 : 0);
         PlayerPrefs.SetInt("hasGuard", hasGuard ? 1 : 0);
-        PlayerPrefs.SetInt("hasDash", hasDash ? 1 : 0);
         PlayerPrefs.Save();
     }
 
@@ -89,7 +87,6 @@ public class StatsManager : MonoBehaviour
     {
         hasBow = false;
         hasGuard = false;
-        hasDash = false;
         SavePermanents();
     }
 
@@ -104,7 +101,6 @@ public class StatsManager : MonoBehaviour
     {
         int total = 0;
         if (hasBow) total++;
-        if (hasDash) total++;
         if (hasGuard) total++;
 
         foreach (int level in upgradeLevels)
@@ -160,6 +156,12 @@ public class StatsManager : MonoBehaviour
         return 1 - .15f * upgradeLevels[FIRE_RATE];
     }
 
+    // Durante el dash se va mas rapido, y como dura lo mismo se llega mas lejos
+    public float DashSpeed()
+    {
+        return dashSpeed + 2 * upgradeLevels[DASH_DISTANCE];
+    }
+
     public float DashCooldownMultiplier()
     {
         return 1 - .2f * upgradeLevels[DASH_RECHARGE];
@@ -185,13 +187,6 @@ public class StatsManager : MonoBehaviour
     // Aplica una mejora temporal elegida en el menu
     public void ApplyUpgrade(int index)
     {
-        // La curacion no sube de nivel, se aplica en el momento
-        if (index == HEAL)
-        {
-            currentHealth = Mathf.Min(currentHealth + 2, MaxHealth());
-            return;
-        }
-
         upgradeLevels[index]++;
 
         // El corazon nuevo aparece ya lleno
@@ -201,20 +196,24 @@ public class StatsManager : MonoBehaviour
         }
     }
 
-    // Desbloquea una mejora permanente: 0 arco, 1 guardia, 2 dash
+    // Al terminar un nivel se recupera toda la vida
+    public void HealFull()
+    {
+        currentHealth = MaxHealth();
+    }
+
+    // Desbloquea una mejora permanente: 0 arco, 1 guardia
     public void UnlockPermanent(int index)
     {
         if (index == 0) hasBow = true;
         else if (index == 1) hasGuard = true;
-        else if (index == 2) hasDash = true;
         SavePermanents();
     }
 
     public bool HasPermanent(int index)
     {
         if (index == 0) return hasBow;
-        if (index == 1) return hasGuard;
-        return hasDash;
+        return hasGuard;
     }
 
     // Deja todo como al empezar una partida nueva (las mejoras permanentes se mantienen)

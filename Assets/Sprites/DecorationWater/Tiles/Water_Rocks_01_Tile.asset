@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Water_Rocks_01_Tile
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -6335573279810749627, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -7184322652579897138, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -4600509347535581728, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 2076328309253076913, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 4310996531415986104, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -3403411955122814337, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -4598967854739871133, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 7102295311157935183, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -5487009464259871396, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 5205710411829920051, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -8582695777547548303, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 8223101792352379362, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -8000823160796330596, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: -5286094858632138967, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 3213739886394838466, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  - {fileID: 794966867081650616, guid: 8c5a54a0f60bb3d4eaf15cad7bda2876, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

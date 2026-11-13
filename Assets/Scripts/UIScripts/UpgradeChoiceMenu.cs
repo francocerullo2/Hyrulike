@@ -9,7 +9,6 @@ public enum UpgradeRequirement
 {
     None,
     Bow,
-    Dash,
     Guard
 }
 
@@ -20,7 +19,7 @@ public class Upgrade
     public string upgradeName;
     [TextArea] public string description;
     public Sprite icon;
-    public int maxLevel = 3; // 0 = no tiene nivel y puede salir siempre (la curacion)
+    public int maxLevel = 3; // 0 = no tiene nivel y puede salir siempre
     public UpgradeRequirement requirement;
 
     public Upgrade(string upgradeName, string description, int maxLevel, UpgradeRequirement requirement)
@@ -33,7 +32,7 @@ public class Upgrade
 }
 
 // Menu que sale al terminar un nivel para elegir una mejora
-// En los niveles 5, 10 y 15 se elige una permanente (arco, guardia o dash) y en el resto una temporal entre dos
+// En los niveles 3 y 6 se elige una permanente (arco o guardia) y en el resto una temporal entre dos
 // Va en un objeto que siempre este activo (MenuCanvas), no en los paneles
 public class UpgradeChoiceMenu : MonoBehaviour
 {
@@ -49,7 +48,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
     public Upgrade[] upgrades =
     {
         new Upgrade("Corazón", "+1 corazón máximo", 3, UpgradeRequirement.None),
-        new Upgrade("Alquimia", "Recupera 2 corazones", 0, UpgradeRequirement.None),
+        new Upgrade("Impulso", "El dash llega más lejos", 3, UpgradeRequirement.None),
         new Upgrade("Armadura", "Más tiempo invulnerable después de recibir un golpe", 3, UpgradeRequirement.None),
         new Upgrade("Fuerza", "+1 daño de espada", 3, UpgradeRequirement.None),
         new Upgrade("Arma mágica", "Más alcance de la espada", 3, UpgradeRequirement.None),
@@ -57,7 +56,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
         new Upgrade("Permuta", "Más velocidad de movimiento", 3, UpgradeRequirement.None),
         new Upgrade("Kunai", "+1 daño de flecha", 3, UpgradeRequirement.Bow),
         new Upgrade("Cañón de agua", "Disparas más rápido", 3, UpgradeRequirement.Bow),
-        new Upgrade("Niebla", "El dash se recarga antes", 3, UpgradeRequirement.Dash),
+        new Upgrade("Niebla", "El dash se recarga antes", 3, UpgradeRequirement.None),
         new Upgrade("Defensa", "La guardia cubre más ángulo y te empujan menos al bloquear", 3, UpgradeRequirement.Guard),
         new Upgrade("Amuleto", "Si mueres, revives una vez con 2 corazones", 1, UpgradeRequirement.None),
     };
@@ -68,9 +67,9 @@ public class UpgradeChoiceMenu : MonoBehaviour
 
     [Header("Mejoras permanentes")]
     public GameObject permanentPanel;
-    public int permanentEvery = 5; // cada cuantos niveles toca elegir permanente
-    // Las tres listas en el orden 0 arco, 1 guardia, 2 dash
-    public Image[] permanentIcons; // IconBow, IconGuard e IconDash, tienen que tener un componente Button
+    public int permanentEvery = 3; // cada cuantos niveles toca elegir permanente (al acabar cada zona)
+    // Las listas en el orden 0 arco, 1 guardia
+    public Image[] permanentIcons; // IconBow e IconGuard, tienen que tener un componente Button
     public Sprite[] permanentIconsOn;
     public Sprite[] permanentIconsOff;
     [TextArea] public string[] permanentDescriptions;
@@ -97,7 +96,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
         permanentPanel.SetActive(false);
     }
 
-    // Lo llama la galleta de la fortuna al recogerla; al darle a Continuar se carga nextLevel
+    // Lo llama la salida del nivel al cruzarla; al darle a Continuar se carga nextLevel
     public void Show(string nextLevel)
     {
         this.nextLevel = nextLevel;
@@ -209,7 +208,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
         return result;
     }
 
-    // Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco, dash o guardia)
+    // Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco o guardia)
     public bool IsAvailable(int index)
     {
         StatsManager stats = StatsManager.Instance;
@@ -221,7 +220,6 @@ public class UpgradeChoiceMenu : MonoBehaviour
         }
 
         if (upgrade.requirement == UpgradeRequirement.Bow) return stats.hasBow;
-        if (upgrade.requirement == UpgradeRequirement.Dash) return stats.hasDash;
         if (upgrade.requirement == UpgradeRequirement.Guard) return stats.hasGuard;
         return true;
     }
@@ -251,7 +249,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
         }
     }
 
-    // Lo llaman los botones de los iconos (0 arco, 1 guardia, 2 dash)
+    // Lo llaman los botones de los iconos (0 arco, 1 guardia)
     public void SelectPermanent(int index)
     {
         selected = index;
@@ -267,12 +265,17 @@ public class UpgradeChoiceMenu : MonoBehaviour
         permanentContinueButton.interactable = true;
     }
 
-    // Toca elegir permanente en los niveles 5, 10 y 15, pero solo si todavia no tiene las que corresponden a ese nivel:
-    // en el 5 se puede tener como mucho 1, en el 10 como mucho 2 y en el 15 las 3.
-    // Asi si ya consiguio una en el 5 de otra partida, al volver al 5 elige temporal y la segunda llega en el 10
+    // Toca elegir permanente en los niveles 3 y 6, pero solo si todavia no tiene las que corresponden a ese nivel:
+    // en el 3 se puede tener como mucho 1 y en el 6 las 2.
+    // Asi si ya consiguio una en el 3 de otra partida, al volver al 3 elige temporal y la segunda llega en el 6.
+    // En el 9 (o si ya las tiene todas) sale una temporal normal
     public bool IsPermanentLevel(int level)
     {
         if (level % permanentEvery != 0)
+        {
+            return false;
+        }
+        if (OwnedPermanents() >= permanentIcons.Length)
         {
             return false;
         }
@@ -283,7 +286,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
     private int OwnedPermanents()
     {
         int owned = 0;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < permanentIcons.Length; i++)
         {
             if (StatsManager.Instance.HasPermanent(i))
             {
@@ -312,7 +315,10 @@ public class UpgradeChoiceMenu : MonoBehaviour
             StatsManager.Instance.ApplyUpgrade(options[selected]);
         }
 
-        // Por si la mejora era de vida, que se vean los corazones nuevos
+        // Al pasar de nivel se recupera toda la vida (despues de la mejora, asi cuenta el corazon nuevo)
+        StatsManager.Instance.HealFull();
+
+        // Que se vean los corazones llenos y los nuevos si la mejora era de vida
         HeartsUI.Instance.UpdateHearts(StatsManager.Instance.currentHealth, StatsManager.Instance.MaxHealth());
 
         upgradePanel.SetActive(false);

@@ -139,11 +139,14 @@ MonoBehaviour:
   speed: 10
   damage: 1
   knockbackForce: 1
-  knockbackTime: 1
-  stunTime: 1
+  knockbackTime: 0.1
+  stunTime: 0.15
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128

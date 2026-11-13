@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9d3a2549a2e694c97ce53c1aad34e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
-  currentHealth: 3
-  maxHealth: 3
+  currentHealth: 2
+  maxHealth: 2
   deadPrefab: {fileID: 3335451650952464426, guid: 3f883b120b65d9d4e9b0df4ead8bf647, type: 3}
   deadDuration: 1.4
 --- !u!114 &1168096136718045281
@@ -346,6 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40c982778afbd24889d34b71837540c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Knockback
+  pushMultiplier: 1
+  stunCooldown: 0
 --- !u!114 &3309772366514091732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Movement
   speed: 1
   attackRange: 5
-  attackCoolDown: 0.7
+  attackCoolDown: 1.5
   playerDetectRange: 5
   detectionPoint: {fileID: 6790796840203122832}
   playerLayer:
@@ -369,9 +371,13 @@ MonoBehaviour:
   patrol: 1
   chasePlayer: 0
   patrolPoints:
-  - {x: -8, y: 3}
-  - {x: -3, y: 3}
-  pauseDuration: 1
+  - {x: 0, y: -1}
+  - {x: 6, y: -1}
+  pauseDuration: 1.5
+  alertDuration: 5
+  alertRangeMultiplier: 3
+  canFlip: 1
+  hasHitAnimation: 0
 --- !u!114 &5636982628836856491
 MonoBehaviour:
   m_ObjectHideFlags: 0

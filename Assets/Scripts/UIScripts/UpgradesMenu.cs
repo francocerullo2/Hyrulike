@@ -1,18 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Muestra en el menu las mejoras permanentes (arco, dash y guardia) y las temporales
+// Muestra en el menu las mejoras permanentes (arco y guardia) y las temporales
 public class UpgradesMenu : MonoBehaviour
 {
     [Header("Arco")]
     public Image bowSlot;
     public Sprite bowIcon;
     public Sprite bowDisabledIcon;
-
-    [Header("Dash")]
-    public Image dashSlot;
-    public Sprite dashIcon;
-    public Sprite dashDisabledIcon;
 
     [Header("Guardia")]
     public Image guardSlot;
@@ -41,7 +36,6 @@ public class UpgradesMenu : MonoBehaviour
     public void UpdateSlots()
     {
         SetSlot(bowSlot, StatsManager.Instance.hasBow, bowIcon, bowDisabledIcon);
-        SetSlot(dashSlot, StatsManager.Instance.hasDash, dashIcon, dashDisabledIcon);
         SetSlot(guardSlot, StatsManager.Instance.hasGuard, guardIcon, guardDisabledIcon);
 
         for (int i = 0; i < tempSlots.Length; i++)

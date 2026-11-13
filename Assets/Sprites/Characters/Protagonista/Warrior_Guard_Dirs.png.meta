@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 0f65429f17c52464fb7da93c2fb78c83
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7810327543004112121
+    second: Warrior_Guard_Dirs_0
+  - first:
+      213: -2046708090991384129
+    second: Warrior_Guard_Dirs_1
+  - first:
+      213: -265021224907930478
+    second: Warrior_Guard_Dirs_2
+  - first:
+      213: -2469685589017238145
+    second: Warrior_Guard_Dirs_3
+  - first:
+      213: -6418522651718128426
+    second: Warrior_Guard_Dirs_4
+  - first:
+      213: -7097617080829174800
+    second: Warrior_Guard_Dirs_5
+  - first:
+      213: 2717823304556996775
+    second: Warrior_Guard_Dirs_6
+  - first:
+      213: 3221910962664891889
+    second: Warrior_Guard_Dirs_7
+  - first:
+      213: 1227237990244392450
+    second: Warrior_Guard_Dirs_8
+  - first:
+      213: -1843576578516813812
+    second: Warrior_Guard_Dirs_9
+  - first:
+      213: -6837716813685224715
+    second: Warrior_Guard_Dirs_10
+  - first:
+      213: 3765604368831333339
+    second: Warrior_Guard_Dirs_11
+  - first:
+      213: 6783692844115767085
+    second: Warrior_Guard_Dirs_12
+  - first:
+      213: -5800018036303668900
+    second: Warrior_Guard_Dirs_13
+  - first:
+      213: -8624537362445771886
+    second: Warrior_Guard_Dirs_14
+  - first:
+      213: -8234511058681779991
+    second: Warrior_Guard_Dirs_15
+  - first:
+      213: -5774289232446907873
+    second: Warrior_Guard_Dirs_16
+  - first:
+      213: 503022312632026315
+    second: Warrior_Guard_Dirs_17
+  - first:
+      213: 4491102417576976930
+    second: Warrior_Guard_Dirs_18
+  - first:
+      213: 4486348347351665395
+    second: Warrior_Guard_Dirs_19
+  - first:
+      213: 4605150921659325588
+    second: Warrior_Guard_Dirs_20
+  - first:
+      213: -6391639326537837473
+    second: Warrior_Guard_Dirs_21
+  - first:
+      213: 1243160358488985379
+    second: Warrior_Guard_Dirs_22
+  - first:
+      213: -5298515135527772750
+    second: Warrior_Guard_Dirs_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 438
+        width: 70
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4a53cf48bd36c60800000000000000
+      internalID: 7810327543004112121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 438
+        width: 71
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb96a8dc5d1a893e0800000000000000
+      internalID: -2046708090991384129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 438
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2948c6f9994725cf0800000000000000
+      internalID: -265021224907930478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_3
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 438
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75e9bfaa0ae9bdd0800000000000000
+      internalID: -2469685589017238145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_4
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 438
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dcea81b7a3dce6a0800000000000000
+      internalID: -6418522651718128426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_5
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 438
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb9e69aed2308d90800000000000000
+      internalID: -7097617080829174800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8e56655e5a7b520800000000000000
+      internalID: 2717823304556996775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 247
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5e39b33f686bc20800000000000000
+      internalID: 3221910962664891889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e916f2376080110800000000000000
+      internalID: 1227237990244392450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 247
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0876499edc4a66e0800000000000000
+      internalID: -1843576578516813812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa839529cc8b11a0800000000000000
+      internalID: -6837716813685224715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_11
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 247
+        width: 45
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3c9d0f83d124430800000000000000
+      internalID: 3765604368831333339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_12
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f21ee33b4842e50800000000000000
+      internalID: 6783692844115767085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_13
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 247
+        width: 45
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59d2476352328fa0800000000000000
+      internalID: -5800018036303668900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_14
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29bd55fa6fc7f4880800000000000000
+      internalID: -8624537362445771886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_15
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 247
+        width: 45
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e82f3802d329bd80800000000000000
+      internalID: -8234511058681779991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_16
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 270
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a93ad598a9ddfa0800000000000000
+      internalID: -5774289232446907873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_17
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 247
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc40782d0281bf600800000000000000
+      internalID: 503022312632026315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_18
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222e2999ad9935e30800000000000000
+      internalID: 4491102417576976930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_19
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa8e8e5d06b24e30800000000000000
+      internalID: 4486348347351665395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_20
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c11963d58c8ef30800000000000000
+      internalID: 4605150921659325588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_21
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f549b4995e55c47a0800000000000000
+      internalID: -6391639326537837473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_22
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f459e62c7904110800000000000000
+      internalID: 1243160358488985379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_Guard_Dirs_23
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 55
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd16d59e84e776b0800000000000000
+      internalID: -5298515135527772750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warrior_Guard_Dirs_0: 7810327543004112121
+      Warrior_Guard_Dirs_1: -2046708090991384129
+      Warrior_Guard_Dirs_10: -6837716813685224715
+      Warrior_Guard_Dirs_11: 3765604368831333339
+      Warrior_Guard_Dirs_12: 6783692844115767085
+      Warrior_Guard_Dirs_13: -5800018036303668900
+      Warrior_Guard_Dirs_14: -8624537362445771886
+      Warrior_Guard_Dirs_15: -8234511058681779991
+      Warrior_Guard_Dirs_16: -5774289232446907873
+      Warrior_Guard_Dirs_17: 503022312632026315
+      Warrior_Guard_Dirs_18: 4491102417576976930
+      Warrior_Guard_Dirs_19: 4486348347351665395
+      Warrior_Guard_Dirs_2: -265021224907930478
+      Warrior_Guard_Dirs_20: 4605150921659325588
+      Warrior_Guard_Dirs_21: -6391639326537837473
+      Warrior_Guard_Dirs_22: 1243160358488985379
+      Warrior_Guard_Dirs_23: -5298515135527772750
+      Warrior_Guard_Dirs_3: -2469685589017238145
+      Warrior_Guard_Dirs_4: -6418522651718128426
+      Warrior_Guard_Dirs_5: -7097617080829174800
+      Warrior_Guard_Dirs_6: 2717823304556996775
+      Warrior_Guard_Dirs_7: 3221910962664891889
+      Warrior_Guard_Dirs_8: 1227237990244392450
+      Warrior_Guard_Dirs_9: -1843576578516813812
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

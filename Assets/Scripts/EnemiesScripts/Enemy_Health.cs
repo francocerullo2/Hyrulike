@@ -21,6 +21,13 @@ public class Enemy_Health : MonoBehaviour
     // Negativo para hacer daño, positivo para curar
     public void ChangeHealth(int amount)
     {
+        // El jefe no recibe daño mientras es el monje o mientras se transforma
+        Boss_Phases boss = GetComponent<Boss_Phases>();
+        if (amount < 0 && boss != null && !boss.CanTakeDamage())
+        {
+            return;
+        }
+
         // Los explosivos no mueren de un golpe, se encienden
         Enemy_Explosion explosive = GetComponent<Enemy_Explosion>();
         if (amount < 0 && explosive != null)
@@ -37,6 +44,12 @@ public class Enemy_Health : MonoBehaviour
             GetComponent<Enemy_Movement>().Alert();
         }
 
+        // El jefe mira si ha bajado de la mitad de vida para pasar a la fase 2
+        if (boss != null)
+        {
+            boss.CheckPhase(currentHealth, maxHealth);
+        }
+
         // Que no se pase del maximo, y si llega a 0 se muere
         if(currentHealth > maxHealth)
         {
@@ -46,7 +59,7 @@ public class Enemy_Health : MonoBehaviour
         {
             isDead = true;
             StatsManager.Instance.enemiesKilled++;
-            LevelManager.Instance.EnemyDefeated(transform.position);
+            LevelManager.Instance.EnemyDefeated();
 
             // Deja la animacion de muerte en su sitio y el enemigo desaparece
             GameObject dead = Instantiate(deadPrefab, transform.position, Quaternion.identity);

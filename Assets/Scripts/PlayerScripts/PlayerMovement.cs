@@ -41,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
             dashTimer -= Time.deltaTime;
         }
 
-        // Solo si tiene la mejora, el cooldown ha acabado y no esta haciendo otra cosa
-        if (Input.GetButtonDown("Dash") && StatsManager.Instance.hasDash && dashTimer <= 0
+        // El dash se tiene desde el principio: solo hace falta que el cooldown haya acabado y no este haciendo otra cosa
+        if (Input.GetButtonDown("Dash") && dashTimer <= 0
             && isDashing == false && isShooting == false && isGuarding == false && isKnockedBack == false
             && anim.GetBool("isAttacking") == false)
         {
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = new Vector2(Mathf.Sign(transform.localScale.x), 0);
         }
-        rb.linearVelocity = direction.normalized * StatsManager.Instance.dashSpeed;
+        rb.linearVelocity = direction.normalized * StatsManager.Instance.DashSpeed();
 
         if (dashEffect != null)
         {

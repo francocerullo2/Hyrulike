@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Escena que se carga al pulsar Jugar, tiene que estar en Build Settings
-    public string firstLevel = "RioPelt_01_Base";
+    public string firstLevel = "Zona1_01";
     public GameObject optionsPanel;
 
     private void Start()

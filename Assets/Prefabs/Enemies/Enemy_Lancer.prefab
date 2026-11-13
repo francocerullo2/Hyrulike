@@ -197,8 +197,8 @@ MonoBehaviour:
   attackPoint: {fileID: 4373921316065367233}
   weaponRange: 0.2
   attackDistance: 1.8
-  knockbackForce: 10
-  stunTime: 0.25
+  knockbackForce: 6
+  stunTime: 0.2
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f770fe58f1584290115d0c032a847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Movement
-  speed: 3
+  speed: 1
   attackRange: 1.6
   attackCoolDown: 1
   playerDetectRange: 4
@@ -222,10 +222,16 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  patrol: 0
+  patrol: 1
   chasePlayer: 1
-  patrolPoints: []
-  pauseDuration: 0
+  patrolPoints:
+  - {x: 9.54, y: 6}
+  - {x: 9.54, y: 0}
+  pauseDuration: 2
+  alertDuration: 5
+  alertRangeMultiplier: 3
+  canFlip: 1
+  hasHitAnimation: 0
 --- !u!70 &8221990318270254296
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -291,6 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40c982778afbd24889d34b71837540c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Knockback
+  pushMultiplier: 1
+  stunCooldown: 0
 --- !u!1 &6519384027716254913
 GameObject:
   m_ObjectHideFlags: 0

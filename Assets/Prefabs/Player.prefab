@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0781e98d11e64824b90e482e4a3fbc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  invulnerabilityTime: 0.25
+  invulnerabilityTime: 1
   player_Guard: {fileID: 523338526507334694}
   playerMovement: {fileID: 5655459149467553669}
   deadPrefab: {fileID: 3335451650952464426, guid: 3f883b120b65d9d4e9b0df4ead8bf647, type: 3}

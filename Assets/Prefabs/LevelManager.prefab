@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4868a679fe3c3b3438dd4aa0b2c61d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  nextLevel: 
-  cookiePrefab: {fileID: 5352971903169962471, guid: e747ce218a302b24287f52769d690b58, type: 3}
+  nextLevel:

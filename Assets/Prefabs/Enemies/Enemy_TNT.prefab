@@ -201,11 +201,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Combat
   damage: 1
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 8567414830326145386}
   weaponRange: 0
   attackDistance: 1
-  knockbackForce: 0
-  stunTime: 0
+  knockbackForce: 8
+  stunTime: 0.3
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40c982778afbd24889d34b71837540c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Knockback
+  pushMultiplier: 1
+  stunCooldown: 0
 --- !u!114 &5763711615860082192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
   currentHealth: 1
   maxHealth: 1
+  deadPrefab: {fileID: 0}
+  deadDuration: 1.4
 --- !u!114 &5910309177006648888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +286,10 @@ MonoBehaviour:
   chasePlayer: 0
   patrolPoints: []
   pauseDuration: 1.5
+  alertDuration: 5
+  alertRangeMultiplier: 3
+  canFlip: 1
+  hasHitAnimation: 0
 --- !u!1 &1123482552162322883
 GameObject:
   m_ObjectHideFlags: 0

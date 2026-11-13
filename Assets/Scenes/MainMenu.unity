@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a1834cf91424691506997ef827583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  firstLevel: RioPelt_01_Base
+  firstLevel: Zona1_01
   optionsPanel: {fileID: 171299535}
 --- !u!114 &589935093
 MonoBehaviour:

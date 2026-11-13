@@ -15,6 +15,8 @@ public class Enemy_Movement : MonoBehaviour
     public float pauseDuration = 1.5f;  // lo que espera en cada punto
     public float alertDuration = 5;     // segundos que va a por el jugador despues de recibir un golpe
     public float alertRangeMultiplier = 3; // cuanto mas lejos "ve" al jugador mientras esta alerta
+    public bool canFlip = true;         // el jefe no se gira porque sus sprites son de frente
+    public bool hasHitAnimation = false; // solo el jefe tiene animacion de recibir golpe (parametro isHit en su animator)
 
     private float alertTimer;
 
@@ -192,6 +194,12 @@ public class Enemy_Movement : MonoBehaviour
     // Los sprites miran a la derecha, asi que escala positiva = derecha y negativa = izquierda (igual que en PlayerMovement)
     private void FaceTarget(Vector2 target)
     {
+        // El jefe tiene sprites de frente: si se girase, la katana izquierda pasaria a la mano derecha
+        if (!canFlip)
+        {
+            return;
+        }
+
         if (target.x > transform.position.x && transform.localScale.x < 0 ||
             target.x < transform.position.x && transform.localScale.x > 0)
         {
@@ -215,6 +223,8 @@ public class Enemy_Movement : MonoBehaviour
             anim.SetBool("isChasing", false);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", false);
+        else if (enemyState == EnemyState.Knockback && hasHitAnimation)
+            anim.SetBool("isHit", false);
 
         // Cambiamos al estado nuevo
         enemyState = newState;
@@ -226,6 +236,8 @@ public class Enemy_Movement : MonoBehaviour
             anim.SetBool("isChasing", true);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", true);
+        else if (enemyState == EnemyState.Knockback && hasHitAnimation)
+            anim.SetBool("isHit", true);
 
 
     }
