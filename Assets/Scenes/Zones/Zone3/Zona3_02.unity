@@ -12405,6 +12405,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1].x
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12686,11 +12690,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: attackRange
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: playerDetectRange
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: patrolPoints.Array.data[0].x
@@ -19773,8 +19777,8 @@ MonoBehaviour:
   dashSpeed: 15
   maxHealth: 5
   currentHealth: 5
-  hasBow: 1
-  hasGuard: 1
+  hasBow: 0
+  hasGuard: 0
   upgradeLevels: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   screenReached: 1
   runTime: 0
@@ -20340,11 +20344,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: attackRange
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: playerDetectRange
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: patrolPoints.Array.data[0].x
@@ -20421,7 +20425,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: attackRange
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: playerDetectRange
@@ -20696,6 +20700,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 576513368501799817, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

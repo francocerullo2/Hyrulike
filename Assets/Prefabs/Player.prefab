@@ -288,6 +288,7 @@ MonoBehaviour:
   dashCooldown: 0.8
   dashEffect: {fileID: 4268930197329704744, guid: 45b8b465cfa50734eb1377982acda3dc, type: 3}
   dashSound: {fileID: 8300000, guid: e5500f9dfe211fb4492bc0bca00792dc, type: 3}
+  stepSound: {fileID: 8300000, guid: b5eed30491015d44f9bc8ff6f07339aa, type: 3}
   isDashing: 0
 --- !u!95 &1932907699759909949
 Animator:

@@ -21,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isDashing; // mientras sea true no se le puede hacer daño ni empujar
     private float dashTimer;
 
+    [Header("Pasos")]
+    public AudioClip stepSound;
+    public float stepInterval = .3f; // segundos entre una pisada y la siguiente
+    public float stepVolume = .5f;
+    private float stepTimer;
+
 
     // El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion
     private void Update()
@@ -29,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
         if (PauseMenu.isPaused)
         {
             return;
+        }
+
+        // Mientras anda suena una pisada cada cierto tiempo (en el dash y cuando le empujan no)
+        stepTimer -= Time.deltaTime;
+        if (rb.linearVelocity.sqrMagnitude > .1f && isDashing == false && isKnockedBack == false && stepTimer <= 0)
+        {
+            AudioManager.Instance.PlaySFX(stepSound, stepVolume);
+            stepTimer = stepInterval;
         }
 
         // En guardia o durante el dash no se puede atacar

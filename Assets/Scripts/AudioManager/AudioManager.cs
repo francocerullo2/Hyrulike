@@ -81,4 +81,10 @@ public class AudioManager : MonoBehaviour
         // PlayOneShot deja que suenen varios efectos a la vez sin cortarse
         sfxSource.PlayOneShot(clip);
     }
+
+    // Igual pero mas bajito (volume de 0 a 1), para sonidos que se repiten mucho como los pasos
+    public void PlaySFX(AudioClip clip, float volume)
+    {
+        sfxSource.PlayOneShot(clip, volume);
+    }
 }

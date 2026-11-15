@@ -38,11 +38,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zones/Final/FinalLevel.unity
     guid: 83f187b368a247f4bb8dd63bfc15cf22
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/Zones/Plantilla.unity
-    guid: 1fa45113239367940b3cd944b5601406
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

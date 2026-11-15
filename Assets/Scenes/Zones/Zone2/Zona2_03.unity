@@ -4775,6 +4775,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Lancer
       objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: -9.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: -9.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10153,6 +10169,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Lancer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: -8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10446,11 +10478,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 178920964016789386, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 11.66
       objectReference: {fileID: 0}
     - target: {fileID: 178920964016789386, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 178920964016789386, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10487,6 +10519,22 @@ PrefabInstance:
     - target: {fileID: 3542086694152175827, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
       propertyPath: m_Name
       value: Enemy_Lancer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021508151731941943, guid: 8e4143c07319fba4facf8c133efdee02, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11175,7 +11223,7 @@ Tilemap:
       - {fileID: 6095582208037308700, guid: 21b4b3bcf60127e40868a4f3483efd59, type: 3}
       - {fileID: 3106726268806862695, guid: 21b4b3bcf60127e40868a4f3483efd59, type: 3}
       - {fileID: 9134618808515329730, guid: 21b4b3bcf60127e40868a4f3483efd59, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 13, y: -8, z: 0}
@@ -11345,7 +11393,7 @@ Tilemap:
       - {fileID: 308406493423557381, guid: a04ad10fcb0bc734da41ced5b9046005, type: 3}
       - {fileID: -7349591119899805087, guid: a04ad10fcb0bc734da41ced5b9046005, type: 3}
       - {fileID: -4844773618669677504, guid: a04ad10fcb0bc734da41ced5b9046005, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: -5, z: 0}
@@ -11806,6 +11854,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: -6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: 2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 2.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5363200918127048960, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: m_Name
       value: Enemy_Archer
@@ -11863,6 +11927,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: 13.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: 4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 4.22
+      objectReference: {fileID: 0}
     - target: {fileID: 5363200918127048960, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: m_Name
       value: Enemy_Archer (1)
@@ -11973,6 +12053,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: 8.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5363200918127048960, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: m_Name
       value: Enemy_Archer (3)
@@ -18266,7 +18362,7 @@ Tilemap:
       - {fileID: -2211883850735809185, guid: 52e7d43b8dd05604d8542d230d33261d, type: 3}
       - {fileID: -621071359127853508, guid: 52e7d43b8dd05604d8542d230d33261d, type: 3}
       - {fileID: -6203981512165479623, guid: 52e7d43b8dd05604d8542d230d33261d, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: -8, z: 0}
@@ -18666,8 +18762,8 @@ MonoBehaviour:
   dashSpeed: 15
   maxHealth: 5
   currentHealth: 5
-  hasBow: 1
-  hasGuard: 1
+  hasBow: 0
+  hasGuard: 0
   upgradeLevels: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   screenReached: 1
   runTime: 0
@@ -19012,6 +19108,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[0].y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309772366514091732, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
+      propertyPath: patrolPoints.Array.data[1].y
+      value: 2.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5363200918127048960, guid: 6071fafb0b4441b0b88ff87fbe840d6a, type: 3}
       propertyPath: m_Name
       value: Enemy_Archer (2)
@@ -19257,6 +19369,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 576513368501799817, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 907548169025839396, guid: 5e13c7bdd4a34c647b57968618b9b8d1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

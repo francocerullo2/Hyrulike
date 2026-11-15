@@ -209,7 +209,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  attackSound: {fileID: 8300000, guid: a0b07b32e158e194c8bee868bdb98335, type: 3}
+  attackSound: {fileID: 0}
 --- !u!114 &1667154540864517190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  explosionSound: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: a0b07b32e158e194c8bee868bdb98335, type: 3}
 --- !u!114 &4045957686351607774
 MonoBehaviour:
   m_ObjectHideFlags: 0
