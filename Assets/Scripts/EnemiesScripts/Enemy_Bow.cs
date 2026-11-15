@@ -6,6 +6,7 @@ public class Enemy_Bow : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject arrowPrefab;
+    public AudioClip shootSound;
 
     private Transform player;
 
@@ -17,6 +18,7 @@ public class Enemy_Bow : MonoBehaviour
     // Lo llama el evento de la animacion de disparo, se llama Attack igual que en Enemy_Combat
     public void Attack()
     {
+        AudioManager.Instance.PlaySFX(shootSound);
         Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.direction = (player.position - launchPoint.position).normalized;
     }

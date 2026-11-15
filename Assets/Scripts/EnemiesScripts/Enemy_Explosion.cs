@@ -13,6 +13,7 @@ public class Enemy_Explosion : MonoBehaviour
     public Transform explosionPoint;
     public GameObject explosionPrefab;
     public LayerMask playerLayer;
+    public AudioClip explosionSound;
 
     private bool isLit; // para que no se encienda dos veces
 
@@ -36,6 +37,8 @@ public class Enemy_Explosion : MonoBehaviour
 
     private void Explode()
     {
+        AudioManager.Instance.PlaySFX(explosionSound);
+
         // Igual que Enemy_Combat: si el jugador esta dentro del radio lo empuja y le quita vida
         Collider2D[] hits = Physics2D.OverlapCircleAll(explosionPoint.position, explosionRange, playerLayer);
 

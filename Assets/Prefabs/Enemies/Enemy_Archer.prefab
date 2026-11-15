@@ -392,3 +392,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Bow
   launchPoint: {fileID: 7316693523914631387}
   arrowPrefab: {fileID: 357129050851406472, guid: 57d2462388543fe4eaf56b5adaa251ac, type: 3}
+  shootSound: {fileID: 8300000, guid: dc1795fb84b9b084fa45716e09f4ed21, type: 3}

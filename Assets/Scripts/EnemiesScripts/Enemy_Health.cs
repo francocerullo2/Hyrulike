@@ -42,6 +42,7 @@ public class Enemy_Health : MonoBehaviour
         if (amount < 0)
         {
             GetComponent<Enemy_Movement>().Alert();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.hitSound);
         }
 
         // El jefe mira si ha bajado de la mitad de vida para pasar a la fase 2

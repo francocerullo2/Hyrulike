@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashDuration = .15f; // lo que dura el impulso
     public float dashCooldown = .8f; // tiempo hasta poder volver a hacer dash
     public GameObject dashEffect; // polvo que sale al hacer dash (opcional)
+    public AudioClip dashSound;
     public bool isDashing; // mientras sea true no se le puede hacer daño ni empujar
     private float dashTimer;
 
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Dash()
     {
         isDashing = true;
+        AudioManager.Instance.PlaySFX(dashSound);
         dashTimer = dashCooldown * StatsManager.Instance.DashCooldownMultiplier(); // con la mejora Niebla se recarga antes
 
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

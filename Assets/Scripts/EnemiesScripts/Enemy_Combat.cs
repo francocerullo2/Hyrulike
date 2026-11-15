@@ -10,6 +10,7 @@ public class Enemy_Combat : MonoBehaviour
     public float knockbackForce;
     public float stunTime;
     public LayerMask playerLayer;
+    public AudioClip attackSound; // cada enemigo tiene el suyo, se pone en su prefab
 
     private Animator anim;
 
@@ -21,6 +22,8 @@ public class Enemy_Combat : MonoBehaviour
     // Lo llama un evento de la animacion de ataque del enemigo
     public void Attack()
     {
+        AudioManager.Instance.PlaySFX(attackSound);
+
         // Pone el punto de ataque hacia donde ataca: lado (1,0), arriba (0,1) o abajo (0,-1)
         attackPoint.localPosition = new Vector2(anim.GetFloat("attackX"), anim.GetFloat("attackY")) * attackDistance;
 

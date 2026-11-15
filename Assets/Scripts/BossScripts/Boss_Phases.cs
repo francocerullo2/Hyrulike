@@ -19,9 +19,18 @@ public class Boss_Phases : MonoBehaviour
     public float monsterAttackCoolDown = 2.2f;
     public CapsuleCollider2D bodyCollider; // opcional: si la bestia es mas grande se cambia el tamaño del collider
     public Vector2 monsterBodySize;
+    public AudioClip monsterAttackSound; // el del samurai se pone en Enemy_Combat, este lo sustituye en la fase 2
+
+    [Header("Sonido")]
+    public AudioClip transformSound; // suena en las dos transformaciones
+
+    [Header("Iconos")]
+    public Sprite samuraiPortrait;
+    public Sprite monsterPortrait;
 
     private bool isTransforming;
 
+    private Enemy_Health enemy_Health;
     private Animator anim;
     private Rigidbody2D rb;
     private Enemy_Movement enemy_Movement;
@@ -33,6 +42,7 @@ public class Boss_Phases : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemy_Movement = GetComponent<Enemy_Movement>();
         enemy_Combat = GetComponent<Enemy_Combat>();
+        enemy_Health = GetComponent<Enemy_Health>();
 
         // El monje se queda quieto hasta que llega el jugador
         enemy_Movement.enabled = false;
@@ -48,6 +58,7 @@ public class Boss_Phases : MonoBehaviour
             {
                 isTransforming = true;
                 anim.SetTrigger("ToSamurai");
+                AudioManager.Instance.PlaySFX(transformSound);
             }
         }
     }
@@ -70,11 +81,31 @@ public class Boss_Phases : MonoBehaviour
         phase = 1;
         isTransforming = false;
         enemy_Movement.enabled = true;
+
+        // Aparece la vida del jefe con los 10 corazones del samurai
+        BossUI.Instance.Show(samuraiPortrait);
+        BossUI.Instance.UpdateHearts(enemy_Health.maxHealth / 2);
     }
 
     // Lo llama Enemy_Health cada vez que el jefe recibe daño
     public void CheckPhase(int currentHealth, int maxHealth)
     {
+        // El samurai gasta la primera mitad de la vida y la bestia la segunda
+        if (phase == 1)
+        {
+            BossUI.Instance.UpdateHearts(currentHealth - maxHealth / 2);
+        }
+        else if (phase == 2)
+        {
+            BossUI.Instance.UpdateHearts(currentHealth);
+        }
+
+        // Al morir el jefe se quita su vida de la pantalla
+        if (currentHealth <= 0)
+        {
+            BossUI.Instance.Hide();
+        }
+
         if (phase == 1 && !isTransforming && currentHealth <= maxHealth / 2)
         {
             // Primero se vuelve a Idle para apagar isAttacking e isHit, si no la bestia saldria atacando
@@ -84,6 +115,7 @@ public class Boss_Phases : MonoBehaviour
 
             isTransforming = true;
             anim.SetTrigger("ToMonster");
+            AudioManager.Instance.PlaySFX(transformSound);
         }
     }
 
@@ -92,12 +124,18 @@ public class Boss_Phases : MonoBehaviour
     {
         phase = 2;
 
+        // La bestia empieza siempre con sus 10 corazones, aunque el ultimo golpe al samurai se pasara
+        enemy_Health.currentHealth = enemy_Health.maxHealth / 2;
+        BossUI.Instance.Show(monsterPortrait);
+        BossUI.Instance.UpdateHearts(enemy_Health.currentHealth);
+
         // La bestia es mas rapida, pega mas fuerte y en mas area
         enemy_Movement.speed = monsterSpeed;
         enemy_Movement.attackRange = monsterAttackRange;
         enemy_Movement.attackCoolDown = monsterAttackCoolDown;
         enemy_Combat.damage = monsterDamage;
         enemy_Combat.weaponRange = monsterWeaponRange;
+        enemy_Combat.attackSound = monsterAttackSound;
 
         if (bodyCollider != null)
         {

@@ -1,9 +1,8 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Pantalla de Game Over: aparece al morir el jugador, enseña los datos de la partida y deja reintentar
+// Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar
 // Tambien enseña la pantalla de victoria al matar al jefe: es un duplicado del panel con otros colores
 // Va en un objeto que siempre este activo (por ejemplo MenuCanvas), no en el propio panel
 public class GameOverMenu : MonoBehaviour
@@ -21,18 +20,6 @@ public class GameOverMenu : MonoBehaviour
 
     // Para saber si la partida acabo ganando o perdiendo (lo usa tambien el ranking)
     public bool isVictory;
-
-    // Textos del panel de Game Over
-    public TMP_Text screenText;
-    public TMP_Text timeText;
-    public TMP_Text enemiesText;
-    public TMP_Text upgradesText;
-
-    // Los mismos textos, pero los del panel de victoria
-    public TMP_Text victoryScreenText;
-    public TMP_Text victoryTimeText;
-    public TMP_Text victoryEnemiesText;
-    public TMP_Text victoryUpgradesText;
 
     // Nombres de las escenas, tienen que estar en Build Settings
     public string mainMenuScene = "MainMenu";
@@ -85,35 +72,20 @@ public class GameOverMenu : MonoBehaviour
         PauseMenu.isPaused = true;
         Time.timeScale = 0;
 
-        // Se rellenan los textos del panel que toca y se enseña ese panel
+        // Se enseña el panel que toca y se cambia la musica del nivel por la suya
         if (isVictory)
         {
-            UpdateTexts(victoryScreenText, victoryTimeText, victoryEnemiesText, victoryUpgradesText);
             victoryPanel.SetActive(true);
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.victoryMusic);
         }
         else
         {
-            UpdateTexts(screenText, timeText, enemiesText, upgradesText);
             gameOverPanel.SetActive(true);
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.gameOverMusic);
         }
 
         // El ranking online se coloca en el recuadro del panel que ha salido
         RankingMenu.Instance.Open(isVictory);
-    }
-
-    // Recibe los textos para que sirva igual para el panel de Game Over que para el de victoria
-    private void UpdateTexts(TMP_Text screen, TMP_Text time, TMP_Text enemies, TMP_Text upgrades)
-    {
-        StatsManager stats = StatsManager.Instance;
-
-        // El tiempo se enseña en minutos:segundos
-        int minutes = (int)(stats.runTime / 60);
-        int seconds = (int)(stats.runTime % 60);
-
-        screen.text = "Nivel: " + stats.screenReached;
-        time.text = "Tiempo total: " + minutes.ToString("00") + ":" + seconds.ToString("00");
-        enemies.text = "Enemigos derrotados: " + stats.enemiesKilled;
-        upgrades.text = "Mejoras: " + stats.UpgradesObtained();
     }
 
     // Empieza una partida nueva desde el primer nivel con todo reiniciado (las permanentes se mantienen)

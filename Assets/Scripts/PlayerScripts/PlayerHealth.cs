@@ -52,6 +52,9 @@ public class PlayerHealth : MonoBehaviour
                 return;
             }
             invulnerabilityTimer = invulnerabilityTime + StatsManager.Instance.InvulnerabilityBonus(); // con la mejora Armadura dura mas
+
+            // Aqui ya es seguro que el golpe le ha hecho daño
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.hitSound);
         }
 
         // Mantiene la vida entre 0 y el maximo

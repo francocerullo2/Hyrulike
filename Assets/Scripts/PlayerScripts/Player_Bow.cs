@@ -14,6 +14,7 @@ public class Player_Bow : MonoBehaviour
     private bool arrowReleased; // para que en cada disparo salga una sola flecha
 
     public Animator anim;
+    public AudioClip shootSound;
 
     // Update se llama una vez por frame
     void Update()
@@ -50,6 +51,7 @@ public class Player_Bow : MonoBehaviour
             return;
         }
         arrowReleased = true;
+        AudioManager.Instance.PlaySFX(shootSound);
 
         // Coloca el punto de salida hacia donde apunta (lado, arriba, abajo o diagonal)
         // Con position y no localPosition, asi da igual que el jugador este girado con el Flip

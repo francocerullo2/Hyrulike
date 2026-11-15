@@ -203,6 +203,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  attackSound: {fileID: 8300000, guid: 8f1087d6f863b5f4195cc5410594fd06, type: 3}
 --- !u!114 &6038165573775667807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +323,10 @@ MonoBehaviour:
   monsterAttackCoolDown: 2.2
   bodyCollider: {fileID: 0}
   monsterBodySize: {x: 0, y: 0}
+  monsterAttackSound: {fileID: 8300000, guid: e3fd3944155fe254cb70ee06fc4bbb3c, type: 3}
+  transformSound: {fileID: 8300000, guid: 1a60665069ad03345bd32f3df63d0702, type: 3}
+  samuraiPortrait: {fileID: -7527145504033472756, guid: 8f7c85e2540dc394589405595db3e7d9, type: 3}
+  monsterPortrait: {fileID: -6158701302202823355, guid: 24143760a4da84f4aa0ef5e28a507c04, type: 3}
 --- !u!1 &4899627792881486970
 GameObject:
   m_ObjectHideFlags: 0

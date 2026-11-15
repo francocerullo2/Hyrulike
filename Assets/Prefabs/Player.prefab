@@ -287,6 +287,7 @@ MonoBehaviour:
   dashDuration: 0.15
   dashCooldown: 0.8
   dashEffect: {fileID: 4268930197329704744, guid: 45b8b465cfa50734eb1377982acda3dc, type: 3}
+  dashSound: {fileID: 8300000, guid: e5500f9dfe211fb4492bc0bca00792dc, type: 3}
   isDashing: 0
 --- !u!95 &1932907699759909949
 Animator:
@@ -347,6 +348,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  swordSound: {fileID: 8300000, guid: 61d39e072f3a1b14aab9294b3a4208c9, type: 3}
+  comboSound: {fileID: 8300000, guid: d95e6345f32c4694186f4d282a903439, type: 3}
 --- !u!114 &6366891645650386514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ MonoBehaviour:
   launchDistance: 0.66
   shootCooldown: 0.5
   anim: {fileID: 1932907699759909949}
+  shootSound: {fileID: 8300000, guid: dc1795fb84b9b084fa45716e09f4ed21, type: 3}
 --- !u!114 &523338526507334694
 MonoBehaviour:
   m_ObjectHideFlags: 0

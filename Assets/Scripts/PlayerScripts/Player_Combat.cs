@@ -9,7 +9,11 @@ public class Player_Combat : MonoBehaviour
     public float feetHeight = -.5f; // ajuste para que el ataque salga desde los pies y no desde el centro
     public LayerMask enemyLayer;
 
+    public AudioClip swordSound; // primer espadazo
+    public AudioClip comboSound; // segundo espadazo del combo
+
     private float timer;
+    private bool isSecondSlash; // para saber cual de los dos sonidos toca
 
 
     private void Update()
@@ -40,6 +44,17 @@ public class Player_Combat : MonoBehaviour
     // Esto lo llama un evento de la animacion justo en el frame en el que pega la espada
     public void DealDamage()
     {
+          // El primer golpe del ataque suena de una forma y el del combo de otra
+          if (isSecondSlash)
+          {
+              AudioManager.Instance.PlaySFX(comboSound);
+          }
+          else
+          {
+              AudioManager.Instance.PlaySFX(swordSound);
+          }
+          isSecondSlash = true;
+
           // Mueve el punto de ataque hacia donde mira el jugador, empezando desde sus pies
           attackPoint.localPosition = new Vector2(anim.GetFloat("lastHorizontal"), anim.GetFloat("lastVertical")) * attackDistance + new Vector2(0, feetHeight);
 
@@ -61,6 +76,7 @@ public class Player_Combat : MonoBehaviour
     {
             anim.SetBool("isAttacking", false);
             anim.SetBool("isCombo", false);
+            isSecondSlash = false;
             timer = cooldown * StatsManager.Instance.AttackCooldownMultiplier(); // con la mejora Corte se ataca mas rapido
     }
 
