@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase PlayerMovement</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_player_movement.html','','class_player_movement-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase PlayerMovement</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Mueve al jugador con el teclado y se encarga del dash, del knockback y de girar el sprite. Tambien lee el boton de ataque y se lo pasa a <a class="el" href="class_player___combat.html" title="Ataque con espada del jugador, con combo de dos golpes y cooldown. El daño lo hace un evento de la an...">Player_Combat</a>. Va en el Player.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de PlayerMovement</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_player_movement.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a9226bba0c2ba9b14303b9a30721fd7bf" id="r_a9226bba0c2ba9b14303b9a30721fd7bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9226bba0c2ba9b14303b9a30721fd7bf">Knockback</a> (Transform enemy, float force, float stunTime)</td></tr>
+<tr class="memdesc:a9226bba0c2ba9b14303b9a30721fd7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empuja al jugador en direccion contraria al enemigo que le ha pegado. Si esta en dash no le pasa nada, y si el escudo para el golpe el empujon es mas flojo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a7eaf004d1a3bd77f15eee32ba9649e58" id="r_a7eaf004d1a3bd77f15eee32ba9649e58"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7eaf004d1a3bd77f15eee32ba9649e58">facingDirection</a> = 1</td></tr>
+<tr class="memitem:acf8b937f61c1e92dfdbd075678f911d1" id="r_acf8b937f61c1e92dfdbd075678f911d1"><td class="memItemLeft">Rigidbody2D&#160;</td><td class="memItemRight"><a class="el" href="#acf8b937f61c1e92dfdbd075678f911d1">rb</a></td></tr>
+<tr class="memitem:af5745cc3cb8f3f0cf6d2beac4316d4a5" id="r_af5745cc3cb8f3f0cf6d2beac4316d4a5"><td class="memItemLeft">Animator&#160;</td><td class="memItemRight"><a class="el" href="#af5745cc3cb8f3f0cf6d2beac4316d4a5">anim</a></td></tr>
+<tr class="memitem:afc1acd0d35fcea9a52d1b2f520bc2d0b" id="r_afc1acd0d35fcea9a52d1b2f520bc2d0b"><td class="memItemLeft"><a class="el" href="class_player___combat.html">Player_Combat</a>&#160;</td><td class="memItemRight"><a class="el" href="#afc1acd0d35fcea9a52d1b2f520bc2d0b">player_Combat</a></td></tr>
+<tr class="memitem:aba8fcc2824412a2caea004d80601b42b" id="r_aba8fcc2824412a2caea004d80601b42b"><td class="memItemLeft"><a class="el" href="class_player___guard.html">Player_Guard</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba8fcc2824412a2caea004d80601b42b">player_Guard</a></td></tr>
+<tr class="memitem:a04e49c8cef7c4e7f7f453e0bb3d1113b" id="r_a04e49c8cef7c4e7f7f453e0bb3d1113b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a04e49c8cef7c4e7f7f453e0bb3d1113b">isShooting</a></td></tr>
+<tr class="memitem:a49ed84d18af567a1b2014cdddde91a35" id="r_a49ed84d18af567a1b2014cdddde91a35"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a49ed84d18af567a1b2014cdddde91a35">isGuarding</a></td></tr>
+<tr class="memitem:ada30a406d3b082b53571c5bb112cbea9" id="r_ada30a406d3b082b53571c5bb112cbea9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ada30a406d3b082b53571c5bb112cbea9">dashDuration</a> = .15f</td></tr>
+<tr class="memitem:a98b82f45a94d3f4352908e84a2a738e1" id="r_a98b82f45a94d3f4352908e84a2a738e1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a98b82f45a94d3f4352908e84a2a738e1">dashCooldown</a> = .8f</td></tr>
+<tr class="memitem:a9e655bb61bd73abe04318fa792c4e7ce" id="r_a9e655bb61bd73abe04318fa792c4e7ce"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a9e655bb61bd73abe04318fa792c4e7ce">dashEffect</a></td></tr>
+<tr class="memitem:a0dc0c2ceae7ca609ac20fe64251cbd26" id="r_a0dc0c2ceae7ca609ac20fe64251cbd26"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#a0dc0c2ceae7ca609ac20fe64251cbd26">dashSound</a></td></tr>
+<tr class="memitem:a844018e259f01e42a3c2c59fcb4e6189" id="r_a844018e259f01e42a3c2c59fcb4e6189"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a844018e259f01e42a3c2c59fcb4e6189">isDashing</a></td></tr>
+<tr class="memitem:a2da80c25f400eeb862aa5fd4a054003b" id="r_a2da80c25f400eeb862aa5fd4a054003b"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#a2da80c25f400eeb862aa5fd4a054003b">stepSound</a></td></tr>
+<tr class="memitem:aa8390690df97299cc1f7f3de4802f9e6" id="r_aa8390690df97299cc1f7f3de4802f9e6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa8390690df97299cc1f7f3de4802f9e6">stepInterval</a> = .3f</td></tr>
+<tr class="memitem:a733e7b2d2e2ee745838f77f140db0ae2" id="r_a733e7b2d2e2ee745838f77f140db0ae2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a733e7b2d2e2ee745838f77f140db0ae2">stepVolume</a> = .5f</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:aaf9b77d7177d538be9c1447d08191322" id="r_aaf9b77d7177d538be9c1447d08191322"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf9b77d7177d538be9c1447d08191322">Update</a> ()</td></tr>
+<tr class="memdesc:aaf9b77d7177d538be9c1447d08191322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee los botones de ataque y de dash, y hace sonar los pasos. El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion.  <br /></td></tr>
+<tr class="memitem:a0bcbc490cadde53eeacfebb591a8befd" id="r_a0bcbc490cadde53eeacfebb591a8befd"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#a0bcbc490cadde53eeacfebb591a8befd">Dash</a> ()</td></tr>
+<tr class="memdesc:a0bcbc490cadde53eeacfebb591a8befd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impulso corto y rapido hacia donde se esta moviendo (o hacia donde mira si esta quieto). Mientras dura, isDashing esta a true y el jugador no recibe daño ni empujones. Va en una corrutina para poder esperar dashDuration y luego frenar.  <br /></td></tr>
+<tr class="memitem:a0caaa871b9ef680c9f02bd0e22c77db1" id="r_a0caaa871b9ef680c9f02bd0e22c77db1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0caaa871b9ef680c9f02bd0e22c77db1">FixedUpdate</a> ()</td></tr>
+<tr class="memdesc:a0caaa871b9ef680c9f02bd0e22c77db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mueve al jugador segun las teclas y actualiza el Animator. FixedUpdate va a intervalos fijos y no depende de los fps, aqui va todo lo de fisicas.  <br /></td></tr>
+<tr class="memitem:a018f31cebe8a12eba0a2c4763cb3f948" id="r_a018f31cebe8a12eba0a2c4763cb3f948"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a018f31cebe8a12eba0a2c4763cb3f948">Flip</a> ()</td></tr>
+<tr class="memdesc:a018f31cebe8a12eba0a2c4763cb3f948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Da la vuelta al sprite invirtiendo la escala en X.  <br /></td></tr>
+<tr class="memitem:a9650c2078abf1de948e63594b114cbb0" id="r_a9650c2078abf1de948e63594b114cbb0"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#a9650c2078abf1de948e63594b114cbb0">KnockbackCounter</a> (float stunTime)</td></tr>
+<tr class="memdesc:a9650c2078abf1de948e63594b114cbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Espera el tiempo de stun, frena al jugador y le devuelve el control.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a3488eab9c422c37f64728749d601bf62" id="r_a3488eab9c422c37f64728749d601bf62"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3488eab9c422c37f64728749d601bf62">isKnockedBack</a></td></tr>
+<tr class="memitem:a2a3e3b2197948e6bbf3c2627e63846ac" id="r_a2a3e3b2197948e6bbf3c2627e63846ac"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2a3e3b2197948e6bbf3c2627e63846ac">dashTimer</a></td></tr>
+<tr class="memitem:a20975da1e4f23c1ddff14838dc82054c" id="r_a20975da1e4f23c1ddff14838dc82054c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a20975da1e4f23c1ddff14838dc82054c">stepTimer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Mueve al jugador con el teclado y se encarga del dash, del knockback y de girar el sprite. Tambien lee el boton de ataque y se lo pasa a <a class="el" href="class_player___combat.html" title="Ataque con espada del jugador, con combo de dos golpes y cooldown. El daño lo hace un evento de la an...">Player_Combat</a>. Va en el Player. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a0bcbc490cadde53eeacfebb591a8befd" name="a0bcbc490cadde53eeacfebb591a8befd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcbc490cadde53eeacfebb591a8befd">&#9670;&#160;</a></span>Dash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator PlayerMovement.Dash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Impulso corto y rapido hacia donde se esta moviendo (o hacia donde mira si esta quieto). Mientras dura, isDashing esta a true y el jugador no recibe daño ni empujones. Va en una corrutina para poder esperar dashDuration y luego frenar. </p>
+
+</div>
+</div>
+<a id="a0caaa871b9ef680c9f02bd0e22c77db1" name="a0caaa871b9ef680c9f02bd0e22c77db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0caaa871b9ef680c9f02bd0e22c77db1">&#9670;&#160;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovement.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mueve al jugador segun las teclas y actualiza el Animator. FixedUpdate va a intervalos fijos y no depende de los fps, aqui va todo lo de fisicas. </p>
+
+</div>
+</div>
+<a id="a018f31cebe8a12eba0a2c4763cb3f948" name="a018f31cebe8a12eba0a2c4763cb3f948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018f31cebe8a12eba0a2c4763cb3f948">&#9670;&#160;</a></span>Flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovement.Flip </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Da la vuelta al sprite invirtiendo la escala en X. </p>
+
+</div>
+</div>
+<a id="a9226bba0c2ba9b14303b9a30721fd7bf" name="a9226bba0c2ba9b14303b9a30721fd7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9226bba0c2ba9b14303b9a30721fd7bf">&#9670;&#160;</a></span>Knockback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovement.Knockback </td>
+          <td>(</td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>enemy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>force</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>stunTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empuja al jugador en direccion contraria al enemigo que le ha pegado. Si esta en dash no le pasa nada, y si el escudo para el golpe el empujon es mas flojo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enemy</td><td>El enemigo que pega, para saber hacia donde empujar.</td></tr>
+    <tr><td class="paramname">force</td><td>La fuerza del empujon.</td></tr>
+    <tr><td class="paramname">stunTime</td><td>Segundos que se queda sin poder moverse.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9650c2078abf1de948e63594b114cbb0" name="a9650c2078abf1de948e63594b114cbb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9650c2078abf1de948e63594b114cbb0">&#9670;&#160;</a></span>KnockbackCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator PlayerMovement.KnockbackCounter </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>stunTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Espera el tiempo de stun, frena al jugador y le devuelve el control. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stunTime</td><td>Segundos que hay que esperar.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf9b77d7177d538be9c1447d08191322" name="aaf9b77d7177d538be9c1447d08191322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9b77d7177d538be9c1447d08191322">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovement.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lee los botones de ataque y de dash, y hace sonar los pasos. El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="af5745cc3cb8f3f0cf6d2beac4316d4a5" name="af5745cc3cb8f3f0cf6d2beac4316d4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5745cc3cb8f3f0cf6d2beac4316d4a5">&#9670;&#160;</a></span>anim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator PlayerMovement.anim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98b82f45a94d3f4352908e84a2a738e1" name="a98b82f45a94d3f4352908e84a2a738e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b82f45a94d3f4352908e84a2a738e1">&#9670;&#160;</a></span>dashCooldown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.dashCooldown = .8f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada30a406d3b082b53571c5bb112cbea9" name="ada30a406d3b082b53571c5bb112cbea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada30a406d3b082b53571c5bb112cbea9">&#9670;&#160;</a></span>dashDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.dashDuration = .15f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e655bb61bd73abe04318fa792c4e7ce" name="a9e655bb61bd73abe04318fa792c4e7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e655bb61bd73abe04318fa792c4e7ce">&#9670;&#160;</a></span>dashEffect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject PlayerMovement.dashEffect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dc0c2ceae7ca609ac20fe64251cbd26" name="a0dc0c2ceae7ca609ac20fe64251cbd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc0c2ceae7ca609ac20fe64251cbd26">&#9670;&#160;</a></span>dashSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip PlayerMovement.dashSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a3e3b2197948e6bbf3c2627e63846ac" name="a2a3e3b2197948e6bbf3c2627e63846ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3e3b2197948e6bbf3c2627e63846ac">&#9670;&#160;</a></span>dashTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.dashTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eaf004d1a3bd77f15eee32ba9649e58" name="a7eaf004d1a3bd77f15eee32ba9649e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eaf004d1a3bd77f15eee32ba9649e58">&#9670;&#160;</a></span>facingDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlayerMovement.facingDirection = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a844018e259f01e42a3c2c59fcb4e6189" name="a844018e259f01e42a3c2c59fcb4e6189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844018e259f01e42a3c2c59fcb4e6189">&#9670;&#160;</a></span>isDashing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.isDashing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49ed84d18af567a1b2014cdddde91a35" name="a49ed84d18af567a1b2014cdddde91a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ed84d18af567a1b2014cdddde91a35">&#9670;&#160;</a></span>isGuarding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.isGuarding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3488eab9c422c37f64728749d601bf62" name="a3488eab9c422c37f64728749d601bf62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3488eab9c422c37f64728749d601bf62">&#9670;&#160;</a></span>isKnockedBack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.isKnockedBack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04e49c8cef7c4e7f7f453e0bb3d1113b" name="a04e49c8cef7c4e7f7f453e0bb3d1113b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e49c8cef7c4e7f7f453e0bb3d1113b">&#9670;&#160;</a></span>isShooting</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.isShooting</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc1acd0d35fcea9a52d1b2f520bc2d0b" name="afc1acd0d35fcea9a52d1b2f520bc2d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1acd0d35fcea9a52d1b2f520bc2d0b">&#9670;&#160;</a></span>player_Combat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player___combat.html">Player_Combat</a> PlayerMovement.player_Combat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba8fcc2824412a2caea004d80601b42b" name="aba8fcc2824412a2caea004d80601b42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba8fcc2824412a2caea004d80601b42b">&#9670;&#160;</a></span>player_Guard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player___guard.html">Player_Guard</a> PlayerMovement.player_Guard</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf8b937f61c1e92dfdbd075678f911d1" name="acf8b937f61c1e92dfdbd075678f911d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf8b937f61c1e92dfdbd075678f911d1">&#9670;&#160;</a></span>rb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D PlayerMovement.rb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8390690df97299cc1f7f3de4802f9e6" name="aa8390690df97299cc1f7f3de4802f9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8390690df97299cc1f7f3de4802f9e6">&#9670;&#160;</a></span>stepInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.stepInterval = .3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2da80c25f400eeb862aa5fd4a054003b" name="a2da80c25f400eeb862aa5fd4a054003b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da80c25f400eeb862aa5fd4a054003b">&#9670;&#160;</a></span>stepSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip PlayerMovement.stepSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20975da1e4f23c1ddff14838dc82054c" name="a20975da1e4f23c1ddff14838dc82054c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20975da1e4f23c1ddff14838dc82054c">&#9670;&#160;</a></span>stepTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.stepTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a733e7b2d2e2ee745838f77f140db0ae2" name="a733e7b2d2e2ee745838f77f140db0ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733e7b2d2e2ee745838f77f140db0ae2">&#9670;&#160;</a></span>stepVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement.stepVolume = .5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/PlayerScripts/<a class="el" href="_player_movement_8cs.html">PlayerMovement.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player_movement.html">PlayerMovement</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

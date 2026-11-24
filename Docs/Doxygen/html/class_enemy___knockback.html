@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase Enemy_Knockback</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_enemy___knockback.html','','class_enemy___knockback-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase Enemy_Knockback</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Empuja y aturde al enemigo cuando recibe un golpe. Mientras esta aturdido <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> no lo mueve (estado Knockback).  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de Enemy_Knockback</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_enemy___knockback.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a3c6f2160c4b9282dfdc7a344af9732e8" id="r_a3c6f2160c4b9282dfdc7a344af9732e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c6f2160c4b9282dfdc7a344af9732e8">Knockback</a> (Transform playerTransform, float knockbackForce, float knockbackTime, float stunTime)</td></tr>
+<tr class="memdesc:a3c6f2160c4b9282dfdc7a344af9732e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empuja al enemigo lejos del jugador cuando recibe un golpe.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:af6c357d2df9b460c5a41a3588b2838af" id="r_af6c357d2df9b460c5a41a3588b2838af"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af6c357d2df9b460c5a41a3588b2838af">pushMultiplier</a> = 1</td></tr>
+<tr class="memitem:a1cc4dc7932793237cdfd7ffec8a16c88" id="r_a1cc4dc7932793237cdfd7ffec8a16c88"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1cc4dc7932793237cdfd7ffec8a16c88">stunCooldown</a> = 0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:abde67cc39d08b71cdb2c0d4aef8c7d27" id="r_abde67cc39d08b71cdb2c0d4aef8c7d27"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abde67cc39d08b71cdb2c0d4aef8c7d27">Start</a> ()</td></tr>
+<tr class="memdesc:abde67cc39d08b71cdb2c0d4aef8c7d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coge el Rigidbody2D y el <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> del enemigo.  <br /></td></tr>
+<tr class="memitem:a3a0b2fb411a0233eca7c28ed169b91cc" id="r_a3a0b2fb411a0233eca7c28ed169b91cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a0b2fb411a0233eca7c28ed169b91cc">Update</a> ()</td></tr>
+<tr class="memdesc:a3a0b2fb411a0233eca7c28ed169b91cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va bajando el tiempo que falta para poder aturdirlo otra vez.  <br /></td></tr>
+<tr class="memitem:a89f29c07afeddda5e087b5078772f062" id="r_a89f29c07afeddda5e087b5078772f062"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#a89f29c07afeddda5e087b5078772f062">StunTimer</a> (float knockbackTime, float stunTime)</td></tr>
+<tr class="memdesc:a89f29c07afeddda5e087b5078772f062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primero sale volando un rato, luego se para y se queda aturdido, y despues vuelve a Idle.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a05ddcb6e7df028fde53d403408b834d8" id="r_a05ddcb6e7df028fde53d403408b834d8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a05ddcb6e7df028fde53d403408b834d8">stunCooldownTimer</a></td></tr>
+<tr class="memitem:a87ffe250fb24956d71896a9f1e1c89d2" id="r_a87ffe250fb24956d71896a9f1e1c89d2"><td class="memItemLeft">Rigidbody2D&#160;</td><td class="memItemRight"><a class="el" href="#a87ffe250fb24956d71896a9f1e1c89d2">rb</a></td></tr>
+<tr class="memitem:a4210bd32fa426c3cb629e0cd8e6d45c1" id="r_a4210bd32fa426c3cb629e0cd8e6d45c1"><td class="memItemLeft"><a class="el" href="class_enemy___movement.html">Enemy_Movement</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4210bd32fa426c3cb629e0cd8e6d45c1">enemy_Movement</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Empuja y aturde al enemigo cuando recibe un golpe. Mientras esta aturdido <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> no lo mueve (estado Knockback). </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a3c6f2160c4b9282dfdc7a344af9732e8" name="a3c6f2160c4b9282dfdc7a344af9732e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6f2160c4b9282dfdc7a344af9732e8">&#9670;&#160;</a></span>Knockback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Knockback.Knockback </td>
+          <td>(</td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>playerTransform</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>knockbackForce</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>knockbackTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>stunTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empuja al enemigo lejos del jugador cuando recibe un golpe. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerTransform</td><td>Quien pega (el jugador o su flecha), para saber hacia donde empujar.</td></tr>
+    <tr><td class="paramname">knockbackForce</td><td>La fuerza del empujon.</td></tr>
+    <tr><td class="paramname">knockbackTime</td><td>Segundos que sale volando.</td></tr>
+    <tr><td class="paramname">stunTime</td><td>Segundos que se queda aturdido despues.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abde67cc39d08b71cdb2c0d4aef8c7d27" name="abde67cc39d08b71cdb2c0d4aef8c7d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde67cc39d08b71cdb2c0d4aef8c7d27">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Knockback.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coge el Rigidbody2D y el <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> del enemigo. </p>
+
+</div>
+</div>
+<a id="a89f29c07afeddda5e087b5078772f062" name="a89f29c07afeddda5e087b5078772f062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f29c07afeddda5e087b5078772f062">&#9670;&#160;</a></span>StunTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator Enemy_Knockback.StunTimer </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>knockbackTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>stunTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Primero sale volando un rato, luego se para y se queda aturdido, y despues vuelve a Idle. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">knockbackTime</td><td>Segundos que sale volando.</td></tr>
+    <tr><td class="paramname">stunTime</td><td>Segundos que se queda aturdido.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a0b2fb411a0233eca7c28ed169b91cc" name="a3a0b2fb411a0233eca7c28ed169b91cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0b2fb411a0233eca7c28ed169b91cc">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Knockback.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Va bajando el tiempo que falta para poder aturdirlo otra vez. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a4210bd32fa426c3cb629e0cd8e6d45c1" name="a4210bd32fa426c3cb629e0cd8e6d45c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4210bd32fa426c3cb629e0cd8e6d45c1">&#9670;&#160;</a></span>enemy_Movement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy___movement.html">Enemy_Movement</a> Enemy_Knockback.enemy_Movement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6c357d2df9b460c5a41a3588b2838af" name="af6c357d2df9b460c5a41a3588b2838af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c357d2df9b460c5a41a3588b2838af">&#9670;&#160;</a></span>pushMultiplier</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Knockback.pushMultiplier = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87ffe250fb24956d71896a9f1e1c89d2" name="a87ffe250fb24956d71896a9f1e1c89d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ffe250fb24956d71896a9f1e1c89d2">&#9670;&#160;</a></span>rb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D Enemy_Knockback.rb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cc4dc7932793237cdfd7ffec8a16c88" name="a1cc4dc7932793237cdfd7ffec8a16c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc4dc7932793237cdfd7ffec8a16c88">&#9670;&#160;</a></span>stunCooldown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Knockback.stunCooldown = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05ddcb6e7df028fde53d403408b834d8" name="a05ddcb6e7df028fde53d403408b834d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ddcb6e7df028fde53d403408b834d8">&#9670;&#160;</a></span>stunCooldownTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Knockback.stunCooldownTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/EnemiesScripts/<a class="el" href="_enemy___knockback_8cs.html">Enemy_Knockback.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_enemy___knockback.html">Enemy_Knockback</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

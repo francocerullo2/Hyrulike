@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase Enemy_Movement</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_enemy___movement.html','','class_enemy___movement-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase Enemy_Movement</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback). Segun donde este el jugador decide si patrullar, perseguir o atacar, y pone la animacion de cada estado. La usan todos los enemigos y el jefe; cada uno se configura con los campos del Inspector.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de Enemy_Movement</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_enemy___movement.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a9b2dc63a1b0d2a01b7844755c4aebaff" id="r_a9b2dc63a1b0d2a01b7844755c4aebaff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9b2dc63a1b0d2a01b7844755c4aebaff">Alert</a> ()</td></tr>
+<tr class="memdesc:a9b2dc63a1b0d2a01b7844755c4aebaff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lo llama <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> al recibir daño: durante un rato ve al jugador desde mucho mas lejos y va a por el. Asi si le disparas con el arco desde fuera de su rango no se queda quieto.  <br /></td></tr>
+<tr class="memitem:a568c140d8c5a8323558cfd7237f7236e" id="r_a568c140d8c5a8323558cfd7237f7236e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a568c140d8c5a8323558cfd7237f7236e">ChangeState</a> (<a class="el" href="_enemy___movement_8cs.html#afa7c83b36b8a04d477dd0b7ce04e07ca">EnemyState</a> newState)</td></tr>
+<tr class="memdesc:a568c140d8c5a8323558cfd7237f7236e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia de estado y actualiza los bools del Animator para que se vea la animacion que toca.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a09c1a0656e4c5d08a1b4bead2ae2b933" id="r_a09c1a0656e4c5d08a1b4bead2ae2b933"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a09c1a0656e4c5d08a1b4bead2ae2b933">speed</a></td></tr>
+<tr class="memitem:a2b92da0fac26be446eb2d60fdb4dd2ef" id="r_a2b92da0fac26be446eb2d60fdb4dd2ef"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2b92da0fac26be446eb2d60fdb4dd2ef">attackRange</a> = 2</td></tr>
+<tr class="memitem:aa0b2c3c3e933679523ff69b37580e891" id="r_aa0b2c3c3e933679523ff69b37580e891"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa0b2c3c3e933679523ff69b37580e891">attackCoolDown</a> = 2</td></tr>
+<tr class="memitem:a64b569a2102701d52fc355f4b8127e39" id="r_a64b569a2102701d52fc355f4b8127e39"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a64b569a2102701d52fc355f4b8127e39">playerDetectRange</a> = 5</td></tr>
+<tr class="memitem:ad821dc359342edd656220c41d5e57965" id="r_ad821dc359342edd656220c41d5e57965"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#ad821dc359342edd656220c41d5e57965">detectionPoint</a></td></tr>
+<tr class="memitem:ac7b40fdfea685dff3554fa99caba8d17" id="r_ac7b40fdfea685dff3554fa99caba8d17"><td class="memItemLeft">LayerMask&#160;</td><td class="memItemRight"><a class="el" href="#ac7b40fdfea685dff3554fa99caba8d17">playerLayer</a></td></tr>
+<tr class="memitem:a747a2454bb94570c719f68942cbbab93" id="r_a747a2454bb94570c719f68942cbbab93"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a747a2454bb94570c719f68942cbbab93">patrol</a> = true</td></tr>
+<tr class="memitem:a08e855e98e66b1ca2fe3b03d676302dd" id="r_a08e855e98e66b1ca2fe3b03d676302dd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a08e855e98e66b1ca2fe3b03d676302dd">chasePlayer</a> = true</td></tr>
+<tr class="memitem:ad65bc047ab589f5bbaffc14d755deac0" id="r_ad65bc047ab589f5bbaffc14d755deac0"><td class="memItemLeft">Vector2[]&#160;</td><td class="memItemRight"><a class="el" href="#ad65bc047ab589f5bbaffc14d755deac0">patrolPoints</a></td></tr>
+<tr class="memitem:ae95b4a6e50487a0dad4c3bfccdfc4f61" id="r_ae95b4a6e50487a0dad4c3bfccdfc4f61"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae95b4a6e50487a0dad4c3bfccdfc4f61">pauseDuration</a> = 1.5f</td></tr>
+<tr class="memitem:afee7b48d64972415234cc354915f64c1" id="r_afee7b48d64972415234cc354915f64c1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afee7b48d64972415234cc354915f64c1">alertDuration</a> = 5</td></tr>
+<tr class="memitem:aa91add20585468d6c19760433ccb96b6" id="r_aa91add20585468d6c19760433ccb96b6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa91add20585468d6c19760433ccb96b6">alertRangeMultiplier</a> = 3</td></tr>
+<tr class="memitem:a5db094ad04c0b75883484206f12fa443" id="r_a5db094ad04c0b75883484206f12fa443"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5db094ad04c0b75883484206f12fa443">canFlip</a> = true</td></tr>
+<tr class="memitem:ac8c737158e36583eea88972190a3c571" id="r_ac8c737158e36583eea88972190a3c571"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8c737158e36583eea88972190a3c571">hasHitAnimation</a> = false</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ace805b48273291826de0fc5b04d8b669" id="r_ace805b48273291826de0fc5b04d8b669"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace805b48273291826de0fc5b04d8b669">Start</a> ()</td></tr>
+<tr class="memdesc:ace805b48273291826de0fc5b04d8b669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coge los componentes y empieza en Idle.  <br /></td></tr>
+<tr class="memitem:a498e9bfd4da9e9a312aff6e372d464bd" id="r_a498e9bfd4da9e9a312aff6e372d464bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a498e9bfd4da9e9a312aff6e372d464bd">FixedUpdate</a> ()</td></tr>
+<tr class="memdesc:a498e9bfd4da9e9a312aff6e372d464bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cada paso de fisicas decide que hacer y baja los contadores. FixedUpdate va a intervalos fijos y no depende de los fps, aqui va lo de fisicas.  <br /></td></tr>
+<tr class="memitem:a0781f63e2e29885a8bb175e339e1d7be" id="r_a0781f63e2e29885a8bb175e339e1d7be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0781f63e2e29885a8bb175e339e1d7be">Chase</a> ()</td></tr>
+<tr class="memdesc:a0781f63e2e29885a8bb175e339e1d7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va directo hacia el jugador.  <br /></td></tr>
+<tr class="memitem:aa42ecaef1d91f673e861d0cd72e8a100" id="r_aa42ecaef1d91f673e861d0cd72e8a100"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa42ecaef1d91f673e861d0cd72e8a100">CheckForPlayer</a> ()</td></tr>
+<tr class="memdesc:aa42ecaef1d91f673e861d0cd72e8a100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aqui se decide que hace el enemigo segun donde este el jugador: si esta cerca ataca (si el cooldown lo deja), si lo ve lo persigue, y si no patrulla o se queda quieto.  <br /></td></tr>
+<tr class="memitem:a0a7ed462aefc198dbff1889877780e8e" id="r_a0a7ed462aefc198dbff1889877780e8e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0a7ed462aefc198dbff1889877780e8e">PatrolOrIdle</a> ()</td></tr>
+<tr class="memdesc:a0a7ed462aefc198dbff1889877780e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Si tiene la patrulla activada y puntos puestos patrulla, si no se queda parado.  <br /></td></tr>
+<tr class="memitem:ad916861c28ea40fe669b6b64d5d13ccc" id="r_ad916861c28ea40fe669b6b64d5d13ccc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad916861c28ea40fe669b6b64d5d13ccc">SetAttackDirection</a> ()</td></tr>
+<tr class="memdesc:ad916861c28ea40fe669b6b64d5d13ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elige la animacion de ataque (lado, arriba o abajo) segun donde este el jugador. La izquierda ya la cubre el Flip, por eso attackX siempre es 1 o 0. Se usan valores redondos para que el blend tree no mezcle dos animaciones y pegue dos veces.  <br /></td></tr>
+<tr class="memitem:a2cd243679fedd5a95aa3b10af4fb2a24" id="r_a2cd243679fedd5a95aa3b10af4fb2a24"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2cd243679fedd5a95aa3b10af4fb2a24">FacePlayer</a> ()</td></tr>
+<tr class="memdesc:a2cd243679fedd5a95aa3b10af4fb2a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gira al enemigo si el jugador esta en el lado contrario.  <br /></td></tr>
+<tr class="memitem:a6664bc66f6cbed4893a935f71ce465a6" id="r_a6664bc66f6cbed4893a935f71ce465a6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6664bc66f6cbed4893a935f71ce465a6">FaceTarget</a> (Vector2 target)</td></tr>
+<tr class="memdesc:a6664bc66f6cbed4893a935f71ce465a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gira al enemigo si el punto al que va esta en el lado contrario. Los sprites miran a la derecha, asi que escala positiva = derecha y negativa = izquierda (igual que en <a class="el" href="class_player_movement.html" title="Mueve al jugador con el teclado y se encarga del dash, del knockback y de girar el sprite....">PlayerMovement</a>).  <br /></td></tr>
+<tr class="memitem:ac0acb949de0e9f4d69106bf4bc086ce5" id="r_ac0acb949de0e9f4d69106bf4bc086ce5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0acb949de0e9f4d69106bf4bc086ce5">Flip</a> ()</td></tr>
+<tr class="memdesc:ac0acb949de0e9f4d69106bf4bc086ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Igual que en el jugador, invierte la escala en X para girar el sprite.  <br /></td></tr>
+<tr class="memitem:adbd5db2244f42b323d46d7885d13a066" id="r_adbd5db2244f42b323d46d7885d13a066"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbd5db2244f42b323d46d7885d13a066">Patrol</a> ()</td></tr>
+<tr class="memdesc:adbd5db2244f42b323d46d7885d13a066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va al punto que toca; al llegar espera un rato y pasa al siguiente.  <br /></td></tr>
+<tr class="memitem:ae315de68be39b0c2997c588b2cd0c11c" id="r_ae315de68be39b0c2997c588b2cd0c11c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae315de68be39b0c2997c588b2cd0c11c">OnDrawGizmosSelected</a> ()</td></tr>
+<tr class="memdesc:ae315de68be39b0c2997c588b2cd0c11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el rango de deteccion y los puntos de patrulla en el editor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:aa0b39570a7d0323f21e580d1d8cd47e0" id="r_aa0b39570a7d0323f21e580d1d8cd47e0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa0b39570a7d0323f21e580d1d8cd47e0">alertTimer</a></td></tr>
+<tr class="memitem:a327e0989f69b95b1c67b858318c1bcd5" id="r_a327e0989f69b95b1c67b858318c1bcd5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a327e0989f69b95b1c67b858318c1bcd5">currentPatrolIndex</a></td></tr>
+<tr class="memitem:af582ebaa1f8382fa0900d8328e0e67ac" id="r_af582ebaa1f8382fa0900d8328e0e67ac"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af582ebaa1f8382fa0900d8328e0e67ac">pauseTimer</a></td></tr>
+<tr class="memitem:a699537df7e246d3412bc7890a4db80c1" id="r_a699537df7e246d3412bc7890a4db80c1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a699537df7e246d3412bc7890a4db80c1">isPatrolling</a></td></tr>
+<tr class="memitem:a182899c159d8143b9bd2bdee654fd345" id="r_a182899c159d8143b9bd2bdee654fd345"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a182899c159d8143b9bd2bdee654fd345">attackCoolDownTimer</a></td></tr>
+<tr class="memitem:a373a8d8fa529f397a755c3e3c9ed44ce" id="r_a373a8d8fa529f397a755c3e3c9ed44ce"><td class="memItemLeft"><a class="el" href="_enemy___movement_8cs.html#afa7c83b36b8a04d477dd0b7ce04e07ca">EnemyState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a373a8d8fa529f397a755c3e3c9ed44ce">enemyState</a></td></tr>
+<tr class="memitem:ab51f18173bf51fb3517a2e970dd2c005" id="r_ab51f18173bf51fb3517a2e970dd2c005"><td class="memItemLeft">Rigidbody2D&#160;</td><td class="memItemRight"><a class="el" href="#ab51f18173bf51fb3517a2e970dd2c005">rb</a></td></tr>
+<tr class="memitem:a0313fa5cd1aa80a45b05052df63df326" id="r_a0313fa5cd1aa80a45b05052df63df326"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#a0313fa5cd1aa80a45b05052df63df326">player</a></td></tr>
+<tr class="memitem:ae4eabff8825f5aa9597b8615a9d0e8f2" id="r_ae4eabff8825f5aa9597b8615a9d0e8f2"><td class="memItemLeft">Animator&#160;</td><td class="memItemRight"><a class="el" href="#ae4eabff8825f5aa9597b8615a9d0e8f2">anim</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback). Segun donde este el jugador decide si patrullar, perseguir o atacar, y pone la animacion de cada estado. La usan todos los enemigos y el jefe; cada uno se configura con los campos del Inspector. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a9b2dc63a1b0d2a01b7844755c4aebaff" name="a9b2dc63a1b0d2a01b7844755c4aebaff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2dc63a1b0d2a01b7844755c4aebaff">&#9670;&#160;</a></span>Alert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.Alert </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lo llama <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> al recibir daño: durante un rato ve al jugador desde mucho mas lejos y va a por el. Asi si le disparas con el arco desde fuera de su rango no se queda quieto. </p>
+
+</div>
+</div>
+<a id="a568c140d8c5a8323558cfd7237f7236e" name="a568c140d8c5a8323558cfd7237f7236e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568c140d8c5a8323558cfd7237f7236e">&#9670;&#160;</a></span>ChangeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.ChangeState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_enemy___movement_8cs.html#afa7c83b36b8a04d477dd0b7ce04e07ca">EnemyState</a></td>          <td class="paramname"><span class="paramname"><em>newState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia de estado y actualiza los bools del Animator para que se vea la animacion que toca. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td>El estado al que pasa.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0781f63e2e29885a8bb175e339e1d7be" name="a0781f63e2e29885a8bb175e339e1d7be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0781f63e2e29885a8bb175e339e1d7be">&#9670;&#160;</a></span>Chase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.Chase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Va directo hacia el jugador. </p>
+
+</div>
+</div>
+<a id="aa42ecaef1d91f673e861d0cd72e8a100" name="aa42ecaef1d91f673e861d0cd72e8a100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42ecaef1d91f673e861d0cd72e8a100">&#9670;&#160;</a></span>CheckForPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.CheckForPlayer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aqui se decide que hace el enemigo segun donde este el jugador: si esta cerca ataca (si el cooldown lo deja), si lo ve lo persigue, y si no patrulla o se queda quieto. </p>
+
+</div>
+</div>
+<a id="a2cd243679fedd5a95aa3b10af4fb2a24" name="a2cd243679fedd5a95aa3b10af4fb2a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd243679fedd5a95aa3b10af4fb2a24">&#9670;&#160;</a></span>FacePlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.FacePlayer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gira al enemigo si el jugador esta en el lado contrario. </p>
+
+</div>
+</div>
+<a id="a6664bc66f6cbed4893a935f71ce465a6" name="a6664bc66f6cbed4893a935f71ce465a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6664bc66f6cbed4893a935f71ce465a6">&#9670;&#160;</a></span>FaceTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.FaceTarget </td>
+          <td>(</td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gira al enemigo si el punto al que va esta en el lado contrario. Los sprites miran a la derecha, asi que escala positiva = derecha y negativa = izquierda (igual que en <a class="el" href="class_player_movement.html" title="Mueve al jugador con el teclado y se encarga del dash, del knockback y de girar el sprite....">PlayerMovement</a>). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>El punto al que tiene que mirar.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a498e9bfd4da9e9a312aff6e372d464bd" name="a498e9bfd4da9e9a312aff6e372d464bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e9bfd4da9e9a312aff6e372d464bd">&#9670;&#160;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cada paso de fisicas decide que hacer y baja los contadores. FixedUpdate va a intervalos fijos y no depende de los fps, aqui va lo de fisicas. </p>
+
+</div>
+</div>
+<a id="ac0acb949de0e9f4d69106bf4bc086ce5" name="ac0acb949de0e9f4d69106bf4bc086ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0acb949de0e9f4d69106bf4bc086ce5">&#9670;&#160;</a></span>Flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.Flip </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Igual que en el jugador, invierte la escala en X para girar el sprite. </p>
+
+</div>
+</div>
+<a id="ae315de68be39b0c2997c588b2cd0c11c" name="ae315de68be39b0c2997c588b2cd0c11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae315de68be39b0c2997c588b2cd0c11c">&#9670;&#160;</a></span>OnDrawGizmosSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.OnDrawGizmosSelected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dibuja el rango de deteccion y los puntos de patrulla en el editor. </p>
+
+</div>
+</div>
+<a id="adbd5db2244f42b323d46d7885d13a066" name="adbd5db2244f42b323d46d7885d13a066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd5db2244f42b323d46d7885d13a066">&#9670;&#160;</a></span>Patrol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.Patrol </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Va al punto que toca; al llegar espera un rato y pasa al siguiente. </p>
+
+</div>
+</div>
+<a id="a0a7ed462aefc198dbff1889877780e8e" name="a0a7ed462aefc198dbff1889877780e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7ed462aefc198dbff1889877780e8e">&#9670;&#160;</a></span>PatrolOrIdle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.PatrolOrIdle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Si tiene la patrulla activada y puntos puestos patrulla, si no se queda parado. </p>
+
+</div>
+</div>
+<a id="ad916861c28ea40fe669b6b64d5d13ccc" name="ad916861c28ea40fe669b6b64d5d13ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad916861c28ea40fe669b6b64d5d13ccc">&#9670;&#160;</a></span>SetAttackDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.SetAttackDirection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Elige la animacion de ataque (lado, arriba o abajo) segun donde este el jugador. La izquierda ya la cubre el Flip, por eso attackX siempre es 1 o 0. Se usan valores redondos para que el blend tree no mezcle dos animaciones y pegue dos veces. </p>
+
+</div>
+</div>
+<a id="ace805b48273291826de0fc5b04d8b669" name="ace805b48273291826de0fc5b04d8b669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace805b48273291826de0fc5b04d8b669">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy_Movement.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coge los componentes y empieza en Idle. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="afee7b48d64972415234cc354915f64c1" name="afee7b48d64972415234cc354915f64c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee7b48d64972415234cc354915f64c1">&#9670;&#160;</a></span>alertDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.alertDuration = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa91add20585468d6c19760433ccb96b6" name="aa91add20585468d6c19760433ccb96b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91add20585468d6c19760433ccb96b6">&#9670;&#160;</a></span>alertRangeMultiplier</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.alertRangeMultiplier = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0b39570a7d0323f21e580d1d8cd47e0" name="aa0b39570a7d0323f21e580d1d8cd47e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b39570a7d0323f21e580d1d8cd47e0">&#9670;&#160;</a></span>alertTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.alertTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4eabff8825f5aa9597b8615a9d0e8f2" name="ae4eabff8825f5aa9597b8615a9d0e8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4eabff8825f5aa9597b8615a9d0e8f2">&#9670;&#160;</a></span>anim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator Enemy_Movement.anim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0b2c3c3e933679523ff69b37580e891" name="aa0b2c3c3e933679523ff69b37580e891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b2c3c3e933679523ff69b37580e891">&#9670;&#160;</a></span>attackCoolDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.attackCoolDown = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a182899c159d8143b9bd2bdee654fd345" name="a182899c159d8143b9bd2bdee654fd345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182899c159d8143b9bd2bdee654fd345">&#9670;&#160;</a></span>attackCoolDownTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.attackCoolDownTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b92da0fac26be446eb2d60fdb4dd2ef" name="a2b92da0fac26be446eb2d60fdb4dd2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b92da0fac26be446eb2d60fdb4dd2ef">&#9670;&#160;</a></span>attackRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.attackRange = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5db094ad04c0b75883484206f12fa443" name="a5db094ad04c0b75883484206f12fa443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db094ad04c0b75883484206f12fa443">&#9670;&#160;</a></span>canFlip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy_Movement.canFlip = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08e855e98e66b1ca2fe3b03d676302dd" name="a08e855e98e66b1ca2fe3b03d676302dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e855e98e66b1ca2fe3b03d676302dd">&#9670;&#160;</a></span>chasePlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy_Movement.chasePlayer = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a327e0989f69b95b1c67b858318c1bcd5" name="a327e0989f69b95b1c67b858318c1bcd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327e0989f69b95b1c67b858318c1bcd5">&#9670;&#160;</a></span>currentPatrolIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Enemy_Movement.currentPatrolIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad821dc359342edd656220c41d5e57965" name="ad821dc359342edd656220c41d5e57965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad821dc359342edd656220c41d5e57965">&#9670;&#160;</a></span>detectionPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform Enemy_Movement.detectionPoint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a373a8d8fa529f397a755c3e3c9ed44ce" name="a373a8d8fa529f397a755c3e3c9ed44ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373a8d8fa529f397a755c3e3c9ed44ce">&#9670;&#160;</a></span>enemyState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_enemy___movement_8cs.html#afa7c83b36b8a04d477dd0b7ce04e07ca">EnemyState</a> Enemy_Movement.enemyState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8c737158e36583eea88972190a3c571" name="ac8c737158e36583eea88972190a3c571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c737158e36583eea88972190a3c571">&#9670;&#160;</a></span>hasHitAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy_Movement.hasHitAnimation = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a699537df7e246d3412bc7890a4db80c1" name="a699537df7e246d3412bc7890a4db80c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699537df7e246d3412bc7890a4db80c1">&#9670;&#160;</a></span>isPatrolling</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy_Movement.isPatrolling</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a747a2454bb94570c719f68942cbbab93" name="a747a2454bb94570c719f68942cbbab93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747a2454bb94570c719f68942cbbab93">&#9670;&#160;</a></span>patrol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy_Movement.patrol = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65bc047ab589f5bbaffc14d755deac0" name="ad65bc047ab589f5bbaffc14d755deac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65bc047ab589f5bbaffc14d755deac0">&#9670;&#160;</a></span>patrolPoints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Enemy_Movement.patrolPoints</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae95b4a6e50487a0dad4c3bfccdfc4f61" name="ae95b4a6e50487a0dad4c3bfccdfc4f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95b4a6e50487a0dad4c3bfccdfc4f61">&#9670;&#160;</a></span>pauseDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.pauseDuration = 1.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af582ebaa1f8382fa0900d8328e0e67ac" name="af582ebaa1f8382fa0900d8328e0e67ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af582ebaa1f8382fa0900d8328e0e67ac">&#9670;&#160;</a></span>pauseTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.pauseTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0313fa5cd1aa80a45b05052df63df326" name="a0313fa5cd1aa80a45b05052df63df326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0313fa5cd1aa80a45b05052df63df326">&#9670;&#160;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform Enemy_Movement.player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64b569a2102701d52fc355f4b8127e39" name="a64b569a2102701d52fc355f4b8127e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b569a2102701d52fc355f4b8127e39">&#9670;&#160;</a></span>playerDetectRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.playerDetectRange = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7b40fdfea685dff3554fa99caba8d17" name="ac7b40fdfea685dff3554fa99caba8d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b40fdfea685dff3554fa99caba8d17">&#9670;&#160;</a></span>playerLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Enemy_Movement.playerLayer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab51f18173bf51fb3517a2e970dd2c005" name="ab51f18173bf51fb3517a2e970dd2c005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51f18173bf51fb3517a2e970dd2c005">&#9670;&#160;</a></span>rb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D Enemy_Movement.rb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09c1a0656e4c5d08a1b4bead2ae2b933" name="a09c1a0656e4c5d08a1b4bead2ae2b933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c1a0656e4c5d08a1b4bead2ae2b933">&#9670;&#160;</a></span>speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy_Movement.speed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/EnemiesScripts/<a class="el" href="_enemy___movement_8cs.html">Enemy_Movement.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_enemy___movement.html">Enemy_Movement</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

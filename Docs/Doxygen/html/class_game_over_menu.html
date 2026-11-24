@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase GameOverMenu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_game_over_menu.html','','class_game_over_menu-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase GameOverMenu</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar. Tambien enseña la pantalla de victoria al matar al jefe: es un duplicado del panel con otros colores. Va en un objeto que siempre este activo (por ejemplo MenuCanvas), no en el propio panel.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de GameOverMenu</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_game_over_menu.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a579a2c7622fee5a7886e36874bbb0e15" id="r_a579a2c7622fee5a7886e36874bbb0e15"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a579a2c7622fee5a7886e36874bbb0e15">Show</a> ()</td></tr>
+<tr class="memdesc:a579a2c7622fee5a7886e36874bbb0e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saca el Game Over un poco despues de morir. Lo llama <a class="el" href="class_player_health.html" title="Vida del jugador: recibir daño, curarse, la invulnerabilidad tras un golpe, el Amuleto y la muerte....">PlayerHealth</a> cuando el jugador se queda sin vida.  <br /></td></tr>
+<tr class="memitem:acbaf34e1a3e9c5ab4b3710207098d6b3" id="r_acbaf34e1a3e9c5ab4b3710207098d6b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbaf34e1a3e9c5ab4b3710207098d6b3">ShowVictory</a> ()</td></tr>
+<tr class="memdesc:acbaf34e1a3e9c5ab4b3710207098d6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saca la pantalla de victoria. Lo llama <a class="el" href="class_level_manager.html" title="Uno en cada nivel: cuenta los enemigos y cuando no queda ninguno abre la salida del nivel....">LevelManager</a> cuando se derrota al ultimo enemigo del nivel final.  <br /></td></tr>
+<tr class="memitem:a61c91deec6800b30707938c8c6ade7b6" id="r_a61c91deec6800b30707938c8c6ade7b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61c91deec6800b30707938c8c6ade7b6">Retry</a> ()</td></tr>
+<tr class="memdesc:a61c91deec6800b30707938c8c6ade7b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boton Reintentar: empieza una partida nueva desde el primer nivel con todo reiniciado (las permanentes se mantienen).  <br /></td></tr>
+<tr class="memitem:ae36fbb1db1cc685f970efdf052a060f1" id="r_ae36fbb1db1cc685f970efdf052a060f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae36fbb1db1cc685f970efdf052a060f1">ExitToMenu</a> ()</td></tr>
+<tr class="memdesc:ae36fbb1db1cc685f970efdf052a060f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boton Salir al menu: reinicia la partida y vuelve al menu principal.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:ae4e8e88dd81266fb12461df0dfe0d604" id="r_ae4e8e88dd81266fb12461df0dfe0d604"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#ae4e8e88dd81266fb12461df0dfe0d604">gameOverPanel</a></td></tr>
+<tr class="memitem:a1db37c86fee458a5ec74544002a762ec" id="r_a1db37c86fee458a5ec74544002a762ec"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1db37c86fee458a5ec74544002a762ec">delay</a> = 1.5f</td></tr>
+<tr class="memitem:a36436d336d9bb6f8876acc873d4b580e" id="r_a36436d336d9bb6f8876acc873d4b580e"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a36436d336d9bb6f8876acc873d4b580e">victoryPanel</a></td></tr>
+<tr class="memitem:ad1a9196acf43a248e2e5ce94a64d645e" id="r_ad1a9196acf43a248e2e5ce94a64d645e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad1a9196acf43a248e2e5ce94a64d645e">isVictory</a></td></tr>
+<tr class="memdesc:ad1a9196acf43a248e2e5ce94a64d645e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Para saber si la partida acabo ganando o perdiendo (lo usa tambien el ranking).  <br /></td></tr>
+<tr class="memitem:a9d45b4a8c49c325f590b016a5efae83f" id="r_a9d45b4a8c49c325f590b016a5efae83f"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a9d45b4a8c49c325f590b016a5efae83f">mainMenuScene</a> = &quot;MainMenu&quot;</td></tr>
+<tr class="memitem:a973584b9315a3337cceb32aa760a86b1" id="r_a973584b9315a3337cceb32aa760a86b1"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a973584b9315a3337cceb32aa760a86b1">firstLevel</a> = &quot;Zona1_01&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a62c9283438f82b0ad1eadf17de217fa7" id="r_a62c9283438f82b0ad1eadf17de217fa7"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a62c9283438f82b0ad1eadf17de217fa7">isGameOver</a></td></tr>
+<tr class="memdesc:a62c9283438f82b0ad1eadf17de217fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Es static para que <a class="el" href="class_pause_menu.html" title="Abre y cierra el menu de pausa con Esc y tiene las funciones de sus botones.">PauseMenu</a> sepa que no tiene que abrirse con Esc estando muerto.  <br /></td></tr>
+<tr class="memitem:a8bf22314052d9e14e2eb2f76b3f93bbb" id="r_a8bf22314052d9e14e2eb2f76b3f93bbb"><td class="memItemLeft">static <a class="el" href="class_game_over_menu.html">GameOverMenu</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8bf22314052d9e14e2eb2f76b3f93bbb">Instance</a></td></tr>
+<tr class="memdesc:a8bf22314052d9e14e2eb2f76b3f93bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Igual que <a class="el" href="class_stats_manager.html#af465127babc7825337d65a0b4d5fd1a2" title="La unica copia, para leer las estadisticas desde cualquier script con StatsManager....">StatsManager.Instance</a>: asi el jugador lo encuentra solo en cualquier nivel.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:aef43211cd03a257da5b2778296273792" id="r_aef43211cd03a257da5b2778296273792"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef43211cd03a257da5b2778296273792">Awake</a> ()</td></tr>
+<tr class="memdesc:aef43211cd03a257da5b2778296273792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se guarda como Instance.  <br /></td></tr>
+<tr class="memitem:a8565cc752b69bed8f0f646a9c788f9c3" id="r_a8565cc752b69bed8f0f646a9c788f9c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8565cc752b69bed8f0f646a9c788f9c3">Start</a> ()</td></tr>
+<tr class="memdesc:a8565cc752b69bed8f0f646a9c788f9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empieza con los dos paneles cerrados.  <br /></td></tr>
+<tr class="memitem:afd78ac69290b6b3947d226928f2f133e" id="r_afd78ac69290b6b3947d226928f2f133e"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#afd78ac69290b6b3947d226928f2f133e">ShowAfterDelay</a> ()</td></tr>
+<tr class="memdesc:afd78ac69290b6b3947d226928f2f133e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Espera a que se vea la animacion de muerte, para el juego y enseña el panel que toque con su musica y el ranking.  <br /></td></tr>
+<tr class="memitem:ae9e334bdb755ee9758b70854e9872625" id="r_ae9e334bdb755ee9758b70854e9872625"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae9e334bdb755ee9758b70854e9872625">Unpause</a> ()</td></tr>
+<tr class="memdesc:ae9e334bdb755ee9758b70854e9872625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quita la pausa. Si no, la siguiente escena empezaria congelada.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar. Tambien enseña la pantalla de victoria al matar al jefe: es un duplicado del panel con otros colores. Va en un objeto que siempre este activo (por ejemplo MenuCanvas), no en el propio panel. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="aef43211cd03a257da5b2778296273792" name="aef43211cd03a257da5b2778296273792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef43211cd03a257da5b2778296273792">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Se guarda como Instance. </p>
+
+</div>
+</div>
+<a id="ae36fbb1db1cc685f970efdf052a060f1" name="ae36fbb1db1cc685f970efdf052a060f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36fbb1db1cc685f970efdf052a060f1">&#9670;&#160;</a></span>ExitToMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.ExitToMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boton Salir al menu: reinicia la partida y vuelve al menu principal. </p>
+
+</div>
+</div>
+<a id="a61c91deec6800b30707938c8c6ade7b6" name="a61c91deec6800b30707938c8c6ade7b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c91deec6800b30707938c8c6ade7b6">&#9670;&#160;</a></span>Retry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.Retry </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boton Reintentar: empieza una partida nueva desde el primer nivel con todo reiniciado (las permanentes se mantienen). </p>
+
+</div>
+</div>
+<a id="a579a2c7622fee5a7886e36874bbb0e15" name="a579a2c7622fee5a7886e36874bbb0e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579a2c7622fee5a7886e36874bbb0e15">&#9670;&#160;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.Show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saca el Game Over un poco despues de morir. Lo llama <a class="el" href="class_player_health.html" title="Vida del jugador: recibir daño, curarse, la invulnerabilidad tras un golpe, el Amuleto y la muerte....">PlayerHealth</a> cuando el jugador se queda sin vida. </p>
+
+</div>
+</div>
+<a id="afd78ac69290b6b3947d226928f2f133e" name="afd78ac69290b6b3947d226928f2f133e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd78ac69290b6b3947d226928f2f133e">&#9670;&#160;</a></span>ShowAfterDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator GameOverMenu.ShowAfterDelay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Espera a que se vea la animacion de muerte, para el juego y enseña el panel que toque con su musica y el ranking. </p>
+
+</div>
+</div>
+<a id="acbaf34e1a3e9c5ab4b3710207098d6b3" name="acbaf34e1a3e9c5ab4b3710207098d6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbaf34e1a3e9c5ab4b3710207098d6b3">&#9670;&#160;</a></span>ShowVictory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.ShowVictory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saca la pantalla de victoria. Lo llama <a class="el" href="class_level_manager.html" title="Uno en cada nivel: cuenta los enemigos y cuando no queda ninguno abre la salida del nivel....">LevelManager</a> cuando se derrota al ultimo enemigo del nivel final. </p>
+
+</div>
+</div>
+<a id="a8565cc752b69bed8f0f646a9c788f9c3" name="a8565cc752b69bed8f0f646a9c788f9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8565cc752b69bed8f0f646a9c788f9c3">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Empieza con los dos paneles cerrados. </p>
+
+</div>
+</div>
+<a id="ae9e334bdb755ee9758b70854e9872625" name="ae9e334bdb755ee9758b70854e9872625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e334bdb755ee9758b70854e9872625">&#9670;&#160;</a></span>Unpause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameOverMenu.Unpause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Quita la pausa. Si no, la siguiente escena empezaria congelada. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a1db37c86fee458a5ec74544002a762ec" name="a1db37c86fee458a5ec74544002a762ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db37c86fee458a5ec74544002a762ec">&#9670;&#160;</a></span>delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameOverMenu.delay = 1.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a973584b9315a3337cceb32aa760a86b1" name="a973584b9315a3337cceb32aa760a86b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973584b9315a3337cceb32aa760a86b1">&#9670;&#160;</a></span>firstLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string GameOverMenu.firstLevel = &quot;Zona1_01&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4e8e88dd81266fb12461df0dfe0d604" name="ae4e8e88dd81266fb12461df0dfe0d604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e8e88dd81266fb12461df0dfe0d604">&#9670;&#160;</a></span>gameOverPanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject GameOverMenu.gameOverPanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bf22314052d9e14e2eb2f76b3f93bbb" name="a8bf22314052d9e14e2eb2f76b3f93bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf22314052d9e14e2eb2f76b3f93bbb">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_over_menu.html">GameOverMenu</a> GameOverMenu.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Igual que <a class="el" href="class_stats_manager.html#af465127babc7825337d65a0b4d5fd1a2" title="La unica copia, para leer las estadisticas desde cualquier script con StatsManager....">StatsManager.Instance</a>: asi el jugador lo encuentra solo en cualquier nivel. </p>
+
+</div>
+</div>
+<a id="a62c9283438f82b0ad1eadf17de217fa7" name="a62c9283438f82b0ad1eadf17de217fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c9283438f82b0ad1eadf17de217fa7">&#9670;&#160;</a></span>isGameOver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameOverMenu.isGameOver</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Es static para que <a class="el" href="class_pause_menu.html" title="Abre y cierra el menu de pausa con Esc y tiene las funciones de sus botones.">PauseMenu</a> sepa que no tiene que abrirse con Esc estando muerto. </p>
+
+</div>
+</div>
+<a id="ad1a9196acf43a248e2e5ce94a64d645e" name="ad1a9196acf43a248e2e5ce94a64d645e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a9196acf43a248e2e5ce94a64d645e">&#9670;&#160;</a></span>isVictory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameOverMenu.isVictory</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Para saber si la partida acabo ganando o perdiendo (lo usa tambien el ranking). </p>
+
+</div>
+</div>
+<a id="a9d45b4a8c49c325f590b016a5efae83f" name="a9d45b4a8c49c325f590b016a5efae83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d45b4a8c49c325f590b016a5efae83f">&#9670;&#160;</a></span>mainMenuScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string GameOverMenu.mainMenuScene = &quot;MainMenu&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36436d336d9bb6f8876acc873d4b580e" name="a36436d336d9bb6f8876acc873d4b580e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36436d336d9bb6f8876acc873d4b580e">&#9670;&#160;</a></span>victoryPanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject GameOverMenu.victoryPanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/UIScripts/<a class="el" href="_game_over_menu_8cs.html">GameOverMenu.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_game_over_menu.html">GameOverMenu</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

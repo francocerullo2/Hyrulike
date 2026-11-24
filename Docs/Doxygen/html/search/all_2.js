@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['calculatescore_0',['CalculateScore',['../class_ranking_menu.html#ae7e34125b55b32601c18ca53280b1ae7',1,'RankingMenu']]],
+  ['canflip_1',['canFlip',['../class_enemy___movement.html#a5db094ad04c0b75883484206f12fa443',1,'Enemy_Movement']]],
+  ['cantakedamage_2',['CanTakeDamage',['../class_boss___phases.html#acdd6d449deee65299d90fd048ad1912c',1,'Boss_Phases']]],
+  ['changehealth_3',['ChangeHealth',['../class_enemy___health.html#a7f5c97dd2e04a50ccb0a4ca6909c66f4',1,'Enemy_Health.ChangeHealth()'],['../class_player_health.html#a1f6b539032b3784def92c314db54ba8e',1,'PlayerHealth.ChangeHealth()']]],
+  ['changestate_4',['ChangeState',['../class_enemy___movement.html#a568c140d8c5a8323558cfd7237f7236e',1,'Enemy_Movement']]],
+  ['chase_5',['Chase',['../class_enemy___movement.html#a0781f63e2e29885a8bb175e339e1d7be',1,'Enemy_Movement']]],
+  ['chaseplayer_6',['chasePlayer',['../class_enemy___movement.html#a08e855e98e66b1ca2fe3b03d676302dd',1,'Enemy_Movement']]],
+  ['chasing_7',['Chasing',['../_enemy___movement_8cs.html#afa7c83b36b8a04d477dd0b7ce04e07caa1281abac0921a91a5f7121ff05a6ce55',1,'Enemy_Movement.cs']]],
+  ['checkforplayer_8',['CheckForPlayer',['../class_enemy___movement.html#aa42ecaef1d91f673e861d0cd72e8a100',1,'Enemy_Movement']]],
+  ['checkphase_9',['CheckPhase',['../class_boss___phases.html#a116cb70f1d2cda3fc80ebb0f2c4024fd',1,'Boss_Phases']]],
+  ['closedcolor_10',['closedColor',['../class_level_exit.html#a8d7b7375f435abed3e31faae9da6bfcb',1,'LevelExit']]],
+  ['closehistory_11',['CloseHistory',['../class_main_menu.html#a2e3a5929620374e8cde9eec0618bf48f',1,'MainMenu']]],
+  ['closeoptions_12',['CloseOptions',['../class_main_menu.html#a2c81b27d05890ffecc816445f8df9e8b',1,'MainMenu']]],
+  ['closesettings_13',['CloseSettings',['../class_pause_menu.html#a320372c71443b3ac65bb4c931cea1916',1,'PauseMenu']]],
+  ['combosound_14',['comboSound',['../class_player___combat.html#a5b584f3bb1f7b3b31286616b679f4556',1,'Player_Combat']]],
+  ['confirm_15',['Confirm',['../class_upgrade_choice_menu.html#a8031eedd99fbe2e119b6b6f1150a9b00',1,'UpgradeChoiceMenu']]],
+  ['controlspanel_16',['controlsPanel',['../class_main_menu.html#aefff52ff0a48d18468bde2bf45b89b84',1,'MainMenu']]],
+  ['cooldown_17',['cooldown',['../class_player___combat.html#a58672c018c3d912f6db236af659eb44d',1,'Player_Combat']]],
+  ['currenthealth_18',['currentHealth',['../class_enemy___health.html#a96af614ab4dbc9de503b47415aba59b9',1,'Enemy_Health.currentHealth'],['../class_stats_manager.html#a579344c355f815b5ce79d67cb07fa297',1,'StatsManager.currentHealth']]],
+  ['currentpatrolindex_19',['currentPatrolIndex',['../class_enemy___movement.html#a327e0989f69b95b1c67b858318c1bcd5',1,'Enemy_Movement']]]
+];

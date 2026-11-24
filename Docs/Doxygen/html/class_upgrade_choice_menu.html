@@ -1,0 +1,1011 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase UpgradeChoiceMenu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_upgrade_choice_menu.html','','class_upgrade_choice_menu-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase UpgradeChoiceMenu</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Menu que sale al terminar un nivel para elegir una mejora. Al acabar cada zona se elige una permanente (arco o guardia) y en el resto una temporal entre tres al azar. Va en un objeto que siempre este activo (MenuCanvas), no en los paneles.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de UpgradeChoiceMenu</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_upgrade_choice_menu.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ad3dcdc0b8facc47984a2310bbee5b31d" id="r_ad3dcdc0b8facc47984a2310bbee5b31d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad3dcdc0b8facc47984a2310bbee5b31d">Show</a> (string nextLevel)</td></tr>
+<tr class="memdesc:ad3dcdc0b8facc47984a2310bbee5b31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre el menu y se guarda a que escena hay que ir despues. Lo llama la salida del nivel al cruzarla; al darle a Continuar se carga nextLevel.  <br /></td></tr>
+<tr class="memitem:a9f736323318365796a5cae23cd7812c8" id="r_a9f736323318365796a5cae23cd7812c8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9f736323318365796a5cae23cd7812c8">Show</a> ()</td></tr>
+<tr class="memdesc:a9f736323318365796a5cae23cd7812c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Para el juego y abre el panel que toque: el de permanentes o el de temporales. Sin nivel siguiente sirve para probar en Play desde los tres puntos del componente (no cambia de escena).  <br /></td></tr>
+<tr class="memitem:a7963e356e8dfb07eaa05399c4f6b8de5" id="r_a7963e356e8dfb07eaa05399c4f6b8de5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7963e356e8dfb07eaa05399c4f6b8de5">SelectOption</a> (int option)</td></tr>
+<tr class="memdesc:a7963e356e8dfb07eaa05399c4f6b8de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marca una de las mejoras temporales y enseña su descripcion. Lo llaman los botones de los iconos.  <br /></td></tr>
+<tr class="memitem:a3e25a82a64997850f874ac76339dd4c1" id="r_a3e25a82a64997850f874ac76339dd4c1"><td class="memItemLeft">List&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3e25a82a64997850f874ac76339dd4c1">GetRandomOptions</a> (int amount)</td></tr>
+<tr class="memdesc:a3e25a82a64997850f874ac76339dd4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elige al azar varias mejoras distintas entre las que se pueden coger ahora. Se va sacando una al azar y se quita de la lista, asi nunca salen dos iguales.  <br /></td></tr>
+<tr class="memitem:a3f7c66c4e933329eed6d6edb2893b54a" id="r_a3f7c66c4e933329eed6d6edb2893b54a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3f7c66c4e933329eed6d6edb2893b54a">IsAvailable</a> (int index)</td></tr>
+<tr class="memdesc:a3f7c66c4e933329eed6d6edb2893b54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco o guardia).  <br /></td></tr>
+<tr class="memitem:a6e54513f20fce6c18d20ff1a249b9f4b" id="r_a6e54513f20fce6c18d20ff1a249b9f4b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e54513f20fce6c18d20ff1a249b9f4b">SelectPermanent</a> (int index)</td></tr>
+<tr class="memdesc:a6e54513f20fce6c18d20ff1a249b9f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marca una mejora permanente y enseña su descripcion. Lo llaman los botones de los iconos.  <br /></td></tr>
+<tr class="memitem:a695eafcaae71cbeca5e84289fc6c210a" id="r_a695eafcaae71cbeca5e84289fc6c210a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a695eafcaae71cbeca5e84289fc6c210a">IsPermanentLevel</a> (int level)</td></tr>
+<tr class="memdesc:a695eafcaae71cbeca5e84289fc6c210a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dice si al acabar este nivel toca elegir permanente. Toca en los niveles 3 y 6, pero solo si todavia no tiene las que corresponden a ese nivel: en el 3 se puede tener como mucho 1 y en el 6 las 2. Asi si ya consiguio una en el 3 de otra partida, al volver al 3 elige temporal y la segunda llega en el 6. En el 9 (o si ya las tiene todas) sale una temporal normal.  <br /></td></tr>
+<tr class="memitem:a8031eedd99fbe2e119b6b6f1150a9b00" id="r_a8031eedd99fbe2e119b6b6f1150a9b00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8031eedd99fbe2e119b6b6f1150a9b00">Confirm</a> ()</td></tr>
+<tr class="memdesc:a8031eedd99fbe2e119b6b6f1150a9b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boton Continuar de los dos paneles: aplica la mejora elegida, cura entera la vida y pasa al siguiente nivel.  <br /></td></tr>
+<tr class="memitem:ad4961eeaf3e0480026c25f9229b60ab1" id="r_ad4961eeaf3e0480026c25f9229b60ab1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad4961eeaf3e0480026c25f9229b60ab1">ExitToMenu</a> ()</td></tr>
+<tr class="memdesc:ad4961eeaf3e0480026c25f9229b60ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boton Salir al menu: reinicia la partida y vuelve al menu principal.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:afbb16a08ace94fa2b3ce57fb9420d8c3" id="r_afbb16a08ace94fa2b3ce57fb9420d8c3"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#afbb16a08ace94fa2b3ce57fb9420d8c3">upgradePanel</a></td></tr>
+<tr class="memitem:a332afe01611cb821a0d4dc4eff3511c8" id="r_a332afe01611cb821a0d4dc4eff3511c8"><td class="memItemLeft"><a class="el" href="class_upgrade.html">Upgrade</a>[]&#160;</td><td class="memItemRight"><a class="el" href="#a332afe01611cb821a0d4dc4eff3511c8">upgrades</a></td></tr>
+<tr class="memitem:ad7280c9f784e07e872cc36253d93eb9a" id="r_ad7280c9f784e07e872cc36253d93eb9a"><td class="memItemLeft">Image[]&#160;</td><td class="memItemRight"><a class="el" href="#ad7280c9f784e07e872cc36253d93eb9a">optionIcons</a></td></tr>
+<tr class="memitem:a3d9da36521cd6f86e6d468ec90d979ee" id="r_a3d9da36521cd6f86e6d468ec90d979ee"><td class="memItemLeft">TMP_Text[]&#160;</td><td class="memItemRight"><a class="el" href="#a3d9da36521cd6f86e6d468ec90d979ee">optionNames</a></td></tr>
+<tr class="memitem:adbefbba034c6478bf0ed70b52133bbb0" id="r_adbefbba034c6478bf0ed70b52133bbb0"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#adbefbba034c6478bf0ed70b52133bbb0">upgradeDescription</a></td></tr>
+<tr class="memitem:a90fa71550c4ef3358bb5c593072c9d16" id="r_a90fa71550c4ef3358bb5c593072c9d16"><td class="memItemLeft">Button&#160;</td><td class="memItemRight"><a class="el" href="#a90fa71550c4ef3358bb5c593072c9d16">upgradeContinueButton</a></td></tr>
+<tr class="memitem:a7498c0e3ba740a31925e9acfafe97d44" id="r_a7498c0e3ba740a31925e9acfafe97d44"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a7498c0e3ba740a31925e9acfafe97d44">permanentPanel</a></td></tr>
+<tr class="memitem:abfc99fa977269b0769765880e75d7255" id="r_abfc99fa977269b0769765880e75d7255"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abfc99fa977269b0769765880e75d7255">permanentEvery</a> = 3</td></tr>
+<tr class="memitem:a2c3bd0a75f438bd80346f68902f02c2c" id="r_a2c3bd0a75f438bd80346f68902f02c2c"><td class="memItemLeft">Image[]&#160;</td><td class="memItemRight"><a class="el" href="#a2c3bd0a75f438bd80346f68902f02c2c">permanentIcons</a></td></tr>
+<tr class="memitem:abace08ba8ea2fa481765af74d2a9bc27" id="r_abace08ba8ea2fa481765af74d2a9bc27"><td class="memItemLeft">Sprite[]&#160;</td><td class="memItemRight"><a class="el" href="#abace08ba8ea2fa481765af74d2a9bc27">permanentIconsOn</a></td></tr>
+<tr class="memitem:a5ea8d93533c6cc260d1a45aac506d71e" id="r_a5ea8d93533c6cc260d1a45aac506d71e"><td class="memItemLeft">Sprite[]&#160;</td><td class="memItemRight"><a class="el" href="#a5ea8d93533c6cc260d1a45aac506d71e">permanentIconsOff</a></td></tr>
+<tr class="memitem:ae762aba0e96ab37b8e9b006fa921f4c2" id="r_ae762aba0e96ab37b8e9b006fa921f4c2"><td class="memItemLeft">string[]&#160;</td><td class="memItemRight"><a class="el" href="#ae762aba0e96ab37b8e9b006fa921f4c2">permanentDescriptions</a></td></tr>
+<tr class="memitem:a5474ebce9a7aa5a1ca34d6ca5ad35084" id="r_a5474ebce9a7aa5a1ca34d6ca5ad35084"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#a5474ebce9a7aa5a1ca34d6ca5ad35084">permanentDescription</a></td></tr>
+<tr class="memitem:a2af74a5b66317497acad0d5c85ab0c1b" id="r_a2af74a5b66317497acad0d5c85ab0c1b"><td class="memItemLeft">Button&#160;</td><td class="memItemRight"><a class="el" href="#a2af74a5b66317497acad0d5c85ab0c1b">permanentContinueButton</a></td></tr>
+<tr class="memitem:a3984fc10d2ea8a9a6f6375742e3aae3f" id="r_a3984fc10d2ea8a9a6f6375742e3aae3f"><td class="memItemLeft">Color&#160;</td><td class="memItemRight"><a class="el" href="#a3984fc10d2ea8a9a6f6375742e3aae3f">notSelectedColor</a> = new Color(.5f, .5f, .5f)</td></tr>
+<tr class="memitem:ac29be67d053928c42e484c93d255deb2" id="r_ac29be67d053928c42e484c93d255deb2"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#ac29be67d053928c42e484c93d255deb2">mainMenuScene</a> = &quot;MainMenu&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a978f7c43b8366bb5e1f4f889708f9ad0" id="r_a978f7c43b8366bb5e1f4f889708f9ad0"><td class="memItemLeft">static <a class="el" href="class_upgrade_choice_menu.html">UpgradeChoiceMenu</a>&#160;</td><td class="memItemRight"><a class="el" href="#a978f7c43b8366bb5e1f4f889708f9ad0">Instance</a></td></tr>
+<tr class="memdesc:a978f7c43b8366bb5e1f4f889708f9ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Igual que <a class="el" href="class_stats_manager.html#af465127babc7825337d65a0b4d5fd1a2" title="La unica copia, para leer las estadisticas desde cualquier script con StatsManager....">StatsManager.Instance</a>: asi se puede abrir desde cualquier sitio.  <br /></td></tr>
+<tr class="memitem:ac50a697b34d6f9f6c2cd45a16b4f90f8" id="r_ac50a697b34d6f9f6c2cd45a16b4f90f8"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ac50a697b34d6f9f6c2cd45a16b4f90f8">isChoosing</a></td></tr>
+<tr class="memdesc:ac50a697b34d6f9f6c2cd45a16b4f90f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Es static para que <a class="el" href="class_pause_menu.html" title="Abre y cierra el menu de pausa con Esc y tiene las funciones de sus botones.">PauseMenu</a> sepa que no tiene que abrirse con Esc mientras se elige.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a2526d3eeb5843254a35abc69ce364205" id="r_a2526d3eeb5843254a35abc69ce364205"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2526d3eeb5843254a35abc69ce364205">Awake</a> ()</td></tr>
+<tr class="memdesc:a2526d3eeb5843254a35abc69ce364205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se guarda como Instance.  <br /></td></tr>
+<tr class="memitem:a717724302e1a57c43318f963f2cf0340" id="r_a717724302e1a57c43318f963f2cf0340"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a717724302e1a57c43318f963f2cf0340">Start</a> ()</td></tr>
+<tr class="memdesc:a717724302e1a57c43318f963f2cf0340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empieza con los dos paneles cerrados.  <br /></td></tr>
+<tr class="memitem:ae13c1b0c462014ca6437723c618124eb" id="r_ae13c1b0c462014ca6437723c618124eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae13c1b0c462014ca6437723c618124eb">ShowTemporary</a> ()</td></tr>
+<tr class="memdesc:ae13c1b0c462014ca6437723c618124eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saca mejoras temporales al azar y las pone en los huecos del panel.  <br /></td></tr>
+<tr class="memitem:a3ed6381688d5f37358f9beefaa9290b9" id="r_a3ed6381688d5f37358f9beefaa9290b9"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a3ed6381688d5f37358f9beefaa9290b9">LevelText</a> (int index, <a class="el" href="class_upgrade.html">Upgrade</a> upgrade)</td></tr>
+<tr class="memdesc:a3ed6381688d5f37358f9beefaa9290b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto con el nivel que tiene y al que pasa, por ejemplo "(nivel 1 -&gt; 2)", o nada si la mejora no tiene niveles.  <br /></td></tr>
+<tr class="memitem:a17e3f35b747ec0fd3a0c2193e8ad95fc" id="r_a17e3f35b747ec0fd3a0c2193e8ad95fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17e3f35b747ec0fd3a0c2193e8ad95fc">ShowPermanent</a> ()</td></tr>
+<tr class="memdesc:a17e3f35b747ec0fd3a0c2193e8ad95fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre el panel de permanentes: las que ya tiene salen encendidas y no se pueden pulsar.  <br /></td></tr>
+<tr class="memitem:abb64450a68fb724a93f6188dde8906df" id="r_abb64450a68fb724a93f6188dde8906df"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abb64450a68fb724a93f6188dde8906df">OwnedPermanents</a> ()</td></tr>
+<tr class="memdesc:abb64450a68fb724a93f6188dde8906df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuenta cuantas mejoras permanentes tiene ya.  <br /></td></tr>
+<tr class="memitem:a620cf9302394d9bbd72f28d4eaab37a7" id="r_a620cf9302394d9bbd72f28d4eaab37a7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a620cf9302394d9bbd72f28d4eaab37a7">Unpause</a> ()</td></tr>
+<tr class="memdesc:a620cf9302394d9bbd72f28d4eaab37a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quita la pausa. Si no, el juego (o la siguiente escena) se quedaria congelado.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a96041262546e3db2ccbc967c85477353" id="r_a96041262546e3db2ccbc967c85477353"><td class="memItemLeft">List&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a96041262546e3db2ccbc967c85477353">options</a> = new List&lt;int&gt;()</td></tr>
+<tr class="memitem:a7cb02faf4c31bc4caf044696ac7a107a" id="r_a7cb02faf4c31bc4caf044696ac7a107a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7cb02faf4c31bc4caf044696ac7a107a">selected</a> = -1</td></tr>
+<tr class="memitem:a4574980446b1068aed7422438ef6a312" id="r_a4574980446b1068aed7422438ef6a312"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4574980446b1068aed7422438ef6a312">isPermanentChoice</a></td></tr>
+<tr class="memitem:afdf7f924a144621eba8a3ba2e1844ac3" id="r_afdf7f924a144621eba8a3ba2e1844ac3"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#afdf7f924a144621eba8a3ba2e1844ac3">nextLevel</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Menu que sale al terminar un nivel para elegir una mejora. Al acabar cada zona se elige una permanente (arco o guardia) y en el resto una temporal entre tres al azar. Va en un objeto que siempre este activo (MenuCanvas), no en los paneles. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a2526d3eeb5843254a35abc69ce364205" name="a2526d3eeb5843254a35abc69ce364205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2526d3eeb5843254a35abc69ce364205">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Se guarda como Instance. </p>
+
+</div>
+</div>
+<a id="a8031eedd99fbe2e119b6b6f1150a9b00" name="a8031eedd99fbe2e119b6b6f1150a9b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8031eedd99fbe2e119b6b6f1150a9b00">&#9670;&#160;</a></span>Confirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Confirm </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boton Continuar de los dos paneles: aplica la mejora elegida, cura entera la vida y pasa al siguiente nivel. </p>
+
+</div>
+</div>
+<a id="ad4961eeaf3e0480026c25f9229b60ab1" name="ad4961eeaf3e0480026c25f9229b60ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4961eeaf3e0480026c25f9229b60ab1">&#9670;&#160;</a></span>ExitToMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.ExitToMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boton Salir al menu: reinicia la partida y vuelve al menu principal. </p>
+
+</div>
+</div>
+<a id="a3e25a82a64997850f874ac76339dd4c1" name="a3e25a82a64997850f874ac76339dd4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e25a82a64997850f874ac76339dd4c1">&#9670;&#160;</a></span>GetRandomOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; int &gt; UpgradeChoiceMenu.GetRandomOptions </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elige al azar varias mejoras distintas entre las que se pueden coger ahora. Se va sacando una al azar y se quita de la lista, asi nunca salen dos iguales. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Cuantas mejoras sacar.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Las posiciones de las mejoras elegidas (pueden ser menos si no quedan).</dd></dl>
+
+</div>
+</div>
+<a id="a3f7c66c4e933329eed6d6edb2893b54a" name="a3f7c66c4e933329eed6d6edb2893b54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7c66c4e933329eed6d6edb2893b54a">&#9670;&#160;</a></span>IsAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UpgradeChoiceMenu.IsAvailable </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco o guardia). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Posicion de la mejora en upgrades.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>True si puede salir.</dd></dl>
+
+</div>
+</div>
+<a id="a695eafcaae71cbeca5e84289fc6c210a" name="a695eafcaae71cbeca5e84289fc6c210a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695eafcaae71cbeca5e84289fc6c210a">&#9670;&#160;</a></span>IsPermanentLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UpgradeChoiceMenu.IsPermanentLevel </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dice si al acabar este nivel toca elegir permanente. Toca en los niveles 3 y 6, pero solo si todavia no tiene las que corresponden a ese nivel: en el 3 se puede tener como mucho 1 y en el 6 las 2. Asi si ya consiguio una en el 3 de otra partida, al volver al 3 elige temporal y la segunda llega en el 6. En el 9 (o si ya las tiene todas) sale una temporal normal. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Nivel que se acaba de terminar.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>True si toca permanente.</dd></dl>
+
+</div>
+</div>
+<a id="a3ed6381688d5f37358f9beefaa9290b9" name="a3ed6381688d5f37358f9beefaa9290b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed6381688d5f37358f9beefaa9290b9">&#9670;&#160;</a></span>LevelText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UpgradeChoiceMenu.LevelText </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_upgrade.html">Upgrade</a></td>          <td class="paramname"><span class="paramname"><em>upgrade</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texto con el nivel que tiene y al que pasa, por ejemplo "(nivel 1 -&gt; 2)", o nada si la mejora no tiene niveles. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Posicion de la mejora en upgrades.</td></tr>
+    <tr><td class="paramname">upgrade</td><td>La mejora.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El texto del nivel.</dd></dl>
+
+</div>
+</div>
+<a id="abb64450a68fb724a93f6188dde8906df" name="abb64450a68fb724a93f6188dde8906df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb64450a68fb724a93f6188dde8906df">&#9670;&#160;</a></span>OwnedPermanents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UpgradeChoiceMenu.OwnedPermanents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cuenta cuantas mejoras permanentes tiene ya. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>0, 1 o 2.</dd></dl>
+
+</div>
+</div>
+<a id="a7963e356e8dfb07eaa05399c4f6b8de5" name="a7963e356e8dfb07eaa05399c4f6b8de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7963e356e8dfb07eaa05399c4f6b8de5">&#9670;&#160;</a></span>SelectOption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.SelectOption </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>option</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marca una de las mejoras temporales y enseña su descripcion. Lo llaman los botones de los iconos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">option</td><td>Hueco pulsado (0 el primero, 1 el segundo...).</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6e54513f20fce6c18d20ff1a249b9f4b" name="a6e54513f20fce6c18d20ff1a249b9f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e54513f20fce6c18d20ff1a249b9f4b">&#9670;&#160;</a></span>SelectPermanent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.SelectPermanent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marca una mejora permanente y enseña su descripcion. Lo llaman los botones de los iconos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>0 arco, 1 guardia.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f736323318365796a5cae23cd7812c8" name="a9f736323318365796a5cae23cd7812c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f736323318365796a5cae23cd7812c8">&#9670;&#160;</a></span>Show() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Para el juego y abre el panel que toque: el de permanentes o el de temporales. Sin nivel siguiente sirve para probar en Play desde los tres puntos del componente (no cambia de escena). </p>
+
+</div>
+</div>
+<a id="ad3dcdc0b8facc47984a2310bbee5b31d" name="ad3dcdc0b8facc47984a2310bbee5b31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3dcdc0b8facc47984a2310bbee5b31d">&#9670;&#160;</a></span>Show() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Show </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>nextLevel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abre el menu y se guarda a que escena hay que ir despues. Lo llama la salida del nivel al cruzarla; al darle a Continuar se carga nextLevel. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nextLevel</td><td>Nombre de la escena siguiente.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17e3f35b747ec0fd3a0c2193e8ad95fc" name="a17e3f35b747ec0fd3a0c2193e8ad95fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e3f35b747ec0fd3a0c2193e8ad95fc">&#9670;&#160;</a></span>ShowPermanent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.ShowPermanent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abre el panel de permanentes: las que ya tiene salen encendidas y no se pueden pulsar. </p>
+
+</div>
+</div>
+<a id="ae13c1b0c462014ca6437723c618124eb" name="ae13c1b0c462014ca6437723c618124eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13c1b0c462014ca6437723c618124eb">&#9670;&#160;</a></span>ShowTemporary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.ShowTemporary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saca mejoras temporales al azar y las pone en los huecos del panel. </p>
+
+</div>
+</div>
+<a id="a717724302e1a57c43318f963f2cf0340" name="a717724302e1a57c43318f963f2cf0340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717724302e1a57c43318f963f2cf0340">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Empieza con los dos paneles cerrados. </p>
+
+</div>
+</div>
+<a id="a620cf9302394d9bbd72f28d4eaab37a7" name="a620cf9302394d9bbd72f28d4eaab37a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620cf9302394d9bbd72f28d4eaab37a7">&#9670;&#160;</a></span>Unpause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpgradeChoiceMenu.Unpause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Quita la pausa. Si no, el juego (o la siguiente escena) se quedaria congelado. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a978f7c43b8366bb5e1f4f889708f9ad0" name="a978f7c43b8366bb5e1f4f889708f9ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978f7c43b8366bb5e1f4f889708f9ad0">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_upgrade_choice_menu.html">UpgradeChoiceMenu</a> UpgradeChoiceMenu.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Igual que <a class="el" href="class_stats_manager.html#af465127babc7825337d65a0b4d5fd1a2" title="La unica copia, para leer las estadisticas desde cualquier script con StatsManager....">StatsManager.Instance</a>: asi se puede abrir desde cualquier sitio. </p>
+
+</div>
+</div>
+<a id="ac50a697b34d6f9f6c2cd45a16b4f90f8" name="ac50a697b34d6f9f6c2cd45a16b4f90f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50a697b34d6f9f6c2cd45a16b4f90f8">&#9670;&#160;</a></span>isChoosing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UpgradeChoiceMenu.isChoosing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Es static para que <a class="el" href="class_pause_menu.html" title="Abre y cierra el menu de pausa con Esc y tiene las funciones de sus botones.">PauseMenu</a> sepa que no tiene que abrirse con Esc mientras se elige. </p>
+
+</div>
+</div>
+<a id="a4574980446b1068aed7422438ef6a312" name="a4574980446b1068aed7422438ef6a312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4574980446b1068aed7422438ef6a312">&#9670;&#160;</a></span>isPermanentChoice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UpgradeChoiceMenu.isPermanentChoice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac29be67d053928c42e484c93d255deb2" name="ac29be67d053928c42e484c93d255deb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29be67d053928c42e484c93d255deb2">&#9670;&#160;</a></span>mainMenuScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UpgradeChoiceMenu.mainMenuScene = &quot;MainMenu&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdf7f924a144621eba8a3ba2e1844ac3" name="afdf7f924a144621eba8a3ba2e1844ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf7f924a144621eba8a3ba2e1844ac3">&#9670;&#160;</a></span>nextLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UpgradeChoiceMenu.nextLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3984fc10d2ea8a9a6f6375742e3aae3f" name="a3984fc10d2ea8a9a6f6375742e3aae3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3984fc10d2ea8a9a6f6375742e3aae3f">&#9670;&#160;</a></span>notSelectedColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color UpgradeChoiceMenu.notSelectedColor = new Color(.5f, .5f, .5f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7280c9f784e07e872cc36253d93eb9a" name="ad7280c9f784e07e872cc36253d93eb9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7280c9f784e07e872cc36253d93eb9a">&#9670;&#160;</a></span>optionIcons</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Image [] UpgradeChoiceMenu.optionIcons</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d9da36521cd6f86e6d468ec90d979ee" name="a3d9da36521cd6f86e6d468ec90d979ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9da36521cd6f86e6d468ec90d979ee">&#9670;&#160;</a></span>optionNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text [] UpgradeChoiceMenu.optionNames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96041262546e3db2ccbc967c85477353" name="a96041262546e3db2ccbc967c85477353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96041262546e3db2ccbc967c85477353">&#9670;&#160;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; UpgradeChoiceMenu.options = new List&lt;int&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2af74a5b66317497acad0d5c85ab0c1b" name="a2af74a5b66317497acad0d5c85ab0c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af74a5b66317497acad0d5c85ab0c1b">&#9670;&#160;</a></span>permanentContinueButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button UpgradeChoiceMenu.permanentContinueButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5474ebce9a7aa5a1ca34d6ca5ad35084" name="a5474ebce9a7aa5a1ca34d6ca5ad35084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5474ebce9a7aa5a1ca34d6ca5ad35084">&#9670;&#160;</a></span>permanentDescription</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text UpgradeChoiceMenu.permanentDescription</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae762aba0e96ab37b8e9b006fa921f4c2" name="ae762aba0e96ab37b8e9b006fa921f4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae762aba0e96ab37b8e9b006fa921f4c2">&#9670;&#160;</a></span>permanentDescriptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] UpgradeChoiceMenu.permanentDescriptions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfc99fa977269b0769765880e75d7255" name="abfc99fa977269b0769765880e75d7255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc99fa977269b0769765880e75d7255">&#9670;&#160;</a></span>permanentEvery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UpgradeChoiceMenu.permanentEvery = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c3bd0a75f438bd80346f68902f02c2c" name="a2c3bd0a75f438bd80346f68902f02c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3bd0a75f438bd80346f68902f02c2c">&#9670;&#160;</a></span>permanentIcons</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Image [] UpgradeChoiceMenu.permanentIcons</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ea8d93533c6cc260d1a45aac506d71e" name="a5ea8d93533c6cc260d1a45aac506d71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea8d93533c6cc260d1a45aac506d71e">&#9670;&#160;</a></span>permanentIconsOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite [] UpgradeChoiceMenu.permanentIconsOff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abace08ba8ea2fa481765af74d2a9bc27" name="abace08ba8ea2fa481765af74d2a9bc27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abace08ba8ea2fa481765af74d2a9bc27">&#9670;&#160;</a></span>permanentIconsOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite [] UpgradeChoiceMenu.permanentIconsOn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7498c0e3ba740a31925e9acfafe97d44" name="a7498c0e3ba740a31925e9acfafe97d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7498c0e3ba740a31925e9acfafe97d44">&#9670;&#160;</a></span>permanentPanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject UpgradeChoiceMenu.permanentPanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cb02faf4c31bc4caf044696ac7a107a" name="a7cb02faf4c31bc4caf044696ac7a107a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb02faf4c31bc4caf044696ac7a107a">&#9670;&#160;</a></span>selected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UpgradeChoiceMenu.selected = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90fa71550c4ef3358bb5c593072c9d16" name="a90fa71550c4ef3358bb5c593072c9d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fa71550c4ef3358bb5c593072c9d16">&#9670;&#160;</a></span>upgradeContinueButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button UpgradeChoiceMenu.upgradeContinueButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbefbba034c6478bf0ed70b52133bbb0" name="adbefbba034c6478bf0ed70b52133bbb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbefbba034c6478bf0ed70b52133bbb0">&#9670;&#160;</a></span>upgradeDescription</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text UpgradeChoiceMenu.upgradeDescription</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbb16a08ace94fa2b3ce57fb9420d8c3" name="afbb16a08ace94fa2b3ce57fb9420d8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb16a08ace94fa2b3ce57fb9420d8c3">&#9670;&#160;</a></span>upgradePanel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject UpgradeChoiceMenu.upgradePanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a332afe01611cb821a0d4dc4eff3511c8" name="a332afe01611cb821a0d4dc4eff3511c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332afe01611cb821a0d4dc4eff3511c8">&#9670;&#160;</a></span>upgrades</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_upgrade.html">Upgrade</a> [] UpgradeChoiceMenu.upgrades</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                        =</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Corazón&quot;</span>, <span class="stringliteral">&quot;+1 corazón máximo&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Impulso&quot;</span>, <span class="stringliteral">&quot;El dash llega más lejos&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Armadura&quot;</span>, <span class="stringliteral">&quot;Más tiempo invulnerable después de recibir un golpe&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Fuerza&quot;</span>, <span class="stringliteral">&quot;+1 daño de espada&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Arma mágica&quot;</span>, <span class="stringliteral">&quot;Más alcance de la espada&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Corte&quot;</span>, <span class="stringliteral">&quot;Atacas más rápido&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Permuta&quot;</span>, <span class="stringliteral">&quot;Más velocidad de movimiento&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Kunai&quot;</span>, <span class="stringliteral">&quot;+1 daño de flecha&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.Bow),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Cañón de agua&quot;</span>, <span class="stringliteral">&quot;Disparas más rápido&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.Bow),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Niebla&quot;</span>, <span class="stringliteral">&quot;El dash se recarga antes&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Defensa&quot;</span>, <span class="stringliteral">&quot;La guardia cubre más ángulo y te empujan menos al bloquear&quot;</span>, 3, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.Guard),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_function" href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade</a>(<span class="stringliteral">&quot;Amuleto&quot;</span>, <span class="stringliteral">&quot;Si mueres, revives una vez con 2 corazones&quot;</span>, 1, <a class="code hl_enumeration" href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a>.None),</div>
+<div class="line">}</div>
+<div class="ttc" id="a_upgrade_choice_menu_8cs_html_a266840271fd5e94142bfa0d142a0aabc"><div class="ttname"><a href="_upgrade_choice_menu_8cs.html#a266840271fd5e94142bfa0d142a0aabc">UpgradeRequirement</a></div><div class="ttdeci">UpgradeRequirement</div><div class="ttdoc">Lo que hace falta tener para que una mejora pueda salir: nada, el arco o la guardia.</div><div class="ttdef"><b>Definición</b> UpgradeChoiceMenu.cs:11</div></div>
+<div class="ttc" id="aclass_upgrade_html_ab1e99d42b0929454b5760c90c4517844"><div class="ttname"><a href="class_upgrade.html#ab1e99d42b0929454b5760c90c4517844">Upgrade.Upgrade</a></div><div class="ttdeci">Upgrade(string upgradeName, string description, int maxLevel, UpgradeRequirement requirement)</div><div class="ttdoc">Crea una mejora con sus datos (el icono se pone luego en el Inspector).</div><div class="ttdef"><b>Definición</b> UpgradeChoiceMenu.cs:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/UIScripts/<a class="el" href="_upgrade_choice_menu_8cs.html">UpgradeChoiceMenu.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_upgrade_choice_menu.html">UpgradeChoiceMenu</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

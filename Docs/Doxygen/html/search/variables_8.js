@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['icon_0',['icon',['../class_upgrade.html#ae0b5e81f6a761c7448a89c6b4c072203',1,'Upgrade.icon'],['../class_upgrade_slot.html#a3241cbbea99c1d7d899a372c0bdc5dc3',1,'UpgradeSlot.icon']]],
+  ['instance_1',['Instance',['../class_audio_manager.html#af96f8bc4f9a0ad3f1a63a028bb31f790',1,'AudioManager.Instance'],['../class_boss_u_i.html#a0695c0a40e2d09640ccfd3ef263aeaed',1,'BossUI.Instance'],['../class_level_manager.html#a4e58c52b52fc7486c8f6ede86867be7b',1,'LevelManager.Instance'],['../class_stats_manager.html#af465127babc7825337d65a0b4d5fd1a2',1,'StatsManager.Instance'],['../class_game_over_menu.html#a8bf22314052d9e14e2eb2f76b3f93bbb',1,'GameOverMenu.Instance'],['../class_hearts_u_i.html#a4cd473dc6523145adc1e09f5e05fa637',1,'HeartsUI.Instance'],['../class_ranking_menu.html#a35f25ef86a0bc52268cf7f5bfa06e68a',1,'RankingMenu.Instance'],['../class_upgrade_choice_menu.html#a978f7c43b8366bb5e1f4f889708f9ad0',1,'UpgradeChoiceMenu.Instance']]],
+  ['invulnerabilitytime_2',['invulnerabilityTime',['../class_player_health.html#ad27192a1715c9eb6a881f48d15139607',1,'PlayerHealth']]],
+  ['invulnerabilitytimer_3',['invulnerabilityTimer',['../class_player_health.html#a337385f7ed81980f8902a7022c2ad076',1,'PlayerHealth']]],
+  ['ischoosing_4',['isChoosing',['../class_upgrade_choice_menu.html#ac50a697b34d6f9f6c2cd45a16b4f90f8',1,'UpgradeChoiceMenu']]],
+  ['isdashing_5',['isDashing',['../class_player_movement.html#a844018e259f01e42a3c2c59fcb4e6189',1,'PlayerMovement']]],
+  ['isdead_6',['isDead',['../class_enemy___health.html#ae8afd79659ab27182f169b2f258ef1bc',1,'Enemy_Health']]],
+  ['isgameover_7',['isGameOver',['../class_game_over_menu.html#a62c9283438f82b0ad1eadf17de217fa7',1,'GameOverMenu']]],
+  ['isguarding_8',['isGuarding',['../class_player_movement.html#a49ed84d18af567a1b2014cdddde91a35',1,'PlayerMovement']]],
+  ['isknockedback_9',['isKnockedBack',['../class_player_movement.html#a3488eab9c422c37f64728749d601bf62',1,'PlayerMovement']]],
+  ['islit_10',['isLit',['../class_enemy___explosion.html#adb1ce26af76cb04c8434a7b92ee387e3',1,'Enemy_Explosion']]],
+  ['ispatrolling_11',['isPatrolling',['../class_enemy___movement.html#a699537df7e246d3412bc7890a4db80c1',1,'Enemy_Movement']]],
+  ['ispaused_12',['isPaused',['../class_pause_menu.html#a3d0a43917cf3e488852b47d1b755b377',1,'PauseMenu']]],
+  ['ispermanentchoice_13',['isPermanentChoice',['../class_upgrade_choice_menu.html#a4574980446b1068aed7422438ef6a312',1,'UpgradeChoiceMenu']]],
+  ['issecondslash_14',['isSecondSlash',['../class_player___combat.html#a3e3a7e314af96fb27e99eb6e244252f0',1,'Player_Combat']]],
+  ['isshooting_15',['isShooting',['../class_player_movement.html#a04e49c8cef7c4e7f7f453e0bb3d1113b',1,'PlayerMovement']]],
+  ['istransforming_16',['isTransforming',['../class_boss___phases.html#a085fca1866f05a93e2021cf54fe4e0f7',1,'Boss_Phases']]],
+  ['isvictory_17',['isVictory',['../class_game_over_menu.html#ad1a9196acf43a248e2e5ce94a64d645e',1,'GameOverMenu']]]
+];

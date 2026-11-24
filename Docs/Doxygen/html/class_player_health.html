@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase PlayerHealth</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_player_health.html','','class_player_health-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase PlayerHealth</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Vida del jugador: recibir daño, curarse, la invulnerabilidad tras un golpe, el Amuleto y la muerte. La vida en si se guarda en <a class="el" href="class_stats_manager.html" title="Guarda todas las estadisticas del jugador: daño, vida, velocidad, las mejoras y los datos de la parti...">StatsManager</a> para que pase de un nivel a otro. Va en el Player.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de PlayerHealth</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_player_health.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a1f6b539032b3784def92c314db54ba8e" id="r_a1f6b539032b3784def92c314db54ba8e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f6b539032b3784def92c314db54ba8e">ChangeHealth</a> (int amount, Transform attacker=null)</td></tr>
+<tr class="memdesc:a1f6b539032b3784def92c314db54ba8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quita o da vida al jugador y actualiza los corazones. Si recibe daño, antes mira si esta en dash, si el escudo para el golpe o si sigue siendo invulnerable. Si se queda sin vida, revive con el Amuleto o muere y sale el Game Over.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:ad27192a1715c9eb6a881f48d15139607" id="r_ad27192a1715c9eb6a881f48d15139607"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad27192a1715c9eb6a881f48d15139607">invulnerabilityTime</a> = 1f</td></tr>
+<tr class="memitem:ac749a3a14848e4af2e78b0c41fa5b430" id="r_ac749a3a14848e4af2e78b0c41fa5b430"><td class="memItemLeft"><a class="el" href="class_player___guard.html">Player_Guard</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac749a3a14848e4af2e78b0c41fa5b430">player_Guard</a></td></tr>
+<tr class="memitem:a6c9b7fc727c089a27a805641103c0bf0" id="r_a6c9b7fc727c089a27a805641103c0bf0"><td class="memItemLeft"><a class="el" href="class_player_movement.html">PlayerMovement</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6c9b7fc727c089a27a805641103c0bf0">playerMovement</a></td></tr>
+<tr class="memitem:a532f5728d0a64ae00b29da04ad1ea7bb" id="r_a532f5728d0a64ae00b29da04ad1ea7bb"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a532f5728d0a64ae00b29da04ad1ea7bb">deadPrefab</a></td></tr>
+<tr class="memitem:a35c8ab40b35887f7fc996e7f758c5be0" id="r_a35c8ab40b35887f7fc996e7f758c5be0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a35c8ab40b35887f7fc996e7f758c5be0">deadDuration</a> = 1.4f</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a2dc105641d870f4a48bf90a5d0dec87c" id="r_a2dc105641d870f4a48bf90a5d0dec87c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2dc105641d870f4a48bf90a5d0dec87c">Start</a> ()</td></tr>
+<tr class="memdesc:a2dc105641d870f4a48bf90a5d0dec87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pinta los corazones nada mas empezar el nivel.  <br /></td></tr>
+<tr class="memitem:a3c49fdd702b2cf0fca654ef6e502f311" id="r_a3c49fdd702b2cf0fca654ef6e502f311"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c49fdd702b2cf0fca654ef6e502f311">Update</a> ()</td></tr>
+<tr class="memdesc:a3c49fdd702b2cf0fca654ef6e502f311"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va bajando el contador de invulnerabilidad.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a337385f7ed81980f8902a7022c2ad076" id="r_a337385f7ed81980f8902a7022c2ad076"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a337385f7ed81980f8902a7022c2ad076">invulnerabilityTimer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Vida del jugador: recibir daño, curarse, la invulnerabilidad tras un golpe, el Amuleto y la muerte. La vida en si se guarda en <a class="el" href="class_stats_manager.html" title="Guarda todas las estadisticas del jugador: daño, vida, velocidad, las mejoras y los datos de la parti...">StatsManager</a> para que pase de un nivel a otro. Va en el Player. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a1f6b539032b3784def92c314db54ba8e" name="a1f6b539032b3784def92c314db54ba8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6b539032b3784def92c314db54ba8e">&#9670;&#160;</a></span>ChangeHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerHealth.ChangeHealth </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>attacker</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Quita o da vida al jugador y actualiza los corazones. Si recibe daño, antes mira si esta en dash, si el escudo para el golpe o si sigue siendo invulnerable. Si se queda sin vida, revive con el Amuleto o muere y sale el Game Over. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Negativo para quitar vida, positivo para curar.</td></tr>
+    <tr><td class="paramname">attacker</td><td>Quien pega, para saber si el escudo lo para. Si es null (curas, explosiones) no se puede bloquear.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2dc105641d870f4a48bf90a5d0dec87c" name="a2dc105641d870f4a48bf90a5d0dec87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc105641d870f4a48bf90a5d0dec87c">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerHealth.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pinta los corazones nada mas empezar el nivel. </p>
+
+</div>
+</div>
+<a id="a3c49fdd702b2cf0fca654ef6e502f311" name="a3c49fdd702b2cf0fca654ef6e502f311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c49fdd702b2cf0fca654ef6e502f311">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerHealth.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Va bajando el contador de invulnerabilidad. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a35c8ab40b35887f7fc996e7f758c5be0" name="a35c8ab40b35887f7fc996e7f758c5be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c8ab40b35887f7fc996e7f758c5be0">&#9670;&#160;</a></span>deadDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerHealth.deadDuration = 1.4f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a532f5728d0a64ae00b29da04ad1ea7bb" name="a532f5728d0a64ae00b29da04ad1ea7bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532f5728d0a64ae00b29da04ad1ea7bb">&#9670;&#160;</a></span>deadPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject PlayerHealth.deadPrefab</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad27192a1715c9eb6a881f48d15139607" name="ad27192a1715c9eb6a881f48d15139607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27192a1715c9eb6a881f48d15139607">&#9670;&#160;</a></span>invulnerabilityTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerHealth.invulnerabilityTime = 1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a337385f7ed81980f8902a7022c2ad076" name="a337385f7ed81980f8902a7022c2ad076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337385f7ed81980f8902a7022c2ad076">&#9670;&#160;</a></span>invulnerabilityTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerHealth.invulnerabilityTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac749a3a14848e4af2e78b0c41fa5b430" name="ac749a3a14848e4af2e78b0c41fa5b430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac749a3a14848e4af2e78b0c41fa5b430">&#9670;&#160;</a></span>player_Guard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player___guard.html">Player_Guard</a> PlayerHealth.player_Guard</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c9b7fc727c089a27a805641103c0bf0" name="a6c9b7fc727c089a27a805641103c0bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9b7fc727c089a27a805641103c0bf0">&#9670;&#160;</a></span>playerMovement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_movement.html">PlayerMovement</a> PlayerHealth.playerMovement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/PlayerScripts/<a class="el" href="_player_health_8cs.html">PlayerHealth.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player_health.html">PlayerHealth</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

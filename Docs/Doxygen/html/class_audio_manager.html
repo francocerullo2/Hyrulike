@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase AudioManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_audio_manager.html','','class_audio_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase AudioManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Uno solo para todo el juego: pasa de una escena a otra y lleva la musica y los efectos. Usa dos AudioSource: uno para la musica en bucle y otro para los efectos.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de AudioManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_audio_manager.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:adec6852abdd7565e0818bb0d01c7502b" id="r_adec6852abdd7565e0818bb0d01c7502b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adec6852abdd7565e0818bb0d01c7502b">PlayMusic</a> (AudioClip clip)</td></tr>
+<tr class="memdesc:adec6852abdd7565e0818bb0d01c7502b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone una cancion de fondo. Si ya esta sonando esa no la toca, asi no vuelve a empezar al cambiar de escena.  <br /></td></tr>
+<tr class="memitem:ab1c7774b5f71b1513881f92f116a114d" id="r_ab1c7774b5f71b1513881f92f116a114d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab1c7774b5f71b1513881f92f116a114d">PlaySFX</a> (AudioClip clip)</td></tr>
+<tr class="memdesc:ab1c7774b5f71b1513881f92f116a114d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lo llaman los demas scripts para que suene un efecto. PlayOneShot deja que suenen varios efectos a la vez sin cortarse.  <br /></td></tr>
+<tr class="memitem:a3aac03c54c6347d07b3e2deba487c641" id="r_a3aac03c54c6347d07b3e2deba487c641"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3aac03c54c6347d07b3e2deba487c641">PlaySFX</a> (AudioClip clip, float volume)</td></tr>
+<tr class="memdesc:a3aac03c54c6347d07b3e2deba487c641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Igual pero mas bajito, para sonidos que se repiten mucho como los pasos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a54db9f2d0d9838c238a56cc82b222773" id="r_a54db9f2d0d9838c238a56cc82b222773"><td class="memItemLeft">AudioSource&#160;</td><td class="memItemRight"><a class="el" href="#a54db9f2d0d9838c238a56cc82b222773">musicSource</a></td></tr>
+<tr class="memitem:af20e9441762e9b8086842802fd93fd69" id="r_af20e9441762e9b8086842802fd93fd69"><td class="memItemLeft">AudioSource&#160;</td><td class="memItemRight"><a class="el" href="#af20e9441762e9b8086842802fd93fd69">sfxSource</a></td></tr>
+<tr class="memitem:acafe2cf2d8eb7b2a686b97d06a238ecc" id="r_acafe2cf2d8eb7b2a686b97d06a238ecc"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#acafe2cf2d8eb7b2a686b97d06a238ecc">menuMusic</a></td></tr>
+<tr class="memitem:ad08cf18ac31a201f8231f5a90830ac43" id="r_ad08cf18ac31a201f8231f5a90830ac43"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#ad08cf18ac31a201f8231f5a90830ac43">zone1Music</a></td></tr>
+<tr class="memitem:aa836ebacf417077754d536915ff56c6e" id="r_aa836ebacf417077754d536915ff56c6e"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#aa836ebacf417077754d536915ff56c6e">zone2Music</a></td></tr>
+<tr class="memitem:ab19e67c6cdfb5b4333ccc38bdcc6616a" id="r_ab19e67c6cdfb5b4333ccc38bdcc6616a"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#ab19e67c6cdfb5b4333ccc38bdcc6616a">zone3Music</a></td></tr>
+<tr class="memitem:a9bcacb2d57a97d5583f152b081d1cbb5" id="r_a9bcacb2d57a97d5583f152b081d1cbb5"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#a9bcacb2d57a97d5583f152b081d1cbb5">bossMusic</a></td></tr>
+<tr class="memitem:ad4554dd0fa646ba1e17ef9938622295d" id="r_ad4554dd0fa646ba1e17ef9938622295d"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#ad4554dd0fa646ba1e17ef9938622295d">gameOverMusic</a></td></tr>
+<tr class="memitem:afd97c64e0ebb2852d74489ae609e58f2" id="r_afd97c64e0ebb2852d74489ae609e58f2"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#afd97c64e0ebb2852d74489ae609e58f2">victoryMusic</a></td></tr>
+<tr class="memitem:a339a20f6179ada9792be40f0b7099edf" id="r_a339a20f6179ada9792be40f0b7099edf"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#a339a20f6179ada9792be40f0b7099edf">hitSound</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:af96f8bc4f9a0ad3f1a63a028bb31f790" id="r_af96f8bc4f9a0ad3f1a63a028bb31f790"><td class="memItemLeft">static <a class="el" href="class_audio_manager.html">AudioManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#af96f8bc4f9a0ad3f1a63a028bb31f790">Instance</a></td></tr>
+<tr class="memdesc:af96f8bc4f9a0ad3f1a63a028bb31f790"><td class="mdescLeft">&#160;</td><td class="mdescRight">La unica copia, para que cualquier script haga sonar algo con <a class="el" href="#af96f8bc4f9a0ad3f1a63a028bb31f790" title="La unica copia, para que cualquier script haga sonar algo con AudioManager.Instance.">AudioManager.Instance</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a631d7d42b921bcbd82bd1baec2ec3ea7" id="r_a631d7d42b921bcbd82bd1baec2ec3ea7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a631d7d42b921bcbd82bd1baec2ec3ea7">Awake</a> ()</td></tr>
+<tr class="memdesc:a631d7d42b921bcbd82bd1baec2ec3ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Igual que el <a class="el" href="class_stats_manager.html" title="Guarda todas las estadisticas del jugador: daño, vida, velocidad, las mejoras y los datos de la parti...">StatsManager</a>: solo vale el primero, los demas se borran al cargar. Tambien se apunta a sceneLoaded para cambiar la musica en cada escena.  <br /></td></tr>
+<tr class="memitem:a23374e1465de33ae0016d757d3b81000" id="r_a23374e1465de33ae0016d757d3b81000"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23374e1465de33ae0016d757d3b81000">OnSceneLoaded</a> (Scene scene, LoadSceneMode mode)</td></tr>
+<tr class="memdesc:a23374e1465de33ae0016d757d3b81000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segun la escena que se acaba de cargar se elige la musica. Los niveles de una zona empiezan todos igual (Zona1_01, Zona1_02...), asi comparten cancion.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Uno solo para todo el juego: pasa de una escena a otra y lleva la musica y los efectos. Usa dos AudioSource: uno para la musica en bucle y otro para los efectos. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a631d7d42b921bcbd82bd1baec2ec3ea7" name="a631d7d42b921bcbd82bd1baec2ec3ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631d7d42b921bcbd82bd1baec2ec3ea7">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Igual que el <a class="el" href="class_stats_manager.html" title="Guarda todas las estadisticas del jugador: daño, vida, velocidad, las mejoras y los datos de la parti...">StatsManager</a>: solo vale el primero, los demas se borran al cargar. Tambien se apunta a sceneLoaded para cambiar la musica en cada escena. </p>
+
+</div>
+</div>
+<a id="a23374e1465de33ae0016d757d3b81000" name="a23374e1465de33ae0016d757d3b81000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23374e1465de33ae0016d757d3b81000">&#9670;&#160;</a></span>OnSceneLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioManager.OnSceneLoaded </td>
+          <td>(</td>
+          <td class="paramtype">Scene</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoadSceneMode</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Segun la escena que se acaba de cargar se elige la musica. Los niveles de una zona empiezan todos igual (Zona1_01, Zona1_02...), asi comparten cancion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>La escena que se ha cargado.</td></tr>
+    <tr><td class="paramname">mode</td><td>Como se ha cargado (no se usa, pero Unity lo pide).</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adec6852abdd7565e0818bb0d01c7502b" name="adec6852abdd7565e0818bb0d01c7502b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec6852abdd7565e0818bb0d01c7502b">&#9670;&#160;</a></span>PlayMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioManager.PlayMusic </td>
+          <td>(</td>
+          <td class="paramtype">AudioClip</td>          <td class="paramname"><span class="paramname"><em>clip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone una cancion de fondo. Si ya esta sonando esa no la toca, asi no vuelve a empezar al cambiar de escena. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clip</td><td>La cancion.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1c7774b5f71b1513881f92f116a114d" name="ab1c7774b5f71b1513881f92f116a114d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c7774b5f71b1513881f92f116a114d">&#9670;&#160;</a></span>PlaySFX() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioManager.PlaySFX </td>
+          <td>(</td>
+          <td class="paramtype">AudioClip</td>          <td class="paramname"><span class="paramname"><em>clip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lo llaman los demas scripts para que suene un efecto. PlayOneShot deja que suenen varios efectos a la vez sin cortarse. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clip</td><td>El sonido.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3aac03c54c6347d07b3e2deba487c641" name="a3aac03c54c6347d07b3e2deba487c641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aac03c54c6347d07b3e2deba487c641">&#9670;&#160;</a></span>PlaySFX() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioManager.PlaySFX </td>
+          <td>(</td>
+          <td class="paramtype">AudioClip</td>          <td class="paramname"><span class="paramname"><em>clip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Igual pero mas bajito, para sonidos que se repiten mucho como los pasos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clip</td><td>El sonido.</td></tr>
+    <tr><td class="paramname">volume</td><td>Volumen de 0 a 1.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a9bcacb2d57a97d5583f152b081d1cbb5" name="a9bcacb2d57a97d5583f152b081d1cbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcacb2d57a97d5583f152b081d1cbb5">&#9670;&#160;</a></span>bossMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.bossMusic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4554dd0fa646ba1e17ef9938622295d" name="ad4554dd0fa646ba1e17ef9938622295d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4554dd0fa646ba1e17ef9938622295d">&#9670;&#160;</a></span>gameOverMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.gameOverMusic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a339a20f6179ada9792be40f0b7099edf" name="a339a20f6179ada9792be40f0b7099edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339a20f6179ada9792be40f0b7099edf">&#9670;&#160;</a></span>hitSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.hitSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af96f8bc4f9a0ad3f1a63a028bb31f790" name="af96f8bc4f9a0ad3f1a63a028bb31f790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96f8bc4f9a0ad3f1a63a028bb31f790">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_audio_manager.html">AudioManager</a> AudioManager.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La unica copia, para que cualquier script haga sonar algo con <a class="el" href="#af96f8bc4f9a0ad3f1a63a028bb31f790" title="La unica copia, para que cualquier script haga sonar algo con AudioManager.Instance.">AudioManager.Instance</a>. </p>
+
+</div>
+</div>
+<a id="acafe2cf2d8eb7b2a686b97d06a238ecc" name="acafe2cf2d8eb7b2a686b97d06a238ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafe2cf2d8eb7b2a686b97d06a238ecc">&#9670;&#160;</a></span>menuMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.menuMusic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54db9f2d0d9838c238a56cc82b222773" name="a54db9f2d0d9838c238a56cc82b222773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54db9f2d0d9838c238a56cc82b222773">&#9670;&#160;</a></span>musicSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioSource AudioManager.musicSource</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af20e9441762e9b8086842802fd93fd69" name="af20e9441762e9b8086842802fd93fd69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20e9441762e9b8086842802fd93fd69">&#9670;&#160;</a></span>sfxSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioSource AudioManager.sfxSource</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd97c64e0ebb2852d74489ae609e58f2" name="afd97c64e0ebb2852d74489ae609e58f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd97c64e0ebb2852d74489ae609e58f2">&#9670;&#160;</a></span>victoryMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.victoryMusic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad08cf18ac31a201f8231f5a90830ac43" name="ad08cf18ac31a201f8231f5a90830ac43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08cf18ac31a201f8231f5a90830ac43">&#9670;&#160;</a></span>zone1Music</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.zone1Music</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa836ebacf417077754d536915ff56c6e" name="aa836ebacf417077754d536915ff56c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa836ebacf417077754d536915ff56c6e">&#9670;&#160;</a></span>zone2Music</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.zone2Music</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab19e67c6cdfb5b4333ccc38bdcc6616a" name="ab19e67c6cdfb5b4333ccc38bdcc6616a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19e67c6cdfb5b4333ccc38bdcc6616a">&#9670;&#160;</a></span>zone3Music</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip AudioManager.zone3Music</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/AudioManager/<a class="el" href="_audio_manager_8cs.html">AudioManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_audio_manager.html">AudioManager</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

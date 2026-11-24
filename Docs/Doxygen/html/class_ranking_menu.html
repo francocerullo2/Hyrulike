@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase RankingMenu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_ranking_menu.html','','class_ranking_menu-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase RankingMenu</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ranking online: guarda las partidas en Firestore (Firebase) y enseña las 10 mejores. Cada partida es un documento de la coleccion "scores" con nombre, nivel, tiempo, si ha ganado y puntuacion. Va en un objeto que siempre este activo (MenuCanvas), igual que <a class="el" href="class_game_over_menu.html" title="Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar....">GameOverMenu</a>.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de RankingMenu</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_ranking_menu.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a1cfabaab188e502f9526372a583a683f" id="r_a1cfabaab188e502f9526372a583a683f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1cfabaab188e502f9526372a583a683f">Open</a> (bool isVictory)</td></tr>
+<tr class="memdesc:a1cfabaab188e502f9526372a583a683f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enseña el ranking dentro del panel que toque y carga las 10 mejores partidas. Lo llama <a class="el" href="class_game_over_menu.html" title="Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar....">GameOverMenu</a> cuando sale el panel de Game Over o el de victoria.  <br /></td></tr>
+<tr class="memitem:ae95f7402082a36e515e4a1774f9fd9e6" id="r_ae95f7402082a36e515e4a1774f9fd9e6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae95f7402082a36e515e4a1774f9fd9e6">Send</a> ()</td></tr>
+<tr class="memdesc:ae95f7402082a36e515e4a1774f9fd9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boton Enviar: comprueba el nombre y sube la partida a Firestore. Pasos: valida el nombre, desactiva el boton, junta los datos de la partida, los envia y cuando llega la respuesta enseña el mensaje y recarga el ranking.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:ab2bd9b52518f989179d005002ea1c9c4" id="r_ab2bd9b52518f989179d005002ea1c9c4"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#ab2bd9b52518f989179d005002ea1c9c4">rankingContent</a></td></tr>
+<tr class="memitem:aa7ace3d850cb7f9a1652ef68caf89fc8" id="r_aa7ace3d850cb7f9a1652ef68caf89fc8"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#aa7ace3d850cb7f9a1652ef68caf89fc8">gameOverBox</a></td></tr>
+<tr class="memitem:a8e4066c3d26cb5706c7f37833a495793" id="r_a8e4066c3d26cb5706c7f37833a495793"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#a8e4066c3d26cb5706c7f37833a495793">victoryBox</a></td></tr>
+<tr class="memitem:a99f4637bc621685fd23755f121611e1e" id="r_a99f4637bc621685fd23755f121611e1e"><td class="memItemLeft">TMP_InputField&#160;</td><td class="memItemRight"><a class="el" href="#a99f4637bc621685fd23755f121611e1e">nameInput</a></td></tr>
+<tr class="memitem:ac651ef2aa3f51e8b48d956cea1c41d03" id="r_ac651ef2aa3f51e8b48d956cea1c41d03"><td class="memItemLeft">Button&#160;</td><td class="memItemRight"><a class="el" href="#ac651ef2aa3f51e8b48d956cea1c41d03">sendButton</a></td></tr>
+<tr class="memitem:ae54cc5c072844fe3a3d055d9e4672430" id="r_ae54cc5c072844fe3a3d055d9e4672430"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#ae54cc5c072844fe3a3d055d9e4672430">messageText</a></td></tr>
+<tr class="memitem:a2e9622679c970673023f610e6a3f11e8" id="r_a2e9622679c970673023f610e6a3f11e8"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#a2e9622679c970673023f610e6a3f11e8">namesText</a></td></tr>
+<tr class="memitem:a629edf8c92081afdd503124882fe4fa7" id="r_a629edf8c92081afdd503124882fe4fa7"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#a629edf8c92081afdd503124882fe4fa7">levelsText</a></td></tr>
+<tr class="memitem:af4e9c86c40ea839174fe50588b110325" id="r_af4e9c86c40ea839174fe50588b110325"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#af4e9c86c40ea839174fe50588b110325">timesText</a></td></tr>
+<tr class="memitem:a0207ca069186f350a711da7679fc0470" id="r_a0207ca069186f350a711da7679fc0470"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0207ca069186f350a711da7679fc0470">minNameLength</a> = 3</td></tr>
+<tr class="memdesc:a0207ca069186f350a711da7679fc0470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Letras minimas que tiene que tener el nombre.  <br /></td></tr>
+<tr class="memitem:a7dc8cb0fc20b6101664b8265576e0420" id="r_a7dc8cb0fc20b6101664b8265576e0420"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7dc8cb0fc20b6101664b8265576e0420">maxNameLength</a> = 10</td></tr>
+<tr class="memdesc:a7dc8cb0fc20b6101664b8265576e0420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Letras maximas que puede tener el nombre (las mismas que dejan las reglas de Firestore).  <br /></td></tr>
+<tr class="memitem:a45111bcb4a146673f6d3e740c82db88d" id="r_a45111bcb4a146673f6d3e740c82db88d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a45111bcb4a146673f6d3e740c82db88d">rows</a> = 10</td></tr>
+<tr class="memdesc:a45111bcb4a146673f6d3e740c82db88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuantas partidas se enseñan en el ranking.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a35f25ef86a0bc52268cf7f5bfa06e68a" id="r_a35f25ef86a0bc52268cf7f5bfa06e68a"><td class="memItemLeft">static <a class="el" href="class_ranking_menu.html">RankingMenu</a>&#160;</td><td class="memItemRight"><a class="el" href="#a35f25ef86a0bc52268cf7f5bfa06e68a">Instance</a></td></tr>
+<tr class="memdesc:a35f25ef86a0bc52268cf7f5bfa06e68a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La unica copia del ranking, para llamarlo desde otros scripts con <a class="el" href="#a35f25ef86a0bc52268cf7f5bfa06e68a" title="La unica copia del ranking, para llamarlo desde otros scripts con RankingMenu.Instance.">RankingMenu.Instance</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a1b87b0499542d64895757a01ac89c373" id="r_a1b87b0499542d64895757a01ac89c373"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b87b0499542d64895757a01ac89c373">Awake</a> ()</td></tr>
+<tr class="memitem:acb08edbfa9b60344ca9958f3e64d4762" id="r_acb08edbfa9b60344ca9958f3e64d4762"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb08edbfa9b60344ca9958f3e64d4762">Start</a> ()</td></tr>
+<tr class="memitem:aa817f51971f8e8e9324e3ceee5343b30" id="r_aa817f51971f8e8e9324e3ceee5343b30"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa817f51971f8e8e9324e3ceee5343b30">IsValidName</a> (string playerName)</td></tr>
+<tr class="memdesc:aa817f51971f8e8e9324e3ceee5343b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mira si el nombre vale para el ranking: solo letras y numeros, y ni muy corto ni muy largo.  <br /></td></tr>
+<tr class="memitem:ae7e34125b55b32601c18ca53280b1ae7" id="r_ae7e34125b55b32601c18ca53280b1ae7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae7e34125b55b32601c18ca53280b1ae7">CalculateScore</a> (int level, int time, bool won)</td></tr>
+<tr class="memdesc:ae7e34125b55b32601c18ca53280b1ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saca un solo numero para poder ordenar el ranking: cuanto mas alto, mejor. Cada nivel vale 100000 puntos y cada segundo resta 1, asi manda el nivel y el tiempo solo desempata. Ganar cuenta como un nivel mas, para quedar por encima de quien murio contra el jefe. Se guarda ya calculado para que Firestore ordene por un solo campo.  <br /></td></tr>
+<tr class="memitem:a6889de5aaa065d9be9607fe5064f280d" id="r_a6889de5aaa065d9be9607fe5064f280d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6889de5aaa065d9be9607fe5064f280d">LoadRanking</a> ()</td></tr>
+<tr class="memdesc:a6889de5aaa065d9be9607fe5064f280d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pide a Firestore las 10 mejores partidas y las escribe en las tres columnas (nombre, nivel y tiempo). Si no hay conexion lo dice en vez de quedarse cargando.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a80cfab828a550c7ab73773001b5ede66" id="r_a80cfab828a550c7ab73773001b5ede66"><td class="memItemLeft">FirebaseFirestore&#160;</td><td class="memItemRight"><a class="el" href="#a80cfab828a550c7ab73773001b5ede66">db</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Ranking online: guarda las partidas en Firestore (Firebase) y enseña las 10 mejores. Cada partida es un documento de la coleccion "scores" con nombre, nivel, tiempo, si ha ganado y puntuacion. Va en un objeto que siempre este activo (MenuCanvas), igual que <a class="el" href="class_game_over_menu.html" title="Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar....">GameOverMenu</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a1b87b0499542d64895757a01ac89c373" name="a1b87b0499542d64895757a01ac89c373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b87b0499542d64895757a01ac89c373">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RankingMenu.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7e34125b55b32601c18ca53280b1ae7" name="ae7e34125b55b32601c18ca53280b1ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e34125b55b32601c18ca53280b1ae7">&#9670;&#160;</a></span>CalculateScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RankingMenu.CalculateScore </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>won</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saca un solo numero para poder ordenar el ranking: cuanto mas alto, mejor. Cada nivel vale 100000 puntos y cada segundo resta 1, asi manda el nivel y el tiempo solo desempata. Ganar cuenta como un nivel mas, para quedar por encima de quien murio contra el jefe. Se guarda ya calculado para que Firestore ordene por un solo campo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Nivel al que ha llegado (1 a 10).</td></tr>
+    <tr><td class="paramname">time</td><td>Lo que ha durado la partida, en segundos.</td></tr>
+    <tr><td class="paramname">won</td><td>True si ha ganado al jefe final.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La puntuacion de la partida.</dd></dl>
+
+</div>
+</div>
+<a id="aa817f51971f8e8e9324e3ceee5343b30" name="aa817f51971f8e8e9324e3ceee5343b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa817f51971f8e8e9324e3ceee5343b30">&#9670;&#160;</a></span>IsValidName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RankingMenu.IsValidName </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>playerName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mira si el nombre vale para el ranking: solo letras y numeros, y ni muy corto ni muy largo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td>El nombre ya sin espacios al principio ni al final.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>True si el nombre vale, false si no.</dd></dl>
+
+</div>
+</div>
+<a id="a6889de5aaa065d9be9607fe5064f280d" name="a6889de5aaa065d9be9607fe5064f280d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6889de5aaa065d9be9607fe5064f280d">&#9670;&#160;</a></span>LoadRanking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RankingMenu.LoadRanking </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pide a Firestore las 10 mejores partidas y las escribe en las tres columnas (nombre, nivel y tiempo). Si no hay conexion lo dice en vez de quedarse cargando. </p>
+
+</div>
+</div>
+<a id="a1cfabaab188e502f9526372a583a683f" name="a1cfabaab188e502f9526372a583a683f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfabaab188e502f9526372a583a683f">&#9670;&#160;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RankingMenu.Open </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isVictory</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enseña el ranking dentro del panel que toque y carga las 10 mejores partidas. Lo llama <a class="el" href="class_game_over_menu.html" title="Pantalla de Game Over: aparece al morir el jugador, enseña el ranking online y deja reintentar....">GameOverMenu</a> cuando sale el panel de Game Over o el de victoria. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isVictory</td><td>True si se abre en la pantalla de victoria, false si es el Game Over.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae95f7402082a36e515e4a1774f9fd9e6" name="ae95f7402082a36e515e4a1774f9fd9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95f7402082a36e515e4a1774f9fd9e6">&#9670;&#160;</a></span>Send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RankingMenu.Send </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boton Enviar: comprueba el nombre y sube la partida a Firestore. Pasos: valida el nombre, desactiva el boton, junta los datos de la partida, los envia y cuando llega la respuesta enseña el mensaje y recarga el ranking. </p>
+
+</div>
+</div>
+<a id="acb08edbfa9b60344ca9958f3e64d4762" name="acb08edbfa9b60344ca9958f3e64d4762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb08edbfa9b60344ca9958f3e64d4762">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RankingMenu.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a80cfab828a550c7ab73773001b5ede66" name="a80cfab828a550c7ab73773001b5ede66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80cfab828a550c7ab73773001b5ede66">&#9670;&#160;</a></span>db</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FirebaseFirestore RankingMenu.db</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7ace3d850cb7f9a1652ef68caf89fc8" name="aa7ace3d850cb7f9a1652ef68caf89fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ace3d850cb7f9a1652ef68caf89fc8">&#9670;&#160;</a></span>gameOverBox</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform RankingMenu.gameOverBox</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35f25ef86a0bc52268cf7f5bfa06e68a" name="a35f25ef86a0bc52268cf7f5bfa06e68a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f25ef86a0bc52268cf7f5bfa06e68a">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ranking_menu.html">RankingMenu</a> RankingMenu.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La unica copia del ranking, para llamarlo desde otros scripts con <a class="el" href="#a35f25ef86a0bc52268cf7f5bfa06e68a" title="La unica copia del ranking, para llamarlo desde otros scripts con RankingMenu.Instance.">RankingMenu.Instance</a>. </p>
+
+</div>
+</div>
+<a id="a629edf8c92081afdd503124882fe4fa7" name="a629edf8c92081afdd503124882fe4fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629edf8c92081afdd503124882fe4fa7">&#9670;&#160;</a></span>levelsText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text RankingMenu.levelsText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dc8cb0fc20b6101664b8265576e0420" name="a7dc8cb0fc20b6101664b8265576e0420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc8cb0fc20b6101664b8265576e0420">&#9670;&#160;</a></span>maxNameLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RankingMenu.maxNameLength = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Letras maximas que puede tener el nombre (las mismas que dejan las reglas de Firestore). </p>
+
+</div>
+</div>
+<a id="ae54cc5c072844fe3a3d055d9e4672430" name="ae54cc5c072844fe3a3d055d9e4672430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae54cc5c072844fe3a3d055d9e4672430">&#9670;&#160;</a></span>messageText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text RankingMenu.messageText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0207ca069186f350a711da7679fc0470" name="a0207ca069186f350a711da7679fc0470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0207ca069186f350a711da7679fc0470">&#9670;&#160;</a></span>minNameLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RankingMenu.minNameLength = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Letras minimas que tiene que tener el nombre. </p>
+
+</div>
+</div>
+<a id="a99f4637bc621685fd23755f121611e1e" name="a99f4637bc621685fd23755f121611e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f4637bc621685fd23755f121611e1e">&#9670;&#160;</a></span>nameInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_InputField RankingMenu.nameInput</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e9622679c970673023f610e6a3f11e8" name="a2e9622679c970673023f610e6a3f11e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9622679c970673023f610e6a3f11e8">&#9670;&#160;</a></span>namesText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text RankingMenu.namesText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2bd9b52518f989179d005002ea1c9c4" name="ab2bd9b52518f989179d005002ea1c9c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2bd9b52518f989179d005002ea1c9c4">&#9670;&#160;</a></span>rankingContent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform RankingMenu.rankingContent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45111bcb4a146673f6d3e740c82db88d" name="a45111bcb4a146673f6d3e740c82db88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45111bcb4a146673f6d3e740c82db88d">&#9670;&#160;</a></span>rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RankingMenu.rows = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cuantas partidas se enseñan en el ranking. </p>
+
+</div>
+</div>
+<a id="ac651ef2aa3f51e8b48d956cea1c41d03" name="ac651ef2aa3f51e8b48d956cea1c41d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac651ef2aa3f51e8b48d956cea1c41d03">&#9670;&#160;</a></span>sendButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button RankingMenu.sendButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4e9c86c40ea839174fe50588b110325" name="af4e9c86c40ea839174fe50588b110325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e9c86c40ea839174fe50588b110325">&#9670;&#160;</a></span>timesText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text RankingMenu.timesText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e4066c3d26cb5706c7f37833a495793" name="a8e4066c3d26cb5706c7f37833a495793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4066c3d26cb5706c7f37833a495793">&#9670;&#160;</a></span>victoryBox</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform RankingMenu.victoryBox</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/UIScripts/<a class="el" href="_ranking_menu_8cs.html">RankingMenu.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_ranking_menu.html">RankingMenu</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

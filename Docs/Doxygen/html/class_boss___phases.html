@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hyrulike: Referencia de la clase Boss_Phases</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Avatars_01.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Hyrulike<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Videojuego 2D de accion con elementos roguelike</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_boss___phases.html','','class_boss___phases-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase Boss_Phases</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Controla las formas del jefe: empieza como monje, al acercarse el jugador se convierte en samurai (fase 1) y al bajar de la mitad de vida se transforma en la bestia (fase 2). El movimiento y los ataques los siguen haciendo <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> y <a class="el" href="class_enemy___combat.html" title="Ataque cuerpo a cuerpo de los enemigos (y del jefe). Cuando pega lo decide Enemy_Movement; aqui solo ...">Enemy_Combat</a>, este script solo los enciende, apaga y cambia sus valores. Asi se reutilizan los scripts de los enemigos normales en vez de hacer otros nuevos para el jefe.  
+ <a href="#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencia de Boss_Phases</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_boss___phases.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:acdd6d449deee65299d90fd048ad1912c" id="r_acdd6d449deee65299d90fd048ad1912c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acdd6d449deee65299d90fd048ad1912c">CanTakeDamage</a> ()</td></tr>
+<tr class="memdesc:acdd6d449deee65299d90fd048ad1912c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lo usan <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> y <a class="el" href="class_enemy___knockback.html" title="Empuja y aturde al enemigo cuando recibe un golpe. Mientras esta aturdido Enemy_Movement no lo mueve ...">Enemy_Knockback</a>: el monje y las transformaciones no reciben daño.  <br /></td></tr>
+<tr class="memitem:a6f4185b776d53d5d54b7070a45991cce" id="r_a6f4185b776d53d5d54b7070a45991cce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f4185b776d53d5d54b7070a45991cce">StartPhase1</a> ()</td></tr>
+<tr class="memdesc:a6f4185b776d53d5d54b7070a45991cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empieza la fase del samurai: activa el movimiento y enseña su vida. Lo llama un evento al final de la animacion de curarse del monje.  <br /></td></tr>
+<tr class="memitem:a116cb70f1d2cda3fc80ebb0f2c4024fd" id="r_a116cb70f1d2cda3fc80ebb0f2c4024fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a116cb70f1d2cda3fc80ebb0f2c4024fd">CheckPhase</a> (int currentHealth, int maxHealth)</td></tr>
+<tr class="memdesc:a116cb70f1d2cda3fc80ebb0f2c4024fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza los corazones del jefe y, si el samurai baja de la mitad de vida, empieza la transformacion en bestia. Lo llama <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> cada vez que el jefe recibe daño.  <br /></td></tr>
+<tr class="memitem:a494ed32f182a990f8e1dd28f9f7746ed" id="r_a494ed32f182a990f8e1dd28f9f7746ed"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a494ed32f182a990f8e1dd28f9f7746ed">StartPhase2</a> ()</td></tr>
+<tr class="memdesc:a494ed32f182a990f8e1dd28f9f7746ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empieza la fase de la bestia: mas rapida, pega mas fuerte y en mas area. Lo llama un evento al final de la animacion de transformacion de la bestia.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a93f5450b69cd1751231effb5ceb1df80" id="r_a93f5450b69cd1751231effb5ceb1df80"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a93f5450b69cd1751231effb5ceb1df80">phase</a> = 0</td></tr>
+<tr class="memitem:ae547ef059340e0def3b56e881234b4c2" id="r_ae547ef059340e0def3b56e881234b4c2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae547ef059340e0def3b56e881234b4c2">wakeUpRange</a> = 3</td></tr>
+<tr class="memitem:aaf7bd7edc0ea4add9109dcd854ced04a" id="r_aaf7bd7edc0ea4add9109dcd854ced04a"><td class="memItemLeft">LayerMask&#160;</td><td class="memItemRight"><a class="el" href="#aaf7bd7edc0ea4add9109dcd854ced04a">playerLayer</a></td></tr>
+<tr class="memitem:aa8383870aa4c9903ede9d8a84e738719" id="r_aa8383870aa4c9903ede9d8a84e738719"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa8383870aa4c9903ede9d8a84e738719">monsterSpeed</a> = 1.5f</td></tr>
+<tr class="memitem:a5986fc52a76b57e5464e68119a40be33" id="r_a5986fc52a76b57e5464e68119a40be33"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5986fc52a76b57e5464e68119a40be33">monsterDamage</a> = 3</td></tr>
+<tr class="memitem:a195df725829216cb8fff395a144cc067" id="r_a195df725829216cb8fff395a144cc067"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a195df725829216cb8fff395a144cc067">monsterAttackRange</a> = 1</td></tr>
+<tr class="memitem:a2facec95cd6ab04b0600fdb935da06a4" id="r_a2facec95cd6ab04b0600fdb935da06a4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2facec95cd6ab04b0600fdb935da06a4">monsterWeaponRange</a> = 1.5f</td></tr>
+<tr class="memitem:a64970c60ae9502d4eadebcd349c995ec" id="r_a64970c60ae9502d4eadebcd349c995ec"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a64970c60ae9502d4eadebcd349c995ec">monsterAttackCoolDown</a> = 2.2f</td></tr>
+<tr class="memitem:a4ab705cddae94780609c92f2ff5a5dd7" id="r_a4ab705cddae94780609c92f2ff5a5dd7"><td class="memItemLeft">CapsuleCollider2D&#160;</td><td class="memItemRight"><a class="el" href="#a4ab705cddae94780609c92f2ff5a5dd7">bodyCollider</a></td></tr>
+<tr class="memitem:af3199b6da485835cf6c34674f6ea540f" id="r_af3199b6da485835cf6c34674f6ea540f"><td class="memItemLeft">Vector2&#160;</td><td class="memItemRight"><a class="el" href="#af3199b6da485835cf6c34674f6ea540f">monsterBodySize</a></td></tr>
+<tr class="memitem:abb105b1c141492fc8f32d813986df4ab" id="r_abb105b1c141492fc8f32d813986df4ab"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#abb105b1c141492fc8f32d813986df4ab">monsterAttackSound</a></td></tr>
+<tr class="memitem:a83da6fbf533d6fe7622cb2ed2b88fb88" id="r_a83da6fbf533d6fe7622cb2ed2b88fb88"><td class="memItemLeft">AudioClip&#160;</td><td class="memItemRight"><a class="el" href="#a83da6fbf533d6fe7622cb2ed2b88fb88">transformSound</a></td></tr>
+<tr class="memitem:a4dc3f92d2cadf94a7f8ad5b993c37ada" id="r_a4dc3f92d2cadf94a7f8ad5b993c37ada"><td class="memItemLeft">Sprite&#160;</td><td class="memItemRight"><a class="el" href="#a4dc3f92d2cadf94a7f8ad5b993c37ada">samuraiPortrait</a></td></tr>
+<tr class="memitem:a121e56dc9bc00a3ad8344bc8cfabd68b" id="r_a121e56dc9bc00a3ad8344bc8cfabd68b"><td class="memItemLeft">Sprite&#160;</td><td class="memItemRight"><a class="el" href="#a121e56dc9bc00a3ad8344bc8cfabd68b">monsterPortrait</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:af2529a109469b3b5aee7e99f28d71458" id="r_af2529a109469b3b5aee7e99f28d71458"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2529a109469b3b5aee7e99f28d71458">Start</a> ()</td></tr>
+<tr class="memdesc:af2529a109469b3b5aee7e99f28d71458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coge los componentes del jefe y deja al monje quieto hasta que llegue el jugador.  <br /></td></tr>
+<tr class="memitem:aceedf950c07bbcd19ea88a4caa5fbbeb" id="r_aceedf950c07bbcd19ea88a4caa5fbbeb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aceedf950c07bbcd19ea88a4caa5fbbeb">Update</a> ()</td></tr>
+<tr class="memdesc:aceedf950c07bbcd19ea88a4caa5fbbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solo el monje busca al jugador: si esta cerca empieza la transformacion en samurai. Luego ya se encarga <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a>.  <br /></td></tr>
+<tr class="memitem:a5fcb2079b6548341e8d1ee6f13de1dc0" id="r_a5fcb2079b6548341e8d1ee6f13de1dc0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5fcb2079b6548341e8d1ee6f13de1dc0">OnDrawGizmosSelected</a> ()</td></tr>
+<tr class="memdesc:a5fcb2079b6548341e8d1ee6f13de1dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja en el editor la distancia a la que despierta el monje.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a085fca1866f05a93e2021cf54fe4e0f7" id="r_a085fca1866f05a93e2021cf54fe4e0f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a085fca1866f05a93e2021cf54fe4e0f7">isTransforming</a></td></tr>
+<tr class="memitem:aee91d85f2f80f310dd44225d1c1c4098" id="r_aee91d85f2f80f310dd44225d1c1c4098"><td class="memItemLeft"><a class="el" href="class_enemy___health.html">Enemy_Health</a>&#160;</td><td class="memItemRight"><a class="el" href="#aee91d85f2f80f310dd44225d1c1c4098">enemy_Health</a></td></tr>
+<tr class="memitem:a7c754fe740acee75c2d2e36df3e0aa89" id="r_a7c754fe740acee75c2d2e36df3e0aa89"><td class="memItemLeft">Animator&#160;</td><td class="memItemRight"><a class="el" href="#a7c754fe740acee75c2d2e36df3e0aa89">anim</a></td></tr>
+<tr class="memitem:a0322865f37a22a0f693e454b5defaeeb" id="r_a0322865f37a22a0f693e454b5defaeeb"><td class="memItemLeft">Rigidbody2D&#160;</td><td class="memItemRight"><a class="el" href="#a0322865f37a22a0f693e454b5defaeeb">rb</a></td></tr>
+<tr class="memitem:a5334bfa01e98ba0fee15c9a7c4eb5d9c" id="r_a5334bfa01e98ba0fee15c9a7c4eb5d9c"><td class="memItemLeft"><a class="el" href="class_enemy___movement.html">Enemy_Movement</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5334bfa01e98ba0fee15c9a7c4eb5d9c">enemy_Movement</a></td></tr>
+<tr class="memitem:a05358fa68ed8223e9724db80e9eb744a" id="r_a05358fa68ed8223e9724db80e9eb744a"><td class="memItemLeft"><a class="el" href="class_enemy___combat.html">Enemy_Combat</a>&#160;</td><td class="memItemRight"><a class="el" href="#a05358fa68ed8223e9724db80e9eb744a">enemy_Combat</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Controla las formas del jefe: empieza como monje, al acercarse el jugador se convierte en samurai (fase 1) y al bajar de la mitad de vida se transforma en la bestia (fase 2). El movimiento y los ataques los siguen haciendo <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a> y <a class="el" href="class_enemy___combat.html" title="Ataque cuerpo a cuerpo de los enemigos (y del jefe). Cuando pega lo decide Enemy_Movement; aqui solo ...">Enemy_Combat</a>, este script solo los enciende, apaga y cambia sus valores. Asi se reutilizan los scripts de los enemigos normales en vez de hacer otros nuevos para el jefe. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="acdd6d449deee65299d90fd048ad1912c" name="acdd6d449deee65299d90fd048ad1912c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd6d449deee65299d90fd048ad1912c">&#9670;&#160;</a></span>CanTakeDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Boss_Phases.CanTakeDamage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lo usan <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> y <a class="el" href="class_enemy___knockback.html" title="Empuja y aturde al enemigo cuando recibe un golpe. Mientras esta aturdido Enemy_Movement no lo mueve ...">Enemy_Knockback</a>: el monje y las transformaciones no reciben daño. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>True si ahora se le puede hacer daño.</dd></dl>
+
+</div>
+</div>
+<a id="a116cb70f1d2cda3fc80ebb0f2c4024fd" name="a116cb70f1d2cda3fc80ebb0f2c4024fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116cb70f1d2cda3fc80ebb0f2c4024fd">&#9670;&#160;</a></span>CheckPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.CheckPhase </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentHealth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxHealth</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza los corazones del jefe y, si el samurai baja de la mitad de vida, empieza la transformacion en bestia. Lo llama <a class="el" href="class_enemy___health.html" title="Vida de los enemigos (tambien del jefe y del TNT). Al morir avisa al LevelManager para saber cuando s...">Enemy_Health</a> cada vez que el jefe recibe daño. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentHealth</td><td>Vida que le queda al jefe.</td></tr>
+    <tr><td class="paramname">maxHealth</td><td>Vida total del jefe (las dos fases juntas).</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5fcb2079b6548341e8d1ee6f13de1dc0" name="a5fcb2079b6548341e8d1ee6f13de1dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcb2079b6548341e8d1ee6f13de1dc0">&#9670;&#160;</a></span>OnDrawGizmosSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.OnDrawGizmosSelected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dibuja en el editor la distancia a la que despierta el monje. </p>
+
+</div>
+</div>
+<a id="af2529a109469b3b5aee7e99f28d71458" name="af2529a109469b3b5aee7e99f28d71458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2529a109469b3b5aee7e99f28d71458">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coge los componentes del jefe y deja al monje quieto hasta que llegue el jugador. </p>
+
+</div>
+</div>
+<a id="a6f4185b776d53d5d54b7070a45991cce" name="a6f4185b776d53d5d54b7070a45991cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4185b776d53d5d54b7070a45991cce">&#9670;&#160;</a></span>StartPhase1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.StartPhase1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empieza la fase del samurai: activa el movimiento y enseña su vida. Lo llama un evento al final de la animacion de curarse del monje. </p>
+
+</div>
+</div>
+<a id="a494ed32f182a990f8e1dd28f9f7746ed" name="a494ed32f182a990f8e1dd28f9f7746ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a494ed32f182a990f8e1dd28f9f7746ed">&#9670;&#160;</a></span>StartPhase2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.StartPhase2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empieza la fase de la bestia: mas rapida, pega mas fuerte y en mas area. Lo llama un evento al final de la animacion de transformacion de la bestia. </p>
+
+</div>
+</div>
+<a id="aceedf950c07bbcd19ea88a4caa5fbbeb" name="aceedf950c07bbcd19ea88a4caa5fbbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceedf950c07bbcd19ea88a4caa5fbbeb">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Boss_Phases.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solo el monje busca al jugador: si esta cerca empieza la transformacion en samurai. Luego ya se encarga <a class="el" href="class_enemy___movement.html" title="IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback)....">Enemy_Movement</a>. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a7c754fe740acee75c2d2e36df3e0aa89" name="a7c754fe740acee75c2d2e36df3e0aa89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c754fe740acee75c2d2e36df3e0aa89">&#9670;&#160;</a></span>anim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator Boss_Phases.anim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab705cddae94780609c92f2ff5a5dd7" name="a4ab705cddae94780609c92f2ff5a5dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab705cddae94780609c92f2ff5a5dd7">&#9670;&#160;</a></span>bodyCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CapsuleCollider2D Boss_Phases.bodyCollider</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05358fa68ed8223e9724db80e9eb744a" name="a05358fa68ed8223e9724db80e9eb744a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05358fa68ed8223e9724db80e9eb744a">&#9670;&#160;</a></span>enemy_Combat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy___combat.html">Enemy_Combat</a> Boss_Phases.enemy_Combat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee91d85f2f80f310dd44225d1c1c4098" name="aee91d85f2f80f310dd44225d1c1c4098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee91d85f2f80f310dd44225d1c1c4098">&#9670;&#160;</a></span>enemy_Health</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy___health.html">Enemy_Health</a> Boss_Phases.enemy_Health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5334bfa01e98ba0fee15c9a7c4eb5d9c" name="a5334bfa01e98ba0fee15c9a7c4eb5d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5334bfa01e98ba0fee15c9a7c4eb5d9c">&#9670;&#160;</a></span>enemy_Movement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy___movement.html">Enemy_Movement</a> Boss_Phases.enemy_Movement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a085fca1866f05a93e2021cf54fe4e0f7" name="a085fca1866f05a93e2021cf54fe4e0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085fca1866f05a93e2021cf54fe4e0f7">&#9670;&#160;</a></span>isTransforming</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Boss_Phases.isTransforming</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64970c60ae9502d4eadebcd349c995ec" name="a64970c60ae9502d4eadebcd349c995ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64970c60ae9502d4eadebcd349c995ec">&#9670;&#160;</a></span>monsterAttackCoolDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Boss_Phases.monsterAttackCoolDown = 2.2f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a195df725829216cb8fff395a144cc067" name="a195df725829216cb8fff395a144cc067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195df725829216cb8fff395a144cc067">&#9670;&#160;</a></span>monsterAttackRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Boss_Phases.monsterAttackRange = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb105b1c141492fc8f32d813986df4ab" name="abb105b1c141492fc8f32d813986df4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb105b1c141492fc8f32d813986df4ab">&#9670;&#160;</a></span>monsterAttackSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Boss_Phases.monsterAttackSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3199b6da485835cf6c34674f6ea540f" name="af3199b6da485835cf6c34674f6ea540f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3199b6da485835cf6c34674f6ea540f">&#9670;&#160;</a></span>monsterBodySize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 Boss_Phases.monsterBodySize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5986fc52a76b57e5464e68119a40be33" name="a5986fc52a76b57e5464e68119a40be33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5986fc52a76b57e5464e68119a40be33">&#9670;&#160;</a></span>monsterDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Boss_Phases.monsterDamage = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a121e56dc9bc00a3ad8344bc8cfabd68b" name="a121e56dc9bc00a3ad8344bc8cfabd68b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a121e56dc9bc00a3ad8344bc8cfabd68b">&#9670;&#160;</a></span>monsterPortrait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite Boss_Phases.monsterPortrait</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8383870aa4c9903ede9d8a84e738719" name="aa8383870aa4c9903ede9d8a84e738719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8383870aa4c9903ede9d8a84e738719">&#9670;&#160;</a></span>monsterSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Boss_Phases.monsterSpeed = 1.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2facec95cd6ab04b0600fdb935da06a4" name="a2facec95cd6ab04b0600fdb935da06a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2facec95cd6ab04b0600fdb935da06a4">&#9670;&#160;</a></span>monsterWeaponRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Boss_Phases.monsterWeaponRange = 1.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93f5450b69cd1751231effb5ceb1df80" name="a93f5450b69cd1751231effb5ceb1df80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f5450b69cd1751231effb5ceb1df80">&#9670;&#160;</a></span>phase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Boss_Phases.phase = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf7bd7edc0ea4add9109dcd854ced04a" name="aaf7bd7edc0ea4add9109dcd854ced04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf7bd7edc0ea4add9109dcd854ced04a">&#9670;&#160;</a></span>playerLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Boss_Phases.playerLayer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0322865f37a22a0f693e454b5defaeeb" name="a0322865f37a22a0f693e454b5defaeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0322865f37a22a0f693e454b5defaeeb">&#9670;&#160;</a></span>rb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D Boss_Phases.rb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dc3f92d2cadf94a7f8ad5b993c37ada" name="a4dc3f92d2cadf94a7f8ad5b993c37ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc3f92d2cadf94a7f8ad5b993c37ada">&#9670;&#160;</a></span>samuraiPortrait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite Boss_Phases.samuraiPortrait</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83da6fbf533d6fe7622cb2ed2b88fb88" name="a83da6fbf533d6fe7622cb2ed2b88fb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83da6fbf533d6fe7622cb2ed2b88fb88">&#9670;&#160;</a></span>transformSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Boss_Phases.transformSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae547ef059340e0def3b56e881234b4c2" name="ae547ef059340e0def3b56e881234b4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae547ef059340e0def3b56e881234b4c2">&#9670;&#160;</a></span>wakeUpRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Boss_Phases.wakeUpRange = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>D:/TFG/Hyrulike/Assets/Scripts/BossScripts/<a class="el" href="_boss___phases_8cs.html">Boss_Phases.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_boss___phases.html">Boss_Phases</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
