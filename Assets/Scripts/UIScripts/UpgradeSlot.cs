@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Hueco del menu para una mejora temporal
+/// <summary>
+/// Hueco del menu de pausa para una mejora temporal: su icono y las flechas de nivel.
+/// </summary>
 public class UpgradeSlot : MonoBehaviour
 {
     public Image icon;
@@ -11,6 +13,10 @@ public class UpgradeSlot : MonoBehaviour
     // Flechas de subir de nivel que salen al lado del icono (nivel 2 y nivel 3)
     public GameObject[] levelIcons;
 
+    /// <summary>
+    /// Pone el icono en color o en gris y enseña una flecha por cada nivel por encima del primero.
+    /// </summary>
+    /// <param name="level">Nivel de la mejora (0 = no la tiene).</param>
     public void SetLevel(int level)
     {
         // A nivel 0 todavia no se ha elegido y sale en gris

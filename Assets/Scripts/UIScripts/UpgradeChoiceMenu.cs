@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Lo que hace falta tener para que una mejora pueda salir
+/// <summary>
+/// Lo que hace falta tener para que una mejora pueda salir: nada, el arco o la guardia.
+/// </summary>
 public enum UpgradeRequirement
 {
     None,
@@ -12,7 +14,10 @@ public enum UpgradeRequirement
     Guard
 }
 
-// Datos de una mejora temporal, se rellenan en el Inspector de UpgradeChoiceMenu
+/// <summary>
+/// Datos de una mejora temporal: nombre, descripcion, icono, nivel maximo y requisito.
+/// Se rellenan en el Inspector de UpgradeChoiceMenu.
+/// </summary>
 [System.Serializable]
 public class Upgrade
 {
@@ -22,6 +27,13 @@ public class Upgrade
     public int maxLevel = 3; // 0 = no tiene nivel y puede salir siempre
     public UpgradeRequirement requirement;
 
+    /// <summary>
+    /// Crea una mejora con sus datos (el icono se pone luego en el Inspector).
+    /// </summary>
+    /// <param name="upgradeName">Nombre que sale en el menu.</param>
+    /// <param name="description">Lo que hace la mejora.</param>
+    /// <param name="maxLevel">Nivel maximo (0 = sin niveles).</param>
+    /// <param name="requirement">Lo que hace falta tener para que salga.</param>
     public Upgrade(string upgradeName, string description, int maxLevel, UpgradeRequirement requirement)
     {
         this.upgradeName = upgradeName;
@@ -31,15 +43,21 @@ public class Upgrade
     }
 }
 
-// Menu que sale al terminar un nivel para elegir una mejora
-// En los niveles 3 y 6 se elige una permanente (arco o guardia) y en el resto una temporal entre dos
-// Va en un objeto que siempre este activo (MenuCanvas), no en los paneles
+/// <summary>
+/// Menu que sale al terminar un nivel para elegir una mejora.
+/// Al acabar cada zona se elige una permanente (arco o guardia) y en el resto una temporal entre tres al azar.
+/// Va en un objeto que siempre este activo (MenuCanvas), no en los paneles.
+/// </summary>
 public class UpgradeChoiceMenu : MonoBehaviour
 {
-    // Igual que StatsManager.Instance: asi se puede abrir desde cualquier sitio
+    /// <summary>
+    /// Igual que StatsManager.Instance: asi se puede abrir desde cualquier sitio.
+    /// </summary>
     public static UpgradeChoiceMenu Instance;
 
-    // Es static para que PauseMenu sepa que no tiene que abrirse con Esc mientras se elige
+    /// <summary>
+    /// Es static para que PauseMenu sepa que no tiene que abrirse con Esc mientras se elige.
+    /// </summary>
     public static bool isChoosing;
 
     [Header("Mejoras temporales")]
@@ -84,11 +102,13 @@ public class UpgradeChoiceMenu : MonoBehaviour
     private bool isPermanentChoice;
     private string nextLevel; // escena que se carga al darle a Continuar
 
+    /// <summary>Se guarda como Instance.</summary>
     private void Awake()
     {
         Instance = this;
     }
 
+    /// <summary>Empieza con los dos paneles cerrados.</summary>
     private void Start()
     {
         isChoosing = false;
@@ -96,14 +116,21 @@ public class UpgradeChoiceMenu : MonoBehaviour
         permanentPanel.SetActive(false);
     }
 
-    // Lo llama la salida del nivel al cruzarla; al darle a Continuar se carga nextLevel
+    /// <summary>
+    /// Abre el menu y se guarda a que escena hay que ir despues.
+    /// Lo llama la salida del nivel al cruzarla; al darle a Continuar se carga nextLevel.
+    /// </summary>
+    /// <param name="nextLevel">Nombre de la escena siguiente.</param>
     public void Show(string nextLevel)
     {
         this.nextLevel = nextLevel;
         Show();
     }
 
-    // Sin nivel siguiente: sirve para probar en Play desde los tres puntos del componente (no cambia de escena)
+    /// <summary>
+    /// Para el juego y abre el panel que toque: el de permanentes o el de temporales.
+    /// Sin nivel siguiente sirve para probar en Play desde los tres puntos del componente (no cambia de escena).
+    /// </summary>
     [ContextMenu("Probar: abrir menu de mejoras")]
     public void Show()
     {
@@ -128,6 +155,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
 
     // ---- Mejoras temporales ----
 
+    /// <summary>Saca mejoras temporales al azar y las pone en los huecos del panel.</summary>
     private void ShowTemporary()
     {
         options = GetRandomOptions(optionIcons.Length);
@@ -157,7 +185,11 @@ public class UpgradeChoiceMenu : MonoBehaviour
         }
     }
 
-    // Lo llaman los botones de los iconos (0 el primero, 1 el segundo)
+    /// <summary>
+    /// Marca una de las mejoras temporales y enseña su descripcion.
+    /// Lo llaman los botones de los iconos.
+    /// </summary>
+    /// <param name="option">Hueco pulsado (0 el primero, 1 el segundo...).</param>
     public void SelectOption(int option)
     {
         selected = option;
@@ -174,7 +206,12 @@ public class UpgradeChoiceMenu : MonoBehaviour
         upgradeContinueButton.interactable = true;
     }
 
-    // "Nivel 1 -> 2", o nada si la mejora no tiene niveles
+    /// <summary>
+    /// Texto con el nivel que tiene y al que pasa, por ejemplo "(nivel 1 -> 2)", o nada si la mejora no tiene niveles.
+    /// </summary>
+    /// <param name="index">Posicion de la mejora en upgrades.</param>
+    /// <param name="upgrade">La mejora.</param>
+    /// <returns>El texto del nivel.</returns>
     private string LevelText(int index, Upgrade upgrade)
     {
         if (upgrade.maxLevel == 0)
@@ -185,7 +222,12 @@ public class UpgradeChoiceMenu : MonoBehaviour
         return "  (nivel " + level + " -> " + (level + 1) + ")";
     }
 
-    // Elige al azar 'amount' mejoras distintas entre las que se pueden coger ahora
+    /// <summary>
+    /// Elige al azar varias mejoras distintas entre las que se pueden coger ahora.
+    /// Se va sacando una al azar y se quita de la lista, asi nunca salen dos iguales.
+    /// </summary>
+    /// <param name="amount">Cuantas mejoras sacar.</param>
+    /// <returns>Las posiciones de las mejoras elegidas (pueden ser menos si no quedan).</returns>
     public List<int> GetRandomOptions(int amount)
     {
         List<int> available = new List<int>();
@@ -208,7 +250,11 @@ public class UpgradeChoiceMenu : MonoBehaviour
         return result;
     }
 
-    // Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco o guardia)
+    /// <summary>
+    /// Una mejora puede salir si no esta al maximo y el jugador tiene lo que necesita (arco o guardia).
+    /// </summary>
+    /// <param name="index">Posicion de la mejora en upgrades.</param>
+    /// <returns>True si puede salir.</returns>
     public bool IsAvailable(int index)
     {
         StatsManager stats = StatsManager.Instance;
@@ -226,6 +272,9 @@ public class UpgradeChoiceMenu : MonoBehaviour
 
     // ---- Mejoras permanentes ----
 
+    /// <summary>
+    /// Abre el panel de permanentes: las que ya tiene salen encendidas y no se pueden pulsar.
+    /// </summary>
     private void ShowPermanent()
     {
         for (int i = 0; i < permanentIcons.Length; i++)
@@ -249,7 +298,11 @@ public class UpgradeChoiceMenu : MonoBehaviour
         }
     }
 
-    // Lo llaman los botones de los iconos (0 arco, 1 guardia)
+    /// <summary>
+    /// Marca una mejora permanente y enseña su descripcion.
+    /// Lo llaman los botones de los iconos.
+    /// </summary>
+    /// <param name="index">0 arco, 1 guardia.</param>
     public void SelectPermanent(int index)
     {
         selected = index;
@@ -265,10 +318,14 @@ public class UpgradeChoiceMenu : MonoBehaviour
         permanentContinueButton.interactable = true;
     }
 
-    // Toca elegir permanente en los niveles 3 y 6, pero solo si todavia no tiene las que corresponden a ese nivel:
-    // en el 3 se puede tener como mucho 1 y en el 6 las 2.
-    // Asi si ya consiguio una en el 3 de otra partida, al volver al 3 elige temporal y la segunda llega en el 6.
-    // En el 9 (o si ya las tiene todas) sale una temporal normal
+    /// <summary>
+    /// Dice si al acabar este nivel toca elegir permanente.
+    /// Toca en los niveles 3 y 6, pero solo si todavia no tiene las que corresponden a ese nivel: en el 3 se puede tener como mucho 1 y en el 6 las 2.
+    /// Asi si ya consiguio una en el 3 de otra partida, al volver al 3 elige temporal y la segunda llega en el 6.
+    /// En el 9 (o si ya las tiene todas) sale una temporal normal.
+    /// </summary>
+    /// <param name="level">Nivel que se acaba de terminar.</param>
+    /// <returns>True si toca permanente.</returns>
     public bool IsPermanentLevel(int level)
     {
         if (level % permanentEvery != 0)
@@ -283,6 +340,10 @@ public class UpgradeChoiceMenu : MonoBehaviour
         return OwnedPermanents() < allowed;
     }
 
+    /// <summary>
+    /// Cuenta cuantas mejoras permanentes tiene ya.
+    /// </summary>
+    /// <returns>0, 1 o 2.</returns>
     private int OwnedPermanents()
     {
         int owned = 0;
@@ -298,7 +359,9 @@ public class UpgradeChoiceMenu : MonoBehaviour
 
     // ---- Botones Continuar y Salir ----
 
-    // Lo llaman los botones Continuar de los dos paneles
+    /// <summary>
+    /// Boton Continuar de los dos paneles: aplica la mejora elegida, cura entera la vida y pasa al siguiente nivel.
+    /// </summary>
     public void Confirm()
     {
         if (selected < 0)
@@ -333,6 +396,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
         }
     }
 
+    /// <summary>Boton Salir al menu: reinicia la partida y vuelve al menu principal.</summary>
     public void ExitToMenu()
     {
         StatsManager.Instance.ResetRun();
@@ -340,7 +404,9 @@ public class UpgradeChoiceMenu : MonoBehaviour
         SceneManager.LoadScene(mainMenuScene);
     }
 
-    // Si no quitamos la pausa, el juego (o la siguiente escena) se quedaria congelado
+    /// <summary>
+    /// Quita la pausa. Si no, el juego (o la siguiente escena) se quedaria congelado.
+    /// </summary>
     private void Unpause()
     {
         isChoosing = false;

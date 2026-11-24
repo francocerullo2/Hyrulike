@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Muestra en el menu las mejoras permanentes (arco y guardia) y las temporales
+/// <summary>
+/// Muestra en el menu de pausa las mejoras permanentes (arco y guardia) y las temporales.
+/// </summary>
 public class UpgradesMenu : MonoBehaviour
 {
     [Header("Arco")]
@@ -18,12 +20,15 @@ public class UpgradesMenu : MonoBehaviour
     // En el mismo orden que upgradeLevels del StatsManager
     public UpgradeSlot[] tempSlots;
 
+    /// <summary>Pinta las mejoras al empezar.</summary>
     private void Start()
     {
         UpdateSlots();
     }
 
-    // Se llama cada vez que se activa el menu, asi siempre sale actualizado
+    /// <summary>
+    /// Se llama cada vez que se activa el menu, asi siempre sale actualizado.
+    /// </summary>
     private void OnEnable()
     {
         // Al cargar la escena puede que el StatsManager aun no exista
@@ -33,6 +38,9 @@ public class UpgradesMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Pinta todas las mejoras segun lo que tenga el jugador en StatsManager.
+    /// </summary>
     public void UpdateSlots()
     {
         SetSlot(bowSlot, StatsManager.Instance.hasBow, bowIcon, bowDisabledIcon);
@@ -44,7 +52,13 @@ public class UpgradesMenu : MonoBehaviour
         }
     }
 
-    // Pone el icono en color si la mejora esta desbloqueada y en gris si no
+    /// <summary>
+    /// Pone el icono en color si la mejora esta desbloqueada y en gris si no.
+    /// </summary>
+    /// <param name="slot">La imagen del hueco.</param>
+    /// <param name="unlocked">Si se tiene la mejora.</param>
+    /// <param name="icon">Icono en color.</param>
+    /// <param name="disabledIcon">Icono en gris.</param>
     private void SetSlot(Image slot, bool unlocked, Sprite icon, Sprite disabledIcon)
     {
         if (unlocked)

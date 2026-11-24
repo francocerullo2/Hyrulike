@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Empuja y aturde al enemigo cuando recibe un golpe.
+/// Mientras esta aturdido Enemy_Movement no lo mueve (estado Knockback).
+/// </summary>
 public class Enemy_Knockback : MonoBehaviour
 {
     public float pushMultiplier = 1; // lo que se le empuja (0 = solo se aturde y no se mueve, como el jefe)
@@ -11,12 +15,14 @@ public class Enemy_Knockback : MonoBehaviour
     private Rigidbody2D rb;
     private Enemy_Movement enemy_Movement;
 
+    /// <summary>Coge el Rigidbody2D y el Enemy_Movement del enemigo.</summary>
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         enemy_Movement = GetComponent<Enemy_Movement>();
     }
 
+    /// <summary>Va bajando el tiempo que falta para poder aturdirlo otra vez.</summary>
     private void Update()
     {
         if (stunCooldownTimer > 0)
@@ -25,7 +31,13 @@ public class Enemy_Knockback : MonoBehaviour
         }
     }
 
-    // Empuja al enemigo lejos del jugador cuando recibe un golpe
+    /// <summary>
+    /// Empuja al enemigo lejos del jugador cuando recibe un golpe.
+    /// </summary>
+    /// <param name="playerTransform">Quien pega (el jugador o su flecha), para saber hacia donde empujar.</param>
+    /// <param name="knockbackForce">La fuerza del empujon.</param>
+    /// <param name="knockbackTime">Segundos que sale volando.</param>
+    /// <param name="stunTime">Segundos que se queda aturdido despues.</param>
     public void Knockback(Transform playerTransform, float knockbackForce, float knockbackTime, float stunTime)
     {
         // Desactivar el componente no impide que otros scripts llamen a este metodo, asi que se comprueba a mano
@@ -57,7 +69,11 @@ public class Enemy_Knockback : MonoBehaviour
         rb.linearVelocity = direction * knockbackForce * pushMultiplier;
     }
 
-    // Primero sale volando un rato, luego se para y se queda aturdido, y despues vuelve a Idle
+    /// <summary>
+    /// Primero sale volando un rato, luego se para y se queda aturdido, y despues vuelve a Idle.
+    /// </summary>
+    /// <param name="knockbackTime">Segundos que sale volando.</param>
+    /// <param name="stunTime">Segundos que se queda aturdido.</param>
     IEnumerator StunTimer(float knockbackTime, float stunTime)
     {
         yield return new WaitForSeconds(knockbackTime);

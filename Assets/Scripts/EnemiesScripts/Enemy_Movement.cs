@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// IA de los enemigos con una maquina de estados (Idle, Chasing, Attacking, Knockback).
+/// Segun donde este el jugador decide si patrullar, perseguir o atacar, y pone la animacion de cada estado.
+/// La usan todos los enemigos y el jefe; cada uno se configura con los campos del Inspector.
+/// </summary>
 public class Enemy_Movement : MonoBehaviour
 {
 
@@ -31,7 +36,7 @@ public class Enemy_Movement : MonoBehaviour
     private Transform player;
     private Animator anim;
 
-    // Start se llama una vez al empezar, antes del primer Update
+    /// <summary>Coge los componentes y empieza en Idle.</summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,7 +46,10 @@ public class Enemy_Movement : MonoBehaviour
     }
 
 
-    // FixedUpdate va a intervalos fijos y no depende de los fps, aqui va lo de fisicas
+    /// <summary>
+    /// Cada paso de fisicas decide que hacer y baja los contadores.
+    /// FixedUpdate va a intervalos fijos y no depende de los fps, aqui va lo de fisicas.
+    /// </summary>
     void FixedUpdate()
     {
         // Si esta siendo empujado no hace nada, ya se encarga Enemy_Knockback
@@ -74,14 +82,17 @@ public class Enemy_Movement : MonoBehaviour
         
     }
 
-    // Va directo hacia el jugador
+    /// <summary>Va directo hacia el jugador.</summary>
     void Chase()
     {
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
     }
 
-    // Aqui se decide que hace el enemigo segun donde este el jugador
+    /// <summary>
+    /// Aqui se decide que hace el enemigo segun donde este el jugador:
+    /// si esta cerca ataca (si el cooldown lo deja), si lo ve lo persigue, y si no patrulla o se queda quieto.
+    /// </summary>
     private void CheckForPlayer()
     {
         // Mientras ataca no cambia de estado; el evento de la animación lo devuelve a Idle
@@ -141,7 +152,9 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    // Si tiene la patrulla activada y puntos puestos patrulla, si no se queda parado
+    /// <summary>
+    /// Si tiene la patrulla activada y puntos puestos patrulla, si no se queda parado.
+    /// </summary>
     private void PatrolOrIdle()
     {
         if (patrol && patrolPoints.Length > 0)
@@ -156,16 +169,20 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    // Lo llama Enemy_Health al recibir daño: durante un rato ve al jugador desde mucho mas lejos y va a por el
-    // Asi si le disparas con el arco desde fuera de su rango no se queda quieto
+    /// <summary>
+    /// Lo llama Enemy_Health al recibir daño: durante un rato ve al jugador desde mucho mas lejos y va a por el.
+    /// Asi si le disparas con el arco desde fuera de su rango no se queda quieto.
+    /// </summary>
     public void Alert()
     {
         alertTimer = alertDuration;
     }
 
-    // Elige la animacion de ataque (lado, arriba o abajo) segun donde este el jugador
-    // La izquierda ya la cubre el Flip, por eso attackX siempre es 1 o 0
-    // Se usan valores redondos para que el blend tree no mezcle dos animaciones y pegue dos veces
+    /// <summary>
+    /// Elige la animacion de ataque (lado, arriba o abajo) segun donde este el jugador.
+    /// La izquierda ya la cubre el Flip, por eso attackX siempre es 1 o 0.
+    /// Se usan valores redondos para que el blend tree no mezcle dos animaciones y pegue dos veces.
+    /// </summary>
     private void SetAttackDirection()
     {
         Vector2 direction = player.position - transform.position;
@@ -184,14 +201,17 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    // Gira al enemigo si el jugador esta en el lado contrario
+    /// <summary>Gira al enemigo si el jugador esta en el lado contrario.</summary>
     private void FacePlayer()
     {
         FaceTarget(player.position);
     }
 
-    // Gira al enemigo si el punto al que va esta en el lado contrario
-    // Los sprites miran a la derecha, asi que escala positiva = derecha y negativa = izquierda (igual que en PlayerMovement)
+    /// <summary>
+    /// Gira al enemigo si el punto al que va esta en el lado contrario.
+    /// Los sprites miran a la derecha, asi que escala positiva = derecha y negativa = izquierda (igual que en PlayerMovement).
+    /// </summary>
+    /// <param name="target">El punto al que tiene que mirar.</param>
     private void FaceTarget(Vector2 target)
     {
         // El jefe tiene sprites de frente: si se girase, la katana izquierda pasaria a la mano derecha
@@ -207,13 +227,18 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    // Igual que en el jugador, invierte la escala en X para girar el sprite
+    /// <summary>
+    /// Igual que en el jugador, invierte la escala en X para girar el sprite.
+    /// </summary>
     private void Flip()
     {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    // Cambia de estado y actualiza los bools del animator para que se vea la animacion que toca
+    /// <summary>
+    /// Cambia de estado y actualiza los bools del Animator para que se vea la animacion que toca.
+    /// </summary>
+    /// <param name="newState">El estado al que pasa.</param>
     public void ChangeState(EnemyState newState)
     {
         // Apagamos la animacion del estado en el que estaba
@@ -242,7 +267,7 @@ public class Enemy_Movement : MonoBehaviour
 
     }
 
-    // Va al punto que toca; al llegar espera un rato y pasa al siguiente
+    /// <summary>Va al punto que toca; al llegar espera un rato y pasa al siguiente.</summary>
     private void Patrol()
     {
         if (pauseTimer > 0)
@@ -267,7 +292,7 @@ public class Enemy_Movement : MonoBehaviour
     }
 
 
-    // Dibuja el rango de deteccion en el editor
+    /// <summary>Dibuja el rango de deteccion y los puntos de patrulla en el editor.</summary>
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -284,7 +309,9 @@ public class Enemy_Movement : MonoBehaviour
 
 }
 
-// Los estados posibles del enemigo
+/// <summary>
+/// Los estados posibles del enemigo: quieto, persiguiendo (o patrullando), atacando y empujado.
+/// </summary>
 public enum EnemyState
 {
     Idle,

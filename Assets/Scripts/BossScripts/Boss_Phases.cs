@@ -1,8 +1,11 @@
 using UnityEngine;
 
-// Controla las formas del jefe: empieza como monje, al acercarse el jugador se convierte en samurai (fase 1)
-// y al bajar de la mitad de vida se transforma en la bestia (fase 2)
-// El movimiento y los ataques los siguen haciendo Enemy_Movement y Enemy_Combat, este script solo los enciende, apaga y cambia sus valores
+/// <summary>
+/// Controla las formas del jefe: empieza como monje, al acercarse el jugador se convierte en samurai (fase 1)
+/// y al bajar de la mitad de vida se transforma en la bestia (fase 2).
+/// El movimiento y los ataques los siguen haciendo Enemy_Movement y Enemy_Combat, este script solo los enciende, apaga y cambia sus valores.
+/// Asi se reutilizan los scripts de los enemigos normales en vez de hacer otros nuevos para el jefe.
+/// </summary>
 public class Boss_Phases : MonoBehaviour
 {
     public int phase = 0; // 0 = monje, 1 = samurai, 2 = bestia
@@ -36,6 +39,9 @@ public class Boss_Phases : MonoBehaviour
     private Enemy_Movement enemy_Movement;
     private Enemy_Combat enemy_Combat;
 
+    /// <summary>
+    /// Coge los componentes del jefe y deja al monje quieto hasta que llegue el jugador.
+    /// </summary>
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -48,6 +54,9 @@ public class Boss_Phases : MonoBehaviour
         enemy_Movement.enabled = false;
     }
 
+    /// <summary>
+    /// Solo el monje busca al jugador: si esta cerca empieza la transformacion en samurai. Luego ya se encarga Enemy_Movement.
+    /// </summary>
     void Update()
     {
         // Solo el monje busca al jugador, luego ya se encarga Enemy_Movement
@@ -63,13 +72,19 @@ public class Boss_Phases : MonoBehaviour
         }
     }
 
-    // Lo usan Enemy_Health y Enemy_Knockback: el monje y las transformaciones no reciben daño
+    /// <summary>
+    /// Lo usan Enemy_Health y Enemy_Knockback: el monje y las transformaciones no reciben daño.
+    /// </summary>
+    /// <returns>True si ahora se le puede hacer daño.</returns>
     public bool CanTakeDamage()
     {
         return phase != 0 && !isTransforming;
     }
 
-    // Lo llama un evento al final de la animacion de curarse del monje
+    /// <summary>
+    /// Empieza la fase del samurai: activa el movimiento y enseña su vida.
+    /// Lo llama un evento al final de la animacion de curarse del monje.
+    /// </summary>
     public void StartPhase1()
     {
         // La animacion de curarse tambien se usa al pasar a bestia, ahi no tiene que hacer nada
@@ -87,7 +102,12 @@ public class Boss_Phases : MonoBehaviour
         BossUI.Instance.UpdateHearts(enemy_Health.maxHealth / 2);
     }
 
-    // Lo llama Enemy_Health cada vez que el jefe recibe daño
+    /// <summary>
+    /// Actualiza los corazones del jefe y, si el samurai baja de la mitad de vida, empieza la transformacion en bestia.
+    /// Lo llama Enemy_Health cada vez que el jefe recibe daño.
+    /// </summary>
+    /// <param name="currentHealth">Vida que le queda al jefe.</param>
+    /// <param name="maxHealth">Vida total del jefe (las dos fases juntas).</param>
     public void CheckPhase(int currentHealth, int maxHealth)
     {
         // El samurai gasta la primera mitad de la vida y la bestia la segunda
@@ -119,7 +139,10 @@ public class Boss_Phases : MonoBehaviour
         }
     }
 
-    // Lo llama un evento al final de la animacion de transformacion de la bestia
+    /// <summary>
+    /// Empieza la fase de la bestia: mas rapida, pega mas fuerte y en mas area.
+    /// Lo llama un evento al final de la animacion de transformacion de la bestia.
+    /// </summary>
     public void StartPhase2()
     {
         phase = 2;
@@ -146,7 +169,7 @@ public class Boss_Phases : MonoBehaviour
         enemy_Movement.enabled = true;
     }
 
-    // Dibuja en el editor la distancia a la que despierta el monje
+    /// <summary>Dibuja en el editor la distancia a la que despierta el monje.</summary>
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;

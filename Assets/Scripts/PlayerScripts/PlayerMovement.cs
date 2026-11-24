@@ -1,6 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Mueve al jugador con el teclado y se encarga del dash, del knockback y de girar el sprite.
+/// Tambien lee el boton de ataque y se lo pasa a Player_Combat.
+/// Va en el Player.
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     public int facingDirection = 1; // 1 mira a la derecha, -1 a la izquierda
@@ -28,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
     private float stepTimer;
 
 
-    // El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion
+    /// <summary>
+    /// Lee los botones de ataque y de dash, y hace sonar los pasos.
+    /// El input de ataque va en Update y no en FixedUpdate para que no se pierda ninguna pulsacion.
+    /// </summary>
     private void Update()
     {
         // En pausa no se puede atacar
@@ -65,7 +73,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Impulso corto y rapido hacia donde se esta moviendo (o hacia donde mira si esta quieto)
+    /// <summary>
+    /// Impulso corto y rapido hacia donde se esta moviendo (o hacia donde mira si esta quieto).
+    /// Mientras dura, isDashing esta a true y el jugador no recibe daño ni empujones.
+    /// Va en una corrutina para poder esperar dashDuration y luego frenar.
+    /// </summary>
     IEnumerator Dash()
     {
         isDashing = true;
@@ -90,7 +102,10 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
     }
 
-    // FixedUpdate va a intervalos fijos y no depende de los fps, aqui va todo lo de fisicas
+    /// <summary>
+    /// Mueve al jugador segun las teclas y actualiza el Animator.
+    /// FixedUpdate va a intervalos fijos y no depende de los fps, aqui va todo lo de fisicas.
+    /// </summary>
     void FixedUpdate()
     {
         // Durante el dash la velocidad la pone Dash(), no se lee el input
@@ -151,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Da la vuelta al sprite invirtiendo la escala en X
+    /// <summary>Da la vuelta al sprite invirtiendo la escala en X.</summary>
     void Flip()
     {
         facingDirection *= -1;
@@ -161,7 +176,13 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale.z);
     }
 
-    // Empuja al jugador en direccion contraria al enemigo que le ha pegado
+    /// <summary>
+    /// Empuja al jugador en direccion contraria al enemigo que le ha pegado.
+    /// Si esta en dash no le pasa nada, y si el escudo para el golpe el empujon es mas flojo.
+    /// </summary>
+    /// <param name="enemy">El enemigo que pega, para saber hacia donde empujar.</param>
+    /// <param name="force">La fuerza del empujon.</param>
+    /// <param name="stunTime">Segundos que se queda sin poder moverse.</param>
     public void Knockback(Transform enemy, float force, float stunTime)
     {
         // Durante el dash esquiva los golpes, no le empujan
@@ -183,7 +204,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // Espera el tiempo de stun, frena al jugador y le devuelve el control
+    /// <summary>
+    /// Espera el tiempo de stun, frena al jugador y le devuelve el control.
+    /// </summary>
+    /// <param name="stunTime">Segundos que hay que esperar.</param>
     IEnumerator KnockbackCounter(float stunTime)
     {
         yield return new WaitForSeconds(stunTime);

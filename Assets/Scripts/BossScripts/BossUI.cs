@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Pinta la vida del jefe: 10 corazones por fase y su retrato
+/// <summary>
+/// Pinta la vida del jefe arriba en la pantalla: 10 corazones por fase y su retrato.
+/// Va en el canvas del nivel final y empieza oculto.
+/// </summary>
 public class BossUI : MonoBehaviour
 {
+    /// <summary>La unica copia, para que Boss_Phases la llame con BossUI.Instance.</summary>
     public static BossUI Instance;
 
     // Imagenes de los corazones, de izquierda a derecha
@@ -14,6 +18,9 @@ public class BossUI : MonoBehaviour
 
     public Image portrait;
 
+    /// <summary>
+    /// Se guarda como Instance y se oculta: mientras el jefe es el monje no se ve su vida.
+    /// </summary>
     private void Awake()
     {
         Instance = this;
@@ -22,13 +29,21 @@ public class BossUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // Lo llama Boss_Phases al empezar cada fase, con el retrato del samurai o de la bestia
+    /// <summary>
+    /// Enseña la vida del jefe con el retrato de la fase.
+    /// Lo llama Boss_Phases al empezar cada fase.
+    /// </summary>
+    /// <param name="bossPortrait">El retrato del samurai o de la bestia.</param>
     public void Show(Sprite bossPortrait)
     {
         portrait.sprite = bossPortrait;
         gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Pinta los corazones: los primeros llenos y el resto vacios.
+    /// </summary>
+    /// <param name="health">Cuantos corazones llenos hay que pintar.</param>
     public void UpdateHearts(int health)
     {
         for (int i = 0; i < hearts.Length; i++)
@@ -45,7 +60,7 @@ public class BossUI : MonoBehaviour
         }
     }
 
-    // Lo llama Boss_Phases cuando el jefe muere
+    /// <summary>Oculta la vida del jefe. Lo llama Boss_Phases cuando el jefe muere.</summary>
     public void Hide()
     {
         gameObject.SetActive(false);

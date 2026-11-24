@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Abre y cierra el menu con Esc y tiene las funciones de sus botones
+/// <summary>
+/// Abre y cierra el menu de pausa con Esc y tiene las funciones de sus botones.
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
-    // Es static para que los scripts del jugador puedan mirar si el juego esta en pausa
+    /// <summary>
+    /// Es static para que los scripts del jugador puedan mirar si el juego esta en pausa.
+    /// </summary>
     public static bool isPaused;
 
     public GameObject pauseMenu;
@@ -13,12 +17,14 @@ public class PauseMenu : MonoBehaviour
     // Nombre de la escena del menu principal, tiene que estar en Build Settings
     public string mainMenuScene = "MainMenu";
 
+    /// <summary>La partida empieza sin pausa y con el menu cerrado.</summary>
     private void Start()
     {
         // La partida empieza sin pausa y con el menu cerrado
         Resume();
     }
 
+    /// <summary>Con Esc pausa, reanuda o sale de los ajustes, segun donde este.</summary>
     private void Update()
     {
         // Muerto o eligiendo mejora no se puede pausar ni reanudar, ya hay otro menu abierto
@@ -45,6 +51,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Para el juego y abre el menu. Con timeScale 0 se para todo lo que use el tiempo (fisicas, animaciones, corrutinas).
+    /// </summary>
     public void Pause()
     {
         isPaused = true;
@@ -52,6 +61,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
     }
 
+    /// <summary>Boton Continuar: quita la pausa y cierra los menus.</summary>
     public void Resume()
     {
         isPaused = false;
@@ -60,16 +70,22 @@ public class PauseMenu : MonoBehaviour
         settingsPanel.SetActive(false);
     }
 
+    /// <summary>Boton Ajustes: abre el panel de ajustes.</summary>
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
     }
 
+    /// <summary>Cierra el panel de ajustes y vuelve al menu de pausa.</summary>
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
     }
 
+    /// <summary>
+    /// Boton Salir al menu: quita la pausa y carga el menu principal.
+    /// Si no quitamos la pausa, la siguiente escena empezaria congelada.
+    /// </summary>
     public void ExitToMenu()
     {
         // Si no quitamos la pausa, la siguiente escena empezaria congelada

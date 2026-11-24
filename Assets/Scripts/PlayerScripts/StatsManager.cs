@@ -1,8 +1,16 @@
 using UnityEngine;
 
+/// <summary>
+/// Guarda todas las estadisticas del jugador: daño, vida, velocidad, las mejoras y los datos de la partida.
+/// Pasa de una escena a otra (DontDestroyOnLoad) para no perder nada al cambiar de nivel.
+/// Los valores base no se tocan; las mejoras se suman en los metodos de abajo (MaxHealth, Damage...).
+/// </summary>
 public class StatsManager : MonoBehaviour
 {
 
+    /// <summary>
+    /// La unica copia, para leer las estadisticas desde cualquier script con StatsManager.Instance.
+    /// </summary>
     public static StatsManager Instance;
 
     [Header("Combat Stats")]
@@ -50,6 +58,10 @@ public class StatsManager : MonoBehaviour
     public float runTime;
     public int enemiesKilled;
 
+    /// <summary>
+    /// Solo vale el primero que se crea y pasa de una escena a otra, asi no se pierden la vida, las mejoras ni el tiempo.
+    /// Los StatsManager que haya en los demas niveles se borran solos al cargar.
+    /// </summary>
     private void Awake()
     {
         // Solo vale el primero que se crea y pasa de una escena a otra, asi no se pierden la vida, las mejoras ni el tiempo.
@@ -66,14 +78,19 @@ public class StatsManager : MonoBehaviour
         }
     }
 
-    // Las permanentes se guardan en disco (PlayerPrefs) para que sigan al reintentar y al cerrar el juego
-    // Con || las casillas marcadas a mano en el Inspector para probar siguen valiendo
+    /// <summary>
+    /// Carga las mejoras permanentes guardadas en disco (PlayerPrefs), para que sigan al reintentar y al cerrar el juego.
+    /// Con || las casillas marcadas a mano en el Inspector para probar siguen valiendo.
+    /// </summary>
     private void LoadPermanents()
     {
         hasBow = hasBow || PlayerPrefs.GetInt("hasBow") == 1;
         hasGuard = hasGuard || PlayerPrefs.GetInt("hasGuard") == 1;
     }
 
+    /// <summary>
+    /// Guarda en disco (PlayerPrefs) si se tienen el arco y la guardia. 1 = si, 0 = no.
+    /// </summary>
     private void SavePermanents()
     {
         PlayerPrefs.SetInt("hasBow", hasBow ? 1 : 0);
@@ -81,7 +98,10 @@ public class StatsManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // Para probar desde cero: en Play, tres puntos del componente -> Borrar progreso
+    /// <summary>
+    /// Borra el arco y la guardia guardados, para probar desde cero.
+    /// Se usa en Play: tres puntos del componente -> Borrar progreso.
+    /// </summary>
     [ContextMenu("Borrar progreso (permanentes)")]
     public void DeletePermanents()
     {
@@ -90,13 +110,19 @@ public class StatsManager : MonoBehaviour
         SavePermanents();
     }
 
-    // Con Time.deltaTime el contador se para solo en pausa y en el Game Over (timeScale = 0)
+    /// <summary>
+    /// Va sumando el tiempo de la partida.
+    /// Con Time.deltaTime el contador se para solo en pausa y en el Game Over (timeScale = 0).
+    /// </summary>
     private void Update()
     {
         runTime += Time.deltaTime;
     }
 
-    // Cuenta las mejoras que lleva: las permanentes y cada nivel de las temporales
+    /// <summary>
+    /// Cuenta las mejoras que lleva: las permanentes y cada nivel de las temporales.
+    /// </summary>
+    /// <returns>El total de mejoras.</returns>
     public int UpgradesObtained()
     {
         int total = 0;
@@ -114,77 +140,127 @@ public class StatsManager : MonoBehaviour
     // Los valores base no se tocan nunca, las mejoras se suman aqui segun su nivel.
     // Asi para empezar una partida nueva basta con poner los niveles a 0
 
+    /// <summary>
+    /// Vida maxima con la mejora Corazon: un corazon mas por nivel.
+    /// </summary>
+    /// <returns>Los corazones maximos.</returns>
     public int MaxHealth()
     {
         return maxHealth + upgradeLevels[HEART];
     }
 
+    /// <summary>
+    /// Daño de la espada con la mejora Fuerza: +1 por nivel.
+    /// </summary>
+    /// <returns>El daño de cada golpe.</returns>
     public int Damage()
     {
         return damage + upgradeLevels[STRENGTH];
     }
 
+    /// <summary>
+    /// Alcance de la espada con la mejora Arma magica: +0.2 por nivel.
+    /// </summary>
+    /// <returns>El radio del ataque.</returns>
     public float WeaponRange()
     {
         return weaponRange + .2f * upgradeLevels[RANGE];
     }
 
+    /// <summary>
+    /// Velocidad de movimiento con la mejora Permuta: +0.5 por nivel.
+    /// </summary>
+    /// <returns>La velocidad del jugador.</returns>
     public float Speed()
     {
         return speed + .5f * upgradeLevels[SPEED];
     }
 
-    // Por lo que se multiplica el tiempo entre ataques: cada nivel lo baja un 15%
+    /// <summary>
+    /// Por lo que se multiplica el tiempo entre ataques (mejora Corte): cada nivel lo baja un 15%.
+    /// </summary>
+    /// <returns>1 sin mejora, menos de 1 con ella.</returns>
     public float AttackCooldownMultiplier()
     {
         return 1 - .15f * upgradeLevels[ATTACK_SPEED];
     }
 
-    // Segundos de invulnerabilidad que se suman despues de un golpe
+    /// <summary>
+    /// Segundos de invulnerabilidad que se suman despues de un golpe (mejora Armadura).
+    /// </summary>
+    /// <returns>Los segundos extra.</returns>
     public float InvulnerabilityBonus()
     {
         return .3f * upgradeLevels[ARMOR];
     }
 
+    /// <summary>
+    /// Daño extra de las flechas con la mejora Kunai: +1 por nivel.
+    /// </summary>
+    /// <returns>El daño que se suma a cada flecha.</returns>
     public int ArrowDamageBonus()
     {
         return upgradeLevels[ARROW_DAMAGE];
     }
 
+    /// <summary>
+    /// Por lo que se multiplica el tiempo entre disparos (mejora Cañon de agua): cada nivel lo baja un 15%.
+    /// </summary>
+    /// <returns>1 sin mejora, menos de 1 con ella.</returns>
     public float ShootCooldownMultiplier()
     {
         return 1 - .15f * upgradeLevels[FIRE_RATE];
     }
 
-    // Durante el dash se va mas rapido, y como dura lo mismo se llega mas lejos
+    /// <summary>
+    /// Velocidad del dash con la mejora Impulso. Como el dash dura lo mismo, si va mas rapido llega mas lejos.
+    /// </summary>
+    /// <returns>La velocidad durante el dash.</returns>
     public float DashSpeed()
     {
         return dashSpeed + 2 * upgradeLevels[DASH_DISTANCE];
     }
 
+    /// <summary>
+    /// Por lo que se multiplica la recarga del dash (mejora Niebla): cada nivel la baja un 20%.
+    /// </summary>
+    /// <returns>1 sin mejora, menos de 1 con ella.</returns>
     public float DashCooldownMultiplier()
     {
         return 1 - .2f * upgradeLevels[DASH_RECHARGE];
     }
 
-    // Grados que se suman al angulo que cubre el escudo
+    /// <summary>
+    /// Grados que se suman al angulo que cubre el escudo (mejora Defensa).
+    /// </summary>
+    /// <returns>Los grados extra.</returns>
     public float GuardAngleBonus()
     {
         return 10 * upgradeLevels[GUARD];
     }
 
-    // Por lo que se multiplica el empujon de un golpe bloqueado
+    /// <summary>
+    /// Por lo que se multiplica el empujon de un golpe bloqueado (mejora Defensa): cada nivel lo baja un 30%.
+    /// </summary>
+    /// <returns>1 sin mejora, menos de 1 con ella.</returns>
     public float GuardKnockbackMultiplier()
     {
         return 1 - .3f * upgradeLevels[GUARD];
     }
 
+    /// <summary>
+    /// Mira si tiene el Amuleto (segunda oportunidad al morir).
+    /// </summary>
+    /// <returns>True si lo tiene.</returns>
     public bool HasAmulet()
     {
         return upgradeLevels[AMULET] > 0;
     }
 
-    // Aplica una mejora temporal elegida en el menu
+    /// <summary>
+    /// Aplica una mejora temporal elegida en el menu: le sube un nivel.
+    /// </summary>
+    /// <param name="index">Posicion de la mejora (las constantes HEART, ARMOR...).</param>
     public void ApplyUpgrade(int index)
     {
         upgradeLevels[index]++;
@@ -196,13 +272,16 @@ public class StatsManager : MonoBehaviour
         }
     }
 
-    // Al terminar un nivel se recupera toda la vida
+    /// <summary>Al terminar un nivel se recupera toda la vida.</summary>
     public void HealFull()
     {
         currentHealth = MaxHealth();
     }
 
-    // Desbloquea una mejora permanente: 0 arco, 1 guardia
+    /// <summary>
+    /// Desbloquea una mejora permanente y la guarda en disco.
+    /// </summary>
+    /// <param name="index">0 arco, 1 guardia.</param>
     public void UnlockPermanent(int index)
     {
         if (index == 0) hasBow = true;
@@ -210,13 +289,20 @@ public class StatsManager : MonoBehaviour
         SavePermanents();
     }
 
+    /// <summary>
+    /// Mira si ya se tiene una mejora permanente.
+    /// </summary>
+    /// <param name="index">0 arco, 1 guardia.</param>
+    /// <returns>True si ya la tiene.</returns>
     public bool HasPermanent(int index)
     {
         if (index == 0) return hasBow;
         return hasGuard;
     }
 
-    // Deja todo como al empezar una partida nueva (las mejoras permanentes se mantienen)
+    /// <summary>
+    /// Deja todo como al empezar una partida nueva (las mejoras permanentes se mantienen).
+    /// </summary>
     public void ResetRun()
     {
         currentHealth = maxHealth;

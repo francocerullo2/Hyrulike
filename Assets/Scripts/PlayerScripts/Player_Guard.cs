@@ -1,7 +1,10 @@
 using UnityEngine;
 
-// Guardia del jugador: mientras se mantiene pulsado se queda quieto y bloquea los golpes que vienen del lado al que mira
-// El escudo solo cubre de lado, asi que los ataques que vienen de arriba o de abajo le siguen dando
+/// <summary>
+/// Guardia del jugador: mientras se mantiene pulsado se queda quieto y bloquea los golpes que vienen del lado al que mira.
+/// El escudo solo cubre de lado, asi que los ataques que vienen de arriba o de abajo le siguen dando.
+/// Solo funciona si ya tiene la guardia (mejora permanente).
+/// </summary>
 public class Player_Guard : MonoBehaviour
 {
     public Animator anim;
@@ -10,6 +13,7 @@ public class Player_Guard : MonoBehaviour
     public float blockAngle = 60; // grados por encima y por debajo del frente que cubre el escudo (90 seria todo el lado)
     public float blockedKnockbackMultiplier = .3f; // un golpe bloqueado empuja menos (0 = nada, 1 = igual que sin guardia)
 
+    /// <summary>Activa o quita la guardia segun si se mantiene pulsado el boton.</summary>
     void Update()
     {
         // En pausa no se puede cambiar de guardia
@@ -28,7 +32,11 @@ public class Player_Guard : MonoBehaviour
         anim.SetBool("isGuarding", wantsToGuard);
     }
 
-    // Dice si un golpe que viene desde attackerPosition lo para el escudo
+    /// <summary>
+    /// Dice si el escudo para un golpe, mirando el angulo entre hacia donde mira el jugador y donde esta el atacante.
+    /// </summary>
+    /// <param name="attackerPosition">Donde esta quien pega.</param>
+    /// <returns>True si el golpe se bloquea.</returns>
     public bool BlocksHit(Vector2 attackerPosition)
     {
         if (playerMovement.isGuarding == false)
@@ -47,7 +55,10 @@ public class Player_Guard : MonoBehaviour
         return Vector2.Angle(facing, toAttacker) <= angle;
     }
 
-    // Lo que se multiplica el empujon de un golpe bloqueado (con la mejora Defensa empuja todavia menos)
+    /// <summary>
+    /// Lo que se multiplica el empujon de un golpe bloqueado (con la mejora Defensa empuja todavia menos).
+    /// </summary>
+    /// <returns>Un numero entre 0 y 1.</returns>
     public float BlockedKnockbackMultiplier()
     {
         return blockedKnockbackMultiplier * StatsManager.Instance.GuardKnockbackMultiplier();

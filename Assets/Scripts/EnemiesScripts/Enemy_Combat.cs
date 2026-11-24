@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Ataque cuerpo a cuerpo de los enemigos (y del jefe).
+/// Cuando pega lo decide Enemy_Movement; aqui solo se mira si le ha dado al jugador.
+/// </summary>
 public class Enemy_Combat : MonoBehaviour
 {
     public int damage = 1;
@@ -14,12 +18,16 @@ public class Enemy_Combat : MonoBehaviour
 
     private Animator anim;
 
+    /// <summary>Coge el Animator para saber hacia donde ataca.</summary>
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    // Lo llama un evento de la animacion de ataque del enemigo
+    /// <summary>
+    /// Mira si el arma le da al jugador y, si le da, lo empuja y le quita vida.
+    /// Lo llama un evento de la animacion de ataque del enemigo, en el frame del golpe.
+    /// </summary>
     public void Attack()
     {
         AudioManager.Instance.PlaySFX(attackSound);
@@ -43,7 +51,9 @@ public class Enemy_Combat : MonoBehaviour
     }
         
     
-    // Zona del ataque en amarillo en el editor: un circulo en el enemigo, otro en la punta y la linea que los une
+    /// <summary>
+    /// Zona del ataque en amarillo en el editor: un circulo en el enemigo, otro en la punta y la linea que los une.
+    /// </summary>
     private void OnDrawGizmosSelected()
 {
     Gizmos.color = Color.yellow;

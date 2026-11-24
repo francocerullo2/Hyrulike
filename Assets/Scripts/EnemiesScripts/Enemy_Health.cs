@@ -1,6 +1,10 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Vida de los enemigos (tambien del jefe y del TNT).
+/// Al morir avisa al LevelManager para saber cuando se ha limpiado el nivel.
+/// </summary>
 public class Enemy_Health : MonoBehaviour
 {
    public int currentHealth;
@@ -11,6 +15,7 @@ public class Enemy_Health : MonoBehaviour
 
    private bool isDead; // por si le llegan dos golpes en el mismo frame, que no muera dos veces
 
+   /// <summary>Todos los enemigos empiezan con la vida llena.</summary>
    private void Start()
     {
         // Todos los enemigos empiezan con la vida llena
@@ -18,7 +23,12 @@ public class Enemy_Health : MonoBehaviour
 
     }
 
-    // Negativo para hacer daño, positivo para curar
+    /// <summary>
+    /// Quita o da vida al enemigo.
+    /// Antes mira los casos especiales: el jefe no recibe daño en algunas fases y el TNT no muere, se enciende.
+    /// Si llega a 0 se muere y avisa al LevelManager.
+    /// </summary>
+    /// <param name="amount">Negativo para hacer daño, positivo para curar.</param>
     public void ChangeHealth(int amount)
     {
         // El jefe no recibe daño mientras es el monje o mientras se transforma

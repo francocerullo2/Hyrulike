@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// Vida del jugador: recibir daño, curarse, la invulnerabilidad tras un golpe, el Amuleto y la muerte.
+/// La vida en si se guarda en StatsManager para que pase de un nivel a otro.
+/// Va en el Player.
+/// </summary>
 public class PlayerHealth : MonoBehaviour
 {
     // Tiempo sin poder recibir daño despues de un golpe
@@ -13,12 +18,14 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deadPrefab; // animacion de muerte (Sprites/Dead)
     public float deadDuration = 1.4f; // lo que dura la animacion, luego se borra
 
+    /// <summary>Pinta los corazones nada mas empezar el nivel.</summary>
     private void Start()
     {
         // Pintamos los corazones nada mas empezar
         HeartsUI.Instance.UpdateHearts(StatsManager.Instance.currentHealth, StatsManager.Instance.MaxHealth());
     }
 
+    /// <summary>Va bajando el contador de invulnerabilidad.</summary>
     private void Update()
     {
         // Va bajando el contador de invulnerabilidad
@@ -28,8 +35,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Sirve para quitar vida (amount negativo) o curar (amount positivo)
-    // attacker es quien pega, para saber si el escudo lo para. Si es null (curas, explosiones) no se puede bloquear
+    /// <summary>
+    /// Quita o da vida al jugador y actualiza los corazones.
+    /// Si recibe daño, antes mira si esta en dash, si el escudo para el golpe o si sigue siendo invulnerable.
+    /// Si se queda sin vida, revive con el Amuleto o muere y sale el Game Over.
+    /// </summary>
+    /// <param name="amount">Negativo para quitar vida, positivo para curar.</param>
+    /// <param name="attacker">Quien pega, para saber si el escudo lo para. Si es null (curas, explosiones) no se puede bloquear.</param>
     public void ChangeHealth(int amount, Transform attacker = null)
     {
         // Si recibe daño mientras es invulnerable, se ignora

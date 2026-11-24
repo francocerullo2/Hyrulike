@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// Ataque con espada del jugador, con combo de dos golpes y cooldown.
+/// El daño lo hace un evento de la animacion (DealDamage) para que cuadre con el frame del espadazo.
+/// Va en el Player.
+/// </summary>
 public class Player_Combat : MonoBehaviour
 {
     public Animator anim;
@@ -16,6 +21,7 @@ public class Player_Combat : MonoBehaviour
     private bool isSecondSlash; // para saber cual de los dos sonidos toca
 
 
+    /// <summary>Va bajando el contador del cooldown.</summary>
     private void Update()
     {
         // Contador del cooldown
@@ -25,7 +31,10 @@ public class Player_Combat : MonoBehaviour
         }
     }
 
-    // Se llama desde PlayerMovement al pulsar el boton de ataque
+    /// <summary>
+    /// Empieza un ataque o encadena el combo si ya esta atacando.
+    /// Se llama desde PlayerMovement al pulsar el boton de ataque.
+    /// </summary>
     public void Attack()
     {
         // Si vuelve a pulsar mientras ataca, se encadena el segundo golpe (combo)
@@ -41,7 +50,10 @@ public class Player_Combat : MonoBehaviour
 
     }
 
-    // Esto lo llama un evento de la animacion justo en el frame en el que pega la espada
+    /// <summary>
+    /// Hace daño a todos los enemigos que haya dentro del circulo del ataque y los empuja.
+    /// Lo llama un evento de la animacion justo en el frame en el que pega la espada.
+    /// </summary>
     public void DealDamage()
     {
           // El primer golpe del ataque suena de una forma y el del combo de otra
@@ -70,8 +82,10 @@ public class Player_Combat : MonoBehaviour
 
     }
 
-    // Evento al final de la animacion, vuelve a dejar al jugador sin atacar
-    // El cooldown empieza aqui para que el golpe y el combo cuenten como un solo ataque
+    /// <summary>
+    /// Evento al final de la animacion, vuelve a dejar al jugador sin atacar.
+    /// El cooldown empieza aqui para que el golpe y el combo cuenten como un solo ataque.
+    /// </summary>
     public void FinishAttacking()
     {
             anim.SetBool("isAttacking", false);
@@ -81,7 +95,9 @@ public class Player_Combat : MonoBehaviour
     }
 
 
-    // Dibuja el rango del ataque en la escena para poder ajustarlo (solo en el editor)
+    /// <summary>
+    /// Dibuja el rango del ataque en la escena para poder ajustarlo (solo en el editor).
+    /// </summary>
     private void OnDrawGizmosSelected()
     {
         // En el editor sin darle a Play el StatsManager todavia no existe

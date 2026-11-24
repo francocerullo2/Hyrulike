@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Arco del jugador: apuntar en 8 direcciones y disparar flechas.
+/// Solo funciona si ya tiene el arco (mejora permanente). Va en el Player.
+/// </summary>
 public class Player_Bow : MonoBehaviour
 {
     public Transform launchPoint;
@@ -16,7 +20,10 @@ public class Player_Bow : MonoBehaviour
     public Animator anim;
     public AudioClip shootSound;
 
-    // Update se llama una vez por frame
+    /// <summary>
+    /// Apunta segun las teclas y empieza el disparo al pulsar el boton.
+    /// La flecha no sale aqui, sale en ReleaseArrow cuando la animacion suelta la cuerda.
+    /// </summary>
     void Update()
     {
         // En pausa no se puede apuntar ni disparar
@@ -42,7 +49,10 @@ public class Player_Bow : MonoBehaviour
         }
     }
 
-    // Lo llama un evento de la animacion en el frame en el que suelta la cuerda
+    /// <summary>
+    /// Crea la flecha hacia donde apunta, con el daño extra de las mejoras, y pone el cooldown.
+    /// Lo llama un evento de la animacion en el frame en el que suelta la cuerda.
+    /// </summary>
     public void ReleaseArrow()
     {
         // En diagonal el blend tree mezcla varias animaciones y cada una lanza su evento, solo vale el primero
@@ -63,13 +73,19 @@ public class Player_Bow : MonoBehaviour
         shootTimer = shootCooldown * StatsManager.Instance.ShootCooldownMultiplier(); // con la mejora Cañón de agua se dispara mas rapido
     }
 
-    // Evento al final de la animacion de disparo, vuelve a la pose normal y deja moverse
+    /// <summary>
+    /// Evento al final de la animacion de disparo, vuelve a la pose normal y deja moverse.
+    /// </summary>
     public void FinishShooting()
     {
         anim.SetBool("isShooting", false);
         playerMovement.isShooting = false;
     }
 
+    /// <summary>
+    /// Guarda la direccion de las teclas como direccion de disparo y se la pasa al Animator.
+    /// Si no se pulsa nada se queda apuntando a donde estaba.
+    /// </summary>
     private void HandleAiming()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");

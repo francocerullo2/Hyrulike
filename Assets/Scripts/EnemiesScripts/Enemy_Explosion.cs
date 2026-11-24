@@ -1,7 +1,9 @@
 using UnityEngine;
 
-// Barril de TNT: no hace nada hasta que el jugador lo toca o le pega
-// Entonces enciende la mecha y al rato explota, dañando al jugador si sigue cerca
+/// <summary>
+/// Barril de TNT: no hace nada hasta que el jugador lo toca o le pega.
+/// Entonces enciende la mecha y al rato explota, dañando al jugador si sigue cerca.
+/// </summary>
 public class Enemy_Explosion : MonoBehaviour
 {
     public int damage = 2;
@@ -17,7 +19,10 @@ public class Enemy_Explosion : MonoBehaviour
 
     private bool isLit; // para que no se encienda dos veces
 
-    // Lo llama Enemy_Health al recibir un golpe, o el propio barril cuando el jugador lo toca
+    /// <summary>
+    /// Enciende la mecha y programa la explosion para dentro de fuseTime segundos.
+    /// Lo llama Enemy_Health al recibir un golpe, o el propio barril cuando el jugador lo toca.
+    /// </summary>
     public void LightFuse()
     {
         if (isLit)
@@ -35,6 +40,10 @@ public class Enemy_Explosion : MonoBehaviour
         Invoke("Explode", fuseTime);
     }
 
+    /// <summary>
+    /// Explota: si el jugador esta dentro del radio lo empuja y le quita vida, y el barril desaparece.
+    /// Se llama con Invoke desde LightFuse.
+    /// </summary>
     private void Explode()
     {
         AudioManager.Instance.PlaySFX(explosionSound);
@@ -58,7 +67,11 @@ public class Enemy_Explosion : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // El collider de la raiz es trigger y el de los pies no, asi que el toque puede llegar por cualquiera de los dos
+    /// <summary>
+    /// Si el jugador choca con el barril, se enciende.
+    /// El collider de la raiz es trigger y el de los pies no, asi que el toque puede llegar por cualquiera de los dos.
+    /// </summary>
+    /// <param name="collision">El choque que manda Unity.</param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -67,6 +80,10 @@ public class Enemy_Explosion : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Lo mismo que OnCollisionEnter2D pero para el collider trigger.
+    /// </summary>
+    /// <param name="collision">El collider con el que ha entrado.</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -75,7 +92,7 @@ public class Enemy_Explosion : MonoBehaviour
         }
     }
 
-    // Circulo naranja en el editor para ver hasta donde llega la explosion
+    /// <summary>Circulo naranja en el editor para ver hasta donde llega la explosion.</summary>
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1, .5f, 0);
