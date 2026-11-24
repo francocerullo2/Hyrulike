@@ -185,7 +185,7 @@ INLINE_INHERITED_MEMB  = NO
 # haga que los nombres de archivo sean únicos.
 # El valor predeterminado es: YES.
 
-FULL_PATH_NAMES        = YES
+FULL_PATH_NAMES        = NO
 
 # La etiqueta STRIP_FROM_PATH se puede usar para eliminar una parte definida por
 # el usuario de la ruta. La eliminación solo se hace si una de las cadenas

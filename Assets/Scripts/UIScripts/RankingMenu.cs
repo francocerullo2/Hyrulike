@@ -133,7 +133,7 @@ public class RankingMenu : MonoBehaviour
     /// </summary>
     /// <param name="playerName">El nombre ya sin espacios al principio ni al final.</param>
     /// <returns>True si el nombre vale, false si no.</returns>
-    private bool IsValidName(string playerName)
+    public bool IsValidName(string playerName)
     {
         if (playerName.Length < minNameLength || playerName.Length > maxNameLength)
         {
@@ -161,7 +161,7 @@ public class RankingMenu : MonoBehaviour
     /// <param name="time">Lo que ha durado la partida, en segundos.</param>
     /// <param name="won">True si ha ganado al jefe final.</param>
     /// <returns>La puntuacion de la partida.</returns>
-    private int CalculateScore(int level, int time, bool won)
+    public int CalculateScore(int level, int time, bool won)
     {
         int score = level * 100000 - time;
 
